@@ -1,0 +1,380 @@
+A list of Text Directives for Super Mystery Dungeon.  Most are available in Gates to Infinity as well.  Equivalent UTF-16 values shown in parentheses.
+
+Formatting:
+  [CN] (C200)               --center align following text
+  [RT] (C300)               --right align following text
+
+  [CS:%d]                   --set font color (0-9)
+
+  [HO:%d]                   --set Horizontal offset from textbox origin
+  [VO:%d]                   --set Vertical Offset from textbox origin
+  [HS:%d] (C4%x)            --add Horizontal spacing from previous char
+  [VS:%d] (FC%x)            --add Vertical spacing from previous char
+
+  [K] (EB00)                --inline pause
+  [C] (EE00)                --box break
+  [P] (ED00)                --Box break w/ sliding up text
+
+  [R] (0A)                  --Line Return
+  [LE] (CB00)               --space
+  [S:%d] (C4%x)             --adjustable width space
+
+  [FT:%d] (C8%x)            --unknown font properties
+
+
+Text Replacement:
+  [player]          --Player name (usually same as hero)
+  [hero]            --Hero name
+  [partner]         --Partner name
+  [my_team]         --your team name
+
+  [other_team]      --Nothing?
+  [other_nickname]  --Nothing?
+
+  [c_kind:%d]       --Species of numbered team member
+  [c_name:%d]       --name of numbered team member
+  [c_stammer:%d]    --first char of name of numbered team member
+  [kind:%d]         --Species name of given PKID (in blue)
+  [type:%d]         --Name of given type ID
+  [waza:%d]         --name of given move ID (in green)
+  [item:%d]         --name of given item ID (w/item icon)
+  [ability:%d]      --Name of given ability ID (in blue)
+  [skill:%d]        --Name of given Gates Team Skill ID
+  [status:%d]       --Name of given Status Condition ID (status_a for lower case)
+  [weather:%d]      --Name of given Weather ID (weather_a for lower case)
+
+  [explore_team]    --"Expedition Society"
+  [item_bag]        --"Bag"
+  
+  [Percent]         --'%'
+  [Upper_e]         --superscript 'e'
+  [Upper_er]        --superscript 'er'
+  [Upper_re]        --superscript 're'
+  [Upper_st]        --superscript 'st'
+  [Upper_nd]        --superscript 'nd'
+  [Upper_rd]        --superscript 'rd'
+  [Upper_th]        --superscript 'th'
+
+  
+Math & Numbers
+  [M:V%d]           --small numbers (0-9)
+    
+  [M:VHS]           --1x space
+  [M:VZS]           --1.5x space
+    
+  [M:VSL]           --small '/'
+  [M:VCRS]          --small 'x' (multiply)
+  [M:VPL]           --small '+'
+  [M:VMN]           --small '-'
+  [M:VPR]           --small '.'
+  [M:VCN]           --small ','
+    
+  [M:VAS]           --small backward 'k'
+    
+  [M:VLV]           --small text "Lv."
+  [M:VHP]           --small text "HP"
+  [M:VPP]           --small text "PP"
+    
+  [M:VCLN]          --small ':'
+  [M:VBRS]          --small '('
+  [M:VBRE]          --small ')'
+
+  
+Icons:
+
+  Items:
+    [M:MONEY] (A072)        --Coin ("Poke")
+    [M:INGOT] (A074)        --gold bars
+
+    [M:RIBBON] (A0A1)       --Scarf/Ribbon
+    [M:APPLE2] (A0A2)       --Apple
+    [M:I1501] (A013)        --Apple (fresh/sparkle)
+    [M:I1001] (A016)        --Apple (Gold)
+
+    [M:I0501] (A011)        --orb
+    [M:IWAND] (A03D)        --wand
+
+    [M:PRESENT] (A105)      --pink gift box
+
+    [M:TICKET] (A08C)       --blue ticket
+    [M:IDL21] (A04B)        --pink ticket
+    [M:IDL22] (A04C)        --gray ticket
+    
+    [M:I0701] (A04A)        --hawlucha token
+    
+    [M:I1502] (A014)        --Grimy Food
+
+    [M:I1005] (A02B)        --Save Gadget
+    [M:I1006] (A02C)        --Save Gadget (Gold)
+
+    [M:I0301] (A020)        --gray rock
+    [M:I0302] (A021)        --brown rock
+    [M:IDL51] (A0DF)        --Gold Rock
+
+    [M:I0201] (A022)        --stick
+    [M:IDL61] (A0E0)        --Gold Stick
+    [M:I0202] (A023)        --iron spike
+    [M:I0203] (A024)        --silver spike
+
+    [M:I1201] (A00D)        --Red chest
+    [M:I1202] (A00E)        --Blue chest
+    [M:I1203] (A00F)        --brown/gray chest
+
+    [M:I0401] (A010)        --Seed
+    [M:IDL41] (A0DE)        --Gold Seed
+    [M:I0402] (A001)        --Oran berry
+    [M:I0403] (A002)        --Rawst berry (blue strawberry)
+    [M:I0404] (A003)        --Pecha berry (upside down strawberry)
+    [M:I0405] (A004)        --Cheri berry
+    [M:I0406] (A005)        --Chesto Berry
+
+    [M:I0801] (A006)       --Sitrus Berry
+    [M:I0802] (A008)        --Max Elixir
+    [M:I0803] (A009)        --Yellow Potion
+    [M:I0804] (A00A)        --Red Potion
+    [M:I0805] (A00B)        --Light Blue Potion
+    [M:I0806] (A00C)        --Blue Potion
+    [M:I0807] (A018)        --Elixir
+    [M:I0808] (A019)        --Gold Elixir
+    [M:I0809] (A03E)        --Green Big Elixir
+    [M:I0810] (A03F)        --Blue Big Elixir
+    [M:I0811] (A040)        --Red Big Elixir
+    [M:I1012] (A02A)        --Purple potion
+    
+    [M:IDL23] (A04D)        --donut
+    [M:IDL23_E] (A11D)      --donut with gold star
+    [M:ICOO1] (A049)        --four leaf cookie
+    [M:ICHO1] (A039)        --chocolate bar (dirt brick?)
+    
+    [M:I1301] (A01C)       --disk (TM)
+    [M:I1301_R] (A11E)     --disk with rainbow outline
+    
+    [M:I1302] (A01D)       --gray disk
+    [M:I1302_R] (A11F)     --gray disk with rainbow outline
+    
+    [M:I1303] (A01E)       --gold disk
+    [M:I1303_R] (A120)     --gold disk with rainbow outline
+
+
+  Looplets & Emeras:
+    [M:SEAL%0d]     --Emera Icons (1-6)
+    [M:I1001Y]      --rainbow emera
+    [M:I1001V]      --blue emera
+    
+    [M:I0101]       --blue looplet
+    [M:I1001P]      --gray looplet
+    [M:I1001S]      --aqua looplet
+    [M:I0102]       --rainbow looplet
+    [M:I0104]       --gold looplet
+    
+    [M:I0101_R]     --blue looplet with orange outline
+    [M:I1001P_R]    --gray looplet with orange outline
+    [M:I1001S_R]    --aqua looplet with orange outline
+    [M:I0102_R]     --rainbow looplet with orange outline
+    [M:I0104_R]     --gold looplet with orange outline
+    
+    [M:I0101_E]     --blue looplet with gold star
+    [M:I1001P_E]    --gray looplet with gold star
+    [M:I1001S_E]    --aqua looplet with gold star
+    [M:I0102_E]     --rainbow looplet with gold star
+    [M:I0104_E]     --gold looplet with gold star
+    
+    [M:I0101_R_E]   --blue looplet with orange outline and gold star
+    [M:I1001P_R_E]  --gray looplet with orange outline and gold star
+    [M:I1001S_R_E]  --aqua looplet with orange outline and gold star
+    [M:I0102_R_E]   --rainbow looplet with orange outline and gold star
+    [M:I0104_R_E]   --gold looplet with orange outline and gold star
+
+    
+  Type Icons:
+    [M:TNORMAL] (A052)
+    [M:TFIRE] (A053)
+    [M:TGRASS] (A054)
+    [M:TWATER] (A055)
+    [M:TELECTRIC] (A056)
+    [M:TGROUND] (A057)
+    [M:TFLYING] (A058)
+    [M:TPSYCHIC] (A059)
+    [M:TFAIRY] (A05A)
+    [M:TBUG] (A062)
+    [M:TROCK] (A062)
+    [M:TGHOST] (A064)
+    [M:TFIGHTING] (A065)
+    [M:TPOISON] (A066)
+    [M:TICE] (A067)
+    [M:TSTEEL] (A068)
+    [M:TDRAGON] (A069)
+    [M:TDARK] (A06A)
+
+    
+  Generic Symbols:
+    [M:WAKU0]       --Gold crown
+    [M:WAKU4]       --dark gray crown
+    [M:I1001R]      --aqua crown
+    [M:STICKET]     --bronze crown
+    [M:IDL35]       --royal crown
+    
+    [M:I0601]       --yellow heart
+    [M:I1010]       --gray/purple heart
+    [M:I1011]       --black/blue heart
+    [M:I1013]       --pink heart
+    
+    [M:WAKU2]       --silver fancy square
+    [M:WAKU3]       --gold fancy square
+    
+    [M:KUBOMI]      --black/blue water drop
+    [M:PIOFF]       --water drop icon
+    [M:PION]        --flames icon
+    
+    [M:I1402]       --yellow key
+    [M:LOCK]        --yellow padlock
+    [M:OPEN]        --open yellow padlock
+    
+    [M:HELPER]      --light orange plus in orange circle
+    
+    [M:FAVORITEA]   --amber circle in white ring
+
+    [M:RECYCLE]     --2 arrow recycle symbol
+
+    [M:MUSICS]      --Magenta Music Note
+    [M:IDENSHI]     --rainbow squiggle
+    [M:SUPER]       --double orange up arrow
+    
+    [M:QNEW]        --white '!' in red circle
+    [M:QCONTINUE]   --white dot in blue circle
+    [M:QPRESENT]    --white check in green circle
+    [M:AT]          --white '!' in red circle with dark outline 
+    [M:S01]         --big red '!'
+    [M:DLCI]        --big blue '?'
+    [M:NEW]         --"New" Icon
+    
+    [M:CM00]        --blue check icon
+    [M:CM01]        --red 'x' icon
+    [M:CM02]        --combo of above
+    [M:FORBID]      --slightly darker red 'x' icon
+    
+    [M:Q00]         --blue checked check box
+    [M:Q01]         --red gear
+    [M:Q02]         --small gold star
+    [M:Q04]         --blue/red infinity symbol
+    [M:Q05]         --blue unchecked check box
+    [M:Q06]         --blue gear
+    
+    [M:RECOMMEN]    --target icon (very effective)
+    [M:I1003]       --orange dot (normal effectiveness)
+    [M:I1004]       --blue down arrow (not effective)
+    
+  Arrows:
+    [M:CU*]         --U/D/L/R Blue Arrow
+
+    [M:OP00]        --left arrow bar (blue)
+    [M:OP01]        --right arrow bar (blue)
+    [M:OP02]        --up arrow bar (blue)
+    [M:OP03]        --down arrow bar (blue)
+
+    [M:OP00ACT]     --left arrow bar (gold)
+    [M:OP01ACT]     --right arrow bar (gold)
+    [M:OP02ACT]     --up arrow bar (gold)
+    [M:OP03ACT]     --down arrow bar (gold)
+
+    
+  Progress Bars:
+    [M:NBKG1]       --orange progress bar left
+    [M:NBKG2]       --orange progress bar center
+    [M:NBKG3]       --orange progress bar right
+    [M:NBKG4]       --orange progress bar center small
+    
+    [M:NBK1]        --red progress bar start
+    [M:NBK2]        --red progress bar center
+    [M:NBK3]        --red progress bar end
+    [M:NBK4]        --red progress bar center small
+  
+  
+  Other:
+    [M:CONTI%0d]    --Continent Icons (1-6)
+
+    [M:KARI]        --red Japanese char in yellow block
+    [M:UNUSED]      --red Japanese char in yellow block
+    [M:DEBUG]       --red Japanese char in yellow block
+    
+    [M:EPLAY]       --audio play symbol
+    [M:EPAUSE]      --audio pause symbol
+    [M:EREC]        --Red Record Symbol
+    
+    [M:SHUFFLE]     --audio player shuffle
+    [M:LOOPOFF]     --audio player loop w/ small 1
+    [M:LOOPON]      --audio player loop
+  
+    [M:B%02d]       --3ds Button Icons 
+       1-8  = Select, Start, X, Y, A, B, R, L
+       9-14 = D-pad, D-pad U/D, D-pad L/R, Circle-Pad, Circle-Pad U/D, Circle-Pad L/R
+      15-22 = D-pad U, D-pad D, D-pad L, D-pad R, Circle-Pad U, Circle-Pad D, Circle-Pad L, Circle-Pad R
+      24,25 = Home, stylus on screen  
+      
+        
+Unsorted:
+  [LINE:0:%d]     --horizontal line %d chars long
+ 
+  [money:%d]      --"Poke" icon followed by number in blue
+  
+  [M:WC%0d]       --Move level numeral icons (1-8)
+  [M:WZMAX]       --three gold stars over gold bar
+  
+  [M:WAKU1]       --banana?
+  
+  [M:I0702]       --Little blue box (Link box?)
+  [M:I1304]       --question mark block
+  
+  [M:I1002]       --sparkle cookie or odd face
+  
+  [M:TUBO]        --odd reddish face
+   
+  [M:BAGS]        --bag icon
+  
+  [M:ORB]         --blue book/ticket with exclamation
+  
+  [M:BOX]         --idfk
+  
+  [M:I1602]       --pink square dungeon tile
+  [M:I1603]       --green circle dungeon tile 
+  
+  [M:VWV]         --v-wave up arrow
+  
+  [M:WC09]        --gold star
+  
+  [M:QDSTAR]      --gold star
+  
+  [M:WN]          --Silver star
+  [M:WE]          --bronze star
+  [M:WS]          --empty star
+  
+  [M:MYCHARA]     --2x space
+  
+  [M:SPACE]       --spacebar icon (square bracket on its side)
+  [M:SPACEG]      --gray spacebar icon
+  
+  [M:I1305]       --closed letter
+  [M:I1306]       --opened letter
+  [M:I1307]       --closed letter with sack
+  [M:I1308]       --opened letter with sack
+  
+  [M:WAZABIG]     --large hit move icon (3x3 grid, yellow center, rest red)
+  
+  [M:REFIN]       --green corner cut icon
+  [M:DLCD]        --red corner cut icon
+  
+
+Unknown:
+  [RR]            --Nothing?
+  [IS]            --Nothing?
+  [IE]            --Nothing?
+  [FT:%d]         --Nothing?
+  [FR]            --Nothing?
+  [ES]            --Nothing?
+  [EE]            --Nothing?
+  [PB:%d]         --Nothing?
+  [STS]           --Nothing?
+  [STE]           --Nothing?
+  [M:T00]         --nothing?
+  [category:%d]   --always a white box?
+  [range:%d]      --always a white box?
