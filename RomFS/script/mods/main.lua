@@ -39,7 +39,7 @@ end
 --Print an error message to the screen  --TODO: rename? can be used for more than just errors
 local function errMsg(title, text)
   if title then
-    WINDOW:SysMsg(title:gsub(" ","[LE]"))
+    WINDOW:SysMsg(title:gsub(" ","쐃"))
     if text == nil then 
       WINDOW:CloseMessage()
       return
@@ -47,7 +47,7 @@ local function errMsg(title, text)
   end
   local err = splitByChunk(text,48)
   for i,v in ipairs(err) do
-    WINDOW:SysMsg(v:gsub(" ","[LE]"))
+    WINDOW:SysMsg(v:gsub(" ","쐃"))
   end
   WINDOW:CloseMessage()
 end

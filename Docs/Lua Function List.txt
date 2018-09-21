@@ -734,23 +734,24 @@ PageMenu
 
   
 WINDOW
-  DrawFace 
+  DrawFace(int posX, int posY, SymAct faceActor, FACE_TYPE faceType)
   DrawFaceF  
   DrawFaceFromPokemonIndex 
   DrawFaceOffset
-  RemoveFace
+  RemoveFace()      --remove portrait from screen
   SetPartnerName
   ResetPartnerName
   SetMessageScreenMode
-  CloseMessage 
+  CloseMessage()
   ForceCloseMessage 
   SetWaitMode
-  SysMsg 
+  SysMsg(string msg)
+  SysMsg(int msgID)
   SwitchSysMsg
   SysAllMsg
-  BeginChapter
-  EndChapter
-  Chapter
+  BeginChapter()    
+  EndChapter()      
+  Chapter(TimeSec fadeInTime, TimeSec fadeOutTime, string chapterText)   --displays the given chapter text, must be preceded by BeginChapter()
   Narration 
   NarrationBottomFrame
   SwitchNaration 
@@ -792,6 +793,29 @@ WINDOW
     NEXT_DAY_ONLY_PARTNER   
     HOUSYUU 
     YARARETA
+
+
+----------------------
+--  Misc Functions  --
+----------------------
+
+MAP
+  SetVisible(bool bVisible)                                         --set the visibility of the map model
+  SetVisibleMaterial(string matName, bool bVisible)                 --doesn't seem to do anything
+  DynamicLoadGroundMap(SymMap newMap)                               --loads the given map model (but not collision for some reason)
+  DynamicUnloadGroundMap()                                          --unloads current map model and collision
+  SetBG(SymImg image)                                               --set the background behind the map model (2D screen-space render)
+  SetVisibleBG(bool bVisible)                                       --set the visibility of background image
+  SetBG2  
+  SetVisibleBG2
+  ChangeLightColor(Color maskColor, TimeSec transitionTime)         --set a color mask on the map model
+  ChangeProjectionShadowAlpha(float alpha, TimeSectransitionTime)   --set the alpha value of cloud projections
+  SetFog(int? nearDist, int? farDist, Color fogColor)               --sets fog distance and color
+  ClearFog()                                                        --removes fog
+  AddRangeBoxCollision
+  SetEnableRangeBoxCollision
+  ClearRangeBoxCollision
+  ReturnLightColor
 
 
 -----------------------

@@ -9,14 +9,14 @@ end
 function runExtern()
   local func, err = loadfile("script/mods/main.lua")
   if not func then
-	WINDOW:SysMsg(err:gsub(" ","[LE]"))
+	WINDOW:SysMsg(err:gsub(" ","쐃"))
   end
   
   local stat, err = pcall(func)
   if not stat then
 	err = splitByChunk(err,50)
 	  for i,v in ipairs(err) do
-        WINDOW:SysMsg(v:gsub(" ","[LE]"))
+        WINDOW:SysMsg(v:gsub(" ","쐃"))
       end
   end
   WINDOW:CloseMessage()

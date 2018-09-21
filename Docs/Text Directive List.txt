@@ -16,7 +16,7 @@ Formatting:
   [P] (ED00)                --Box break w/ sliding up text
 
   [R] (0A)                  --Line Return
-  [LE] (CB00)               --space
+  [LE] (CB00)               --space (only for US version?)
   [S:%d] (C4%x)             --adjustable width space
 
   [FT:%d] (C8%x)            --unknown font properties
