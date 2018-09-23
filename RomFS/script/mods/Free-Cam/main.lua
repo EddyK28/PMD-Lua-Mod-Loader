@@ -324,14 +324,17 @@ local function tgtEye()
   
   while true do     --wait for button presses
     TASK:Sleep(TimeSec(0.01))
-    if PAD:Data("START") then   --open menu
-      break
-    elseif PAD:Data("X") then
+    if PAD:Data("X") then
       if PAD:Data("R") then
         CH("PARTNER"):MoveTo(Vector2(camtgt.x, camtgt.z),Speed(350))
       else
         CH("HERO"):MoveTo(Vector2(camtgt.x, camtgt.z),Speed(350))
       end
+    end
+    
+    if PAD:Data("START") then   --open menu
+      break
+    --else
     elseif PAD:Data("Y") then
       CAMERA:MoveEye(Vector(0, 5, 5), Speed(5))
       CAMERA:MoveTgt(Vector(0, 0, 0), Speed(5))

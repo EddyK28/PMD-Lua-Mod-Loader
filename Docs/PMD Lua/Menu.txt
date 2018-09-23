@@ -1,0 +1,245 @@
+LOWER_SCREEN
+  SetScreenLuaObjectIndex
+  SetScreenLuaObjectType
+  SetUpperVisible
+  SetLowerVisible
+  SetVisible
+  IsVisible
+  SetWallpaperVisible
+  SetCaptionAndPadHelpVisible
+  SetCaptionVisible
+  SetPadHelpVisible
+  IsCaptionAndPadHelpVisible
+  IsCaptionVisible
+  IsPadHelpVisible
+  SetCurrentScreenType
+  SetInputEnable
+  SetTextIdCaption
+  SetTextIdPadHelp
+  SetTextCaption
+  SetTextPadHelp
+  ChangeLastWallpaper
+  SetEnableIndex
+  SetEnableType
+  ChangeRestPointMode   †
+  
+LowerScreenType
+  TYPE_BASE
+  TYPE_FLOOR_MAP
+  TYPE_OPERATION
+  TYPE_STATUS
+  TYPE_QUEST
+  TYPE_GUIDE_MAP
+  TYPE_ITEM_WINDOW
+  TYPE_MAX
+
+
+MENU
+  CreatePageMenu
+  CreatePageMenuBigStack
+  CreatePageGroupMenu
+  CreatePageGroupMenuNoMela
+  CreateParameterMenu
+  CreateScrollMenu
+  CreateAskMenu
+  CreateButtonMenu
+  CreateButtonMenuWindow
+  CreateInfomationMenuWindow
+  CreateInfomationScrollWindow
+  CreatePartyMemberWindow
+  CreatePartyMenu
+  CreateWazaDetailWindow
+  CreatePartyWazaWindow
+  CreatePokemonSelect
+  CreatePokemonStatusWindow
+  CreateWazaSelectWindow
+  CreateWazaStatusWindow
+  CreateArPokemonStatusWindow
+  CreateArExplainWindow
+  CreateArTopMenu
+  CreateDungeonMenuWaza
+  CreateBoardMenuWindow
+  CreateExplainMenuWindow
+  CreateExplainMenuWindowNotButton
+  CreateExplainMenuWindowPageOneType
+  CreateExplainMenuWindowForceNomalWindow
+  CreateNumInputMenu
+  CreateCutSceneSelectMenu
+  CreateNumericMenuWindow
+  CreatePageTimerMenu
+  CreateArrowBoardMenuWindow
+  CreateFaceMenuWindow
+  CreateScratchMenu
+  CreateSimpleStatusWindow
+  CreateLotteryPremiumsMenu
+  CreateMenuMela
+  DestroyMenu
+  CreateEcSelectMenu
+  CreateEcMenuWindow
+  CallPartyMenu2
+  SetFocus
+  ClearFocus
+  WaitClose
+  WaitSync
+  ShowAskSelect
+  ShowAskMessage
+  ShowTalkAskMessage
+  SetTag_Floor
+  SetTag_Value
+  SetTag_Money
+  SetTag_MyMoney
+  SetTag_Bank
+  SetTag_MoneyMuji
+  SetTag_MyMoneyMuji
+  SetTag_BankMuji
+  SetTag_String
+  SetTag_MonsterIndex
+  SetTag_ItemIndex
+  SetTag_ItemIndexNoCount
+  SetTag_ItemIndexAndCount
+  SetTag_DungeonIndex
+  SetTag_Fhushigido
+  SetTag_MonsterString
+  PushTag_MonsterString
+  PullTag_MonsterString
+  SetTag_ItemString
+  PushTag_ItemString
+  PullTag_ItemString
+  SetTag_ContinentIndex
+  SetTag_PlaceString
+  SetTag_PrefectureString
+  SetTag_DamageValue
+  SetTag_ExperienceValue
+  SetWindowFrameAndGroundVariation
+  SetTag_ShopPrice
+  SetTag_TicketIndex
+  ReplaceTagText
+  GetTextPoolText
+  GetTextWidth
+  GetTextReturnNum
+  LoadMenuTextPool
+  CheckGroupItem
+  CallLuaFunctionWithLuaGlobalEnvGuard
+  DebugReloadMenuScript
+  DebugReloadGlobalGameSetting
+
+
+BaseLayoutWindow
+  Open
+  CloseAndClearFocus
+  IsFocus
+  NotifyForceClose
+  IsForceClosed
+  IsOpened
+  GetLeft
+  GetRight
+  GetTop
+  GetBottom
+  AddAnimeTask
+  IsExistAnimeTask
+
+
+BaseMenu
+  SetLayoutPosition
+  SetLayoutPositionY
+  SetLayoutSize
+  SetLayoutSizeH
+  SetOption
+  DrawHorizontalLine
+  SetTextAlpha
+  SetFrameAlpha
+  SetParallax TD
+  SetParallaxFromLevel
+  SetAnimeOffsPosX
+  SetAnimeOffsPosY
+  GetAnimeOffsPosX
+  GetAnimeOffsPosY
+  SetDecideSound
+  SetCancelSound
+  IsDecideSound
+  IsCancelSound
+  SetEnableXButtonDecide
+  SetMela
+
+
+PageMenu
+  SetCursorOffset
+  SetItemOffset
+  SetDefaultCursorDispIndex
+  GetPagenum
+  GetPageTopIndex
+  ShowPageNum
+  SetShowCurosr
+  EnableCursor    ê
+  SetMultiSelectable
+  AddMultiSelect
+  ClearMultiSelect
+  AllMultiSelectFromLua
+  ResetSelecting
+  GetItemCount
+  GetItem
+  GetSelectedItemCount
+  GetSelectedItem
+  IsMultiSelect
+  SortItem
+  InterruptUpdate
+  SetMaxSelectingNum
+  
+  
+WINDOW
+  DrawFace(int posX, int posY, SymAct faceActor, FACE_TYPE faceType)
+  DrawFaceF
+  DrawFaceFromPokemonIndex(int posX, int posY, int PKID, bool ukn, FACE_TYPE faceType)
+  DrawFaceOffset
+  RemoveFace()      --remove portrait from screen
+  SetPartnerName
+  ResetPartnerName
+  SetMessageScreenMode
+  CloseMessage()
+  ForceCloseMessage
+  SetWaitMode
+  SysMsg(string msg)
+  SysMsg(int msgID)
+  SwitchSysMsg
+  SysAllMsg
+  BeginChapter()
+  EndChapter()
+  Chapter(TimeSec fadeInTime, TimeSec fadeOutTime, string chapterText)   --displays the given chapter text, must be preceded by BeginChapter()
+  Narration(TimeSec fadeInTime, TimeSec fadeOutTime, string narrationText)
+  NarrationBottomFrame
+  SwitchNaration
+  NarrationB(TimeSec fadeInTime, TimeSec fadeOutTime, string narrationText)
+  Explanation(string msg)
+  Explanation(int msgID)
+  ExplanationB(string msg)
+  ExplanationB(int msgID)
+  Outline
+  SystemLetter(string msg)
+  SystemLetter(int msgID)
+  Talk([SymAct/SymWord] speaker, string msg)
+  Talk([SymAct/SymWord] speaker, int msgID)
+  Talk_HideFrame
+  Talk_AutoCloseFrame
+  Talk_Fuupa
+  TalkOption
+  SwitchTalk
+  TalkNpc
+  KeyWait
+  Monologue(string msg)
+  Monologue(int msgID)
+  Monologue2
+  SetStartKeyOffWait
+  SelectStart
+  SelectSetLuaMenu
+  SelectEnd
+  SelectEndWithWakeupCancel
+  SelectEndTalk
+  SelectEndNotPlayDecideSe
+  SelectChain
+  DefaultCursor
+  SetMessagePriority
+  GetMessagePriority
+  NoticeWindow
+  NoticeWindowB
+  DPRINTF
+  TestLuaFuncCall
