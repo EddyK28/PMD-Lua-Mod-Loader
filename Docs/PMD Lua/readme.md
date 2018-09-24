@@ -1,0 +1,1 @@
+An incomplete list of system Lua Objects and Functions for Super Mystery Dungeon.  No actual function documentation yet, sorry.

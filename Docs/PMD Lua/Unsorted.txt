@@ -1,0 +1,155 @@
+MAP
+  SetVisible(bool bVisible)                                         --set the visibility of the map model
+  SetVisibleMaterial(string matName, bool bVisible)                 --doesn't seem to do anything
+  DynamicLoadGroundMap(SymMap newMap)                               --loads the given map model (but not collision for some reason)
+  DynamicUnloadGroundMap()                                          --unloads current map model and collision
+  SetBG(SymImg image)                                               --set the background behind the map model (2D screen-space render)
+  SetVisibleBG(bool bVisible)                                       --set the visibility of background image
+  SetBG2
+  SetVisibleBG2
+  ChangeLightColor(Color maskColor, TimeSec transitionTime)         --set a color mask on the map model
+  ChangeProjectionShadowAlpha(float alpha, TimeSectransitionTime)   --set the alpha value of cloud projections
+  SetFog(int? nearDist, int? farDist, Color fogColor)               --sets fog distance and color
+  ClearFog()                                                        --removes fog
+  AddRangeBoxCollision
+  SetEnableRangeBoxCollision
+  ClearRangeBoxCollision
+  ReturnLightColor
+
+
+
+
+
+
+ITEM_KIND
+  KIND_ARROW
+  KIND_STONE
+  KIND_EQUIP
+  KIND_FOOD
+  KIND_SEED
+  KIND_PP
+  KIND_PARAMETER
+  KIND_ORB
+  KIND_WAND
+  KIND_SUMMON
+  KIND_STUDS
+  KIND_EVOLUTION
+  KIND_OTHER
+  KIND_MONEY
+  KIND_BOX
+  KIND_CHEST
+  KIND_WAZAMACHINE
+  KIND_BROKENMACHINE
+  KIND_TRAP
+
+ITEM_SHOP_TYPE
+  SEED
+  MISSILE
+  ORB
+
+
+DungeonMystery
+  INDEX_SPEED_DOWN
+  INDEX_LEVEL_DOWN
+  INDEX_KAMIN
+  INDEX_SPEED_UP
+  INDEX_NO_HP_UP
+  INDEX_LEVEL_UP
+  INDEX_NO_USE_SEED
+  INDEX_NO_USE_ORB
+  INDEX_NO_USE_EQUIPMENT
+  INDEX_WAY
+  INDEX_PANEL
+  INDEX_WEATHER
+  INDEX_ITEM_KIND
+  INDEX_POKEMON_KIND
+  INDEX_NO_ABILITY
+  INDEX_SUDDEN_DEATH
+  INDEX_WAZAMACHINE
+  INDEX_MAX
+
+
+
+KEEP_PLACEMENT
+  OFF
+  ON
+
+SPECIAL_ENTRY
+  NEXT_DAY
+  NEXT_DAY_ONLY_PARTNER
+  HOUSYUU
+  YARARETA
+
+
+UsedMenuKind
+  USED_MENU_KIND_TOP_START
+  USED_MENU_KIND_TOP_AR
+  USED_MENU_KIND_TOP_PASSWORD
+  USED_MENU_KIND_TOP_RESERVE_0
+  USED_MENU_KIND_TOP_RESERVE_1
+  USED_MENU_KIND_TOP_RESERVE_2
+  USED_MENU_KIND_TOP_RESERVE_3
+  USED_MENU_KIND_TOP_RESERVE_4
+  USED_MENU_KIND_COMMON_QUEST
+  USED_MENU_KIND_GROUND_MATERIAL
+  USED_MENU_KIND_GROUND_LOCAL
+  USED_MENU_KIND_GROUND_3
+  USED_MENU_KIND_GROUND_4
+  USED_MENU_KIND_GROUND_5
+  USED_MENU_KIND_GROUND_6
+  USED_MENU_KIND_GROUND_7
+  USED_MENU_KIND_GROUND_8
+  USED_MENU_KIND_GROUND_9
+  USED_MENU_KIND_QUEST_MEMO
+  USED_MENU_KIND_DUNGEON_1
+  USED_MENU_KIND_DUNGEON_2
+  USED_MENU_KIND_DUNGEON_3
+  USED_MENU_KIND_DUNGEON_4
+  USED_MENU_KIND_DUNGEON_5
+  USED_MENU_KIND_DUNGEON_6
+  USED_MENU_KIND_DUNGEON_7
+  USED_MENU_KIND_DUNGEON_8
+
+PokemonType
+  GRASS
+  FIRE
+  WATER
+  ELECTRIC
+  ICE
+  FIGHTING
+  POISON
+  GROUND
+  FLYING
+  PSYCHIC
+  BUG
+  ROCK
+  GHOST
+  DRAGON
+  DARK
+  STEEL
+
+
+ArQuestFloorType
+  SHORT
+  MIDDLE
+  LONG
+
+
+
+
+
+
+
+DebugGroundCursorPositionKind
+TOP
+ITEM_BAG2
+
+NASHI
+
+CecResultState
+NG_EULA
+CheckRescueType
+OK_IN_FUKKATSU_SEED
+OK_COLLECTED_PEOPLE
+NG_BOX_NONE
+NG_PARENTAL_CONTROL

@@ -24,18 +24,18 @@ local function menuOption(tid)
   --add menu items
   menu:AddItem("Exit", 0, nil)
   if tid ~= 1 then 
-    menu:AddItem("Switch[LE]to[LE]Fly[LE]Cam", 1, nil)
+    menu:AddItem("Switch to Fly Cam", 1, nil)
   end
   if tid ~= 2 then 
-    menu:AddItem("Switch[LE]to[LE]Spot[LE]Orbit", 2, nil)
+    menu:AddItem("Switch to Spot Orbit", 2, nil)
   end
   if tid ~= 3 and not bIsDungeon then 
-    menu:AddItem("Switch[LE]to[LE]Char[LE]Orbit", 3, nil)
+    menu:AddItem("Switch to Char Orbit", 3, nil)
   end
   if tid ~= 4 then 
-    menu:AddItem("Switch[LE]to[LE]Cam[LE]Target", 4, nil)
+    menu:AddItem("Switch to Cam Target", 4, nil)
   end
-  menu:AddItem("Get[LE]Height", 5, nil)
+  menu:AddItem("Get Height", 5, nil)
 
   --set menu functions
   function menu:openedAction()
@@ -324,14 +324,17 @@ local function tgtEye()
   
   while true do     --wait for button presses
     TASK:Sleep(TimeSec(0.01))
-    if PAD:Data("START") then   --open menu
-      break
-    elseif PAD:Data("X") then
+    if PAD:Data("X") then
       if PAD:Data("R") then
         CH("PARTNER"):MoveTo(Vector2(camtgt.x, camtgt.z),Speed(350))
       else
         CH("HERO"):MoveTo(Vector2(camtgt.x, camtgt.z),Speed(350))
       end
+    end
+    
+    if PAD:Data("START") then   --open menu
+      break
+    --else
     elseif PAD:Data("Y") then
       CAMERA:MoveEye(Vector(0, 5, 5), Speed(5))
       CAMERA:MoveTgt(Vector(0, 0, 0), Speed(5))

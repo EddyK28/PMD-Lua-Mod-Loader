@@ -1,12 +1,12 @@
   local setlvl = 0
   repeat
     WINDOW:CloseMessage()
-    WINDOW:SysMsg("Select[LE]Pokemon:")
+    WINDOW:SysMsg("Select쐃Pokemon:")
     WINDOW:SelectStart()                                            --create selection menu
     WINDOW:SelectChain("Exit", 0)                                   --add entry (text, id)
     WINDOW:SelectChain("Hero", 1)
     WINDOW:SelectChain("Partner", 2)
-    WINDOW:SelectChain("Force[LE]Level", 3)
+    WINDOW:SelectChain("Force쐃Level", 3)
     WINDOW:DefaultCursor(0)                                         --set default entry
     local id = WINDOW:SelectEnd(MENU_SELECT_MODE.DISABLE_CANCEL)    --wait for and get window selection, store as "id"
  
