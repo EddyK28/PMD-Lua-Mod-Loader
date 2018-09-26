@@ -72,6 +72,7 @@ end
 --Clear global variables
 local function clearGlob()
   modDir = nil
+  curModDir = nil
   bIsGates = nil
   bIsDungeon = nil
 end
@@ -128,6 +129,7 @@ end
 modDir = "script/mods/"
 bIsGates = (GROUND.GetWorldContinentName == nil)
 bIsDungeon = SYSTEM:IsDungeon()
+curModDir = nil
 
 
 --load mod list from main config file
@@ -207,12 +209,14 @@ else
     CommonSys:CloseBasicMenu()
     
     --load mod
+    curModDir = modDir .. modData[selectID].ID
     if bIsDungeon then  --calling loadfile() from a menu function while in a dungeon crashes the game, so load the mod in a task.
       TASK:Regist(loadMod,{modData[selectID]})
       TASK:WaitTask()
     else
       loadMod(modData[selectID])
     end
+    curModDir = nil
     
     --reshow menu
     self:SetVisible(true)

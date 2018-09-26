@@ -333,7 +333,7 @@ Unsorted:
   
   [M:ORB]         --blue book/ticket with exclamation
   
-  [M:BOX]         --idfk
+  [M:BOX]         --idfk (Supposed to be deposit box?)
   
   [M:I1602]       --pink square dungeon tile
   [M:I1603]       --green circle dungeon tile 

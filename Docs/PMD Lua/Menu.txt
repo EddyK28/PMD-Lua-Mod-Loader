@@ -22,7 +22,7 @@ LOWER_SCREEN
   SetEnableIndex
   SetEnableType
   ChangeRestPointMode    
-  
+
 LowerScreenType
   TYPE_BASE
   TYPE_FLOOR_MAP
@@ -32,6 +32,27 @@ LowerScreenType
   TYPE_GUIDE_MAP
   TYPE_ITEM_WINDOW
   TYPE_MAX
+
+
+TOP
+  SetUpperMenuVisible
+  OpenUpperHomeButtonMenu
+  CloseUpperHomeButtonMenu
+  SetUpperHomeButtonMenuVisible
+  EndBgm
+  OpenUpperMenu
+  CloseUpperMenu
+  ChangeUpperMenuAlpha
+  UpdateUpperMenu
+  SetUpperMenuNormalFaceType
+  SetUpperMenuSaveDeleteFaceType
+  IsLastRevival
+  GetNokoriRevival
+  ExecuteDLCDownloadMessage
+  ExecuteItsunomaniMessage
+  IsInitializeBossManager
+  IsEnableDlcContents
+  SetDisableDlcContents
 
 
 MENU
@@ -184,8 +205,280 @@ PageMenu
   SortItem
   InterruptUpdate
   SetMaxSelectingNum
-  
-  
+
+
+BoardMenuWindow
+
+
+ArrowBoardMenuWindow
+  PushLeftArrow
+  PushRightArrow
+  ShowLeftArrow
+  ShowRightArrow
+  SetLeftArrowPos
+  SetRightArrowPos
+
+
+ArTopMenu
+  ModeFirst
+  ModeDataNon
+  ModeNormal
+
+
+AskMenu
+  Setup
+  SetPositionAndWidth
+  SetFontType
+  SetTextOffset
+  SetText
+  SetLayoutRect
+  SetDownCursorPosition
+  ShowDownCursor
+  Resize
+
+
+ButtonMenu
+  PC
+  IsExistCursorItemIndex
+  AddAdhesionItem
+  AddFixedPatternItem
+  AddFacePatternItem
+  AddDummy
+  IsDummy
+  AddButtonMenuWindowItem
+  SetItemLink4
+  SetItemLink8
+  SetBlinkButton
+  GetIconCursor
+  SetVisibleIconCursor
+  SetVisibleNormalCursor
+  ButtonMenuInputMode
+
+
+ButtonMenuWindow
+  SetRectangle
+  LoadSpriteImage
+  ClearSpriteImage
+  SetSpriteInfo
+  SetSpriteBlendMul
+
+  ButtonMenuWindowType
+    TYPE_NORMAL
+    TYPE_ADHESION
+    TYPE_SPRITE
+
+  SpriteSlotIndex
+    SLOT_INDEX_0
+    SLOT_INDEX_1
+    SLOT_INDEX_2
+    SLOT_INDEX_3
+
+
+DungeonMenuWaza
+  UpdatePokemon
+
+
+EcMenuWindow
+  SetPositionY
+  SetSizeH
+  SetTextOffsetDesc
+  SetTextOffsetDif
+  SetTextOffsetRelease
+  SetTextOffsetBlock
+  SetTextOffsetPrice
+  SetTextDesc
+  SetTextDif
+  SetTextRelease
+  SetTextBlock
+  SetTextPrice
+  SetTextAmount
+  SetMsgLineFeedHeight
+  SetVisibleNew
+  SetVisibleReceived
+  SetVisibleDoneShopping
+  SetIndex
+  UnselectItem
+  SetVisibleText
+  IsVisibleText
+  SetVisibleItemIcon
+  IsVisibleItemIcon
+
+
+EcSelectMenu
+  SetNumOfItem
+  GetSelectItemData
+  AddItemData
+  GetCursorIndex
+  SetLeftArrow
+  SetRightArrow
+  SetArrowVisible
+  SetChangeFoucs
+  SetChangeFoucs_Up
+  SetChangeFoucs_Down
+  SetChangeFoucs_Touch
+  SetUpdateCallFlag
+  SetIsRequireFocusFlag
+  MenuLuaWrapper_ExplainMenuWindow
+  ExplainMenuWindow
+  GetCaption
+  GetCaptionText
+  SetDrawExplainIndex
+
+
+FaceMenuWindow
+  SetPokemonIndex
+  SetFemale
+  SetFaceType
+  SetFacePos
+
+
+InfomationMenuWindow
+  SetDrawPriority
+
+
+InfomationScrollWindow
+  SetClipRegion
+  CountReset
+  CountClear
+  SetSpeed
+  SetInterval
+  SetWaitCount
+  SetScrollStop
+
+
+LotteryPremiumsMenu
+  SetLotteryType
+  Update
+
+
+MenuMela
+  SetFont
+  ClearMessage
+  SetMessageStr    
+  SetMessageId
+
+
+NumericMenuWindow
+  SetTagLine
+  SetTagLineVisible
+  SetTagTextOffset
+  SetTagText
+  SetPlace
+  SetDigit
+  GetSettingData
+  SetStartNum
+  SetMaxNum
+  SetMinNum
+  SetActiveFlag
+
+  NUM_MENU_TYPE
+    TYPE_DIGIT_ON
+    TYPE_DIGIT_OFF
+
+
+NumInputMenu
+  SetNumber
+
+
+PageGroupMenu
+  AddPageGroup
+  SetCurrentPageGroup
+  SetEquipFaceIconVisible
+  ChangeSelectEquip
+  GetCurrentPageGroupNum
+  GetPageGroupCount
+  SetWindowSize
+  ListUpdate
+
+
+PageTimerMenu
+  ResetTimer
+  ChangeOff
+  SetTimerLimit
+
+
+DUNGEON_MENU
+  IsSelectItem
+  SetSelectMenuParam
+  AddSelectMenuTargetItem
+  AddSelectMenuTargetSeal
+  SetOverwriteAddSelectMenu
+  GetBagChestCount
+  GetWazaText
+  GetWazaTextPPVisibleFalse
+  GetPlayerName
+  GetMyName
+  GetGrayedItemsForItemSelectMenu
+  GetDungeonIndex
+  WazaShiftUp
+  WazaShiftDown
+  IsEnableWaza
+  SetEnableWaza
+  IsDebug
+  SetDebugTurnFlg
+  SetDebugIndex
+  SetDebugBGChange
+  IsFootTrapExist
+  IsFootStairsExist
+  IsFootQuestTargetExist
+  IsFootTentExist
+  IsFootChestExist
+  IsPlaceTentCoord
+  IsPlaceTentFloor
+  GetFootItem
+  GetBagChest
+  IsBossFloor
+  IsEncountCamera
+  IsFuupaLegendSummoned
+  PrintDungeonLog
+  CloseDungeonLog
+  LogSetItemName
+  LogSetWazaName
+  LogSetAbilityName
+  LogSetStatusName     	
+  LogSetDungeonStatusName
+  HasBadStatus
+  IsHiddenStatus
+  GetBadStatusMax
+  GetPokemonSearchString
+  GetPokemonSearchLineNum
+  SetupVWaveString
+  GetDungeonStatusIndexMax
+  IsJoiningDungeon
+  HasDungeonStatus
+  IsUseItem
+  IsUseWaza
+  CanEatItemFood
+  PlayWazamachineEffect
+  GetWazaSelectMemberId
+  GetWazaSelectNewName
+  GetNewWazaIndex
+  GetNewWazaMaxPP
+  GetNewMemberName
+  GetNewMemberLevel
+  SetupWazaStatusWindows
+  ChangeLeader
+  ChangeLeaderNextPokemon
+  CanSelectChangeLeader
+  CanChangeLeader
+  CanChangeLeaderNextPokemon
+  SetCameraTarget
+  SetStatusTarget
+  IsNotRescueDungeon
+  IsCanRescue
+  IsRescueDorobou
+  IsSaveItemDungeon
+  IsValidSealEquipMenu
+  BeginSealEquipMenu
+  SetSealEquipMenuSelectItem
+  ClearSealEquipMenuSelectItem
+  EndSealEquipMenu
+  GetItemSealEquipMenu
+  IsVisibleLowerMenuNavi
+  SetVisibleLowerMenuNavi
+  GetPartyPlayerPos
+
+
 WINDOW
   DrawFace(int posX, int posY, SymAct faceActor, FACE_TYPE faceType)
   DrawFaceF
@@ -243,3 +536,93 @@ WINDOW
   NoticeWindowB
   DPRINTF
   TestLuaFuncCall
+
+DungeonMenuSelectItems
+  SELECT_MENU_NON
+  SELECT_MENU_WAZA_USE
+  SELECT_MENU_ITEM_EQUIP
+  SELECT_MENU_ITEM_PUT
+  SELECT_MENU_ITEM_SET
+  SELECT_MENU_ITEM_UNSET
+  SELECT_MENU_ITEM_RETURN
+  SELECT_MENU_ITEM_EQUIP_EXCHANGE
+  SELECT_MENU_ITEM_THROW
+  SELECT_MENU_ITEM_SHOT
+  SELECT_MENU_ITEM_STONE_THROW
+  SELECT_MENU_ITEM_GIFT
+  SELECT_MENU_ITEM_EAT
+  SELECT_MENU_ITEM_DRINK
+  SELECT_MENU_ITEM_OTHER_USE
+  SELECT_MENU_ITEM_ORB_USE
+  SELECT_MENU_ITEM_STUCK
+  SELECT_MENU_ITEM_STUCK_FROM_EQUIP
+  SELECT_MENU_ITEM_REMOVE_FROM_EQUIP
+  SELECT_MENU_ITEM_SWING     
+  SELECT_MENU_ITEM_TENT
+  SELECT_MENU_ITEM_SUMMON
+  SELECT_MENU_ITEM_SUMMON_RET
+  SELECT_MENU_FOOT_GET
+  SELECT_MENU_FOOT_EXCHANGE
+  SELECT_MENU_FOOT_THROW
+  SELECT_MENU_FOOT_SHOT
+  SELECT_MENU_FOOT_STONE_THROW
+  SELECT_MENU_FOOT_GIFT
+  SELECT_MENU_FOOT_EAT
+  SELECT_MENU_FOOT_DRINK
+  SELECT_MENU_FOOT_OTHER_USE
+  SELECT_MENU_FOOT_ORB_USE
+  SELECT_MENU_FOOT_SWING
+  SELECT_MENU_FOOT_TENT
+  SELECT_MENU_FOOT_SUMMON
+  SELECT_MENU_FOOT_SUMMON_RET
+  SELECT_MENU_FOOT_STEP
+  SELECT_MENU_FOOT_MOVE
+  SELECT_MENU_FOOT_QUEST
+  SELECT_MENU_FOOT_SAVE
+  SELECT_MENU_FOOT_STUCK
+  SELECT_MENU_FOOT_STUCK_FROM_EQUIP
+  SELECT_MENU_FOOT_REMOVE_FROM_EQUIP
+  SELECT_MENU_PARTY_OPE_BACK
+  SELECT_MENU_LEADER_CHANGE
+  SELECT_MENU_REST_REST
+  SELECT_MENU_REST_GIVEUP
+  SELECT_MENU_LOOK_AROUND
+  SELECT_MENU_PARADISE
+  SELECT_MENU_DO_RESCUE
+  SELECE_DEBUG_PARAM_LV_UP
+  SELECT_DEBUG_CTRL_ALL_CLEAR
+  SELECT_DEBUG_CTRL_CREATE
+  SELECT_DEBUG_MAP_FLOOR
+  SELECT_DEBUG_MAP_BG_CHANGE
+  SELECT_DEBUG_MAP_SEED
+  SELECT_DEBUG_MYSTERY_REENTRY
+  SELECT_DEBUG_WATARIARUKI_NEXT_FLOOR
+  SELECT_DEBUG_MAP_THROUGH
+  SELECT_DEBUG_OTHERS_SUICIDE
+  SELECT_DEBUG_OTHERS_ESCAPE
+  SELECT_DEBUG_OTHERS_CLEAR
+  SELECT_DEBUG_WAZA_VIEWER_MAP_CHANGE
+  SELECT_DEBUG_WAZA_VIEWER_EXIT
+
+DungeonMenuMenuCursor
+  MENU_CURSOR_WAZA_POKE
+  MENU_CURSOR_WAZA_WAZA
+  MENU_CURSOR_ITEM_ITEM
+  MENU_CURSOR_ITEM_POKE
+  MENU_CURSOR_PARTY_MAIN
+  MENU_CURSOR_PARTY_TSUYOSA
+  MENU_CURSOR_PARTY_TOKUTYO
+  MENU_CURSOR_PARTY_JOTAI
+  MENU_CURSOR_PARTY_TEAM_SKILL
+  MENU_CURSOR_PARTY_ORDER
+  MENU_CURSOR_OTHER_MAIN
+  MENU_CURSOR_FOOT
+  MENU_CURSOR_REST
+
+WazaSelectMenuAskReturnValue
+  ANSWER_YES
+  ANSWER_NO
+  ANSWER_CANCEL
+
+
+
