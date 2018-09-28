@@ -25,7 +25,10 @@ Take control over the camera and move it anywhere you want. Multiple camera mode
     
 #### PokeMorph (RomFS/script/mods/PKIDset)
    Change your hero & partner Pokemon into anything, anything at all.  Warning: this should not be used for regular gameplay (it messes up your stats).  
-
+    
+#### Nicknamer (RomFS/script/mods/Nicknamer)
+Lets you give nicknames to the Pokemon you've recruited.  
+   
 #### Example Mod (RomFS/script/mods/Example)
 It's an example for how to make a mod for this mod loader.  What else can I say.   
 &nbsp;  
