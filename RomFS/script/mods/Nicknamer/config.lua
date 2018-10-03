@@ -1,5 +1,6 @@
 return {
   --name="Keypad",
   description="Nickname your teammates!",
-  game="super"
+  game="super",
+  allowDungeon="no"
 }

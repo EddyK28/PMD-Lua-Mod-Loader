@@ -23,10 +23,10 @@ Hold the 'L' or 'X' button while opening the "Others" menu to open the mod loade
 #### Free-Cam (RomFS/script/mods/Free-Cam)
 Take control over the camera and move it anywhere you want. Multiple camera modes. Works in both towns and dungeons.
     
-#### PokeMorph (RomFS/script/mods/PKIDset)
+#### PokeMorph (RomFS/script/mods/PKIDset) (PSMD only)
    Change your hero & partner Pokemon into anything, anything at all.  Warning: this should not be used for regular gameplay (it messes up your stats).  
     
-#### Nicknamer (RomFS/script/mods/Nicknamer)
+#### Nicknamer (RomFS/script/mods/Nicknamer) (PSMD only)
 Lets you give nicknames to the Pokemon you've recruited.  
    
 #### Example Mod (RomFS/script/mods/Example)

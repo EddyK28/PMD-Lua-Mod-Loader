@@ -1,0 +1,126 @@
+CAMERA
+  SetPreset
+  SetEye(SymCam camera)     --sets the camera position from the given camera data
+  SetEye(Vector position)   --snap the camera to the given vector coords
+  SetEyeR(Vector offset)    --snap the camera relative to its current position
+  SetEyeR(Degree, Degree )  --snap rotate the camera around the target from current position
+  GetEye()                  --returns a Vector representing the camera position
+  SetTgt(SymCam camera)     --sets the camera target from the given camera data
+  SetTgt(Vector position)   --snap the camera target to the given vector coords
+  SetTgtR(Vector offset)    --snap the camera target relative to its current position
+  GetTgt()                  --returns a Vector representing the target position
+  Move
+  MoveEye
+  MoveEyeR  --move the camera relative to its current position
+  MoveTgt
+  MoveTgtR  --move the camera target relative to its current position
+  MoveFollow
+  MoveFollowR
+  MoveFollow2
+  MoveFollow2R
+  MoveFollowZoom
+  MoveFollowZoomR
+  Zoom
+  ZoomReset
+  MoveToHero(Speed speed)
+  MoveToPlayer
+  SetShake
+  SetShakeDungeon
+  SetFovy(Degree fov)       --sets the camera FOV (default is 20)
+  SetFovy(SymCam camera)    --sets the camera FOV from the given camera data
+  SetNearFar(float, float)
+  ResetDefaultNearFar()
+  SetDefaultGroundFovy()
+  SetDefaultDungeonFovy()
+  SetRotateZ(SymCam camera)
+  SetRotateZ(Degree angle)
+  SetSisaAzimuthDifferenceVolume
+  ResetSisaAzimuthDifferenceVolume
+  SetSisaRateVolume
+  ResetSisaRateVolume
+  LockTarget(CH target)
+  UnlockTarget()
+  SetFreeMoveFixHeight
+  ResetFreeMoveFixHeight
+  SetTgtAndFreeMoveEye
+  SetFreeMovePlayerFollowMode()
+  ResetPlayerFreeMoveCameraOffset
+  WaitMove()
+  SetFollowEffect(string, int)
+  DebugControll
+
+
+CH
+  GetVisible
+  SetShadowOnlyMode
+  SetVisibleScarf(bool bVisible)
+  SetPosition
+  SetPosition_NoTaiki
+  GetPosition
+  GetPosition2d
+  GetGroundHeight
+  SetHeight
+  GetHeight
+  SetDir(RotateTarget angle)
+  GetDirPosOffs
+  SetShadow
+  ForceMaterialUpdate	
+  ChangeColor(Color color, TimeSec duration)        --change the color (multiplicative) of the character over time
+  ChangeAddColor(Color color, TimeSec duration)     --change the color (additive) of the character over time
+  SetSpotEnable
+  SetMotionBlendMode
+  SetMotion
+  SetNextMotion
+  ResetMotion
+  SetMotionRaito
+  SetMotionPause
+  SetFacialMotion
+  SetEyeMotion
+  SetMouthMotion
+  ResetFacialMotion
+  ResetEyeMotion
+  ResetMouthMotion
+  SetNeckRot(RotateTarget pitch, RotateTarget yaw, RotateTarget roll, TimeSec time)
+  ResetNeckRot(TimeSec time)
+  SetTaiki
+  SetActivityTaiki
+  Remove
+  WalkTo
+  RunTo
+  MoveTo
+  MoveHeightTo
+  JumpMoveTo
+  SetScale(Scale scale)                         --set the scale of the character
+  ChangeScale(Scale scale, TimeSec duration)    --change the scale of the character over time
+  EnableCalcGround
+  DisableCalcGround
+  IsCalcGround
+  HasQuest
+  FinishQuest
+  UpdateQuestFriendStage
+  IsQuestExecution
+  IsQuestComplete
+  GetQuestTalkMessage
+  EnableQuestExecution
+  EnableTargetQuestComplete
+  PlayTalkScene
+  IsTargetQuest
+  DirTo(CH target, Speed speed, ROT_TYPE type)
+  DirLockToChara
+  DirLockOff
+  IsMoveHeight
+  IsJumpMove
+  IsRotate
+  IsPlayMotion
+  IsNextMotionExist
+  IsNeckRot
+  WaitMoveHeight
+  WaitJumpMove
+  WaitRotate
+  WaitPlayMotion
+  WaitNextMotionExist
+  WaitNeckRot
+  SetManpu(string manpuName)
+  WaitManpu()   --pause script execution until current manpu effect finishes
+  ResetManpu()  --remove current manpu
+  ResetShake
