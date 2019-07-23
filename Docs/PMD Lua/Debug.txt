@@ -16,14 +16,14 @@ GROUND_DEBUG
   GotoTopMenu
   GotoDLC
   ShopTest
-  BagItemAdd
+  BagItemAdd(int itemID, int count) --add the given quantity of the specified item ID to the bag
   BagItemFull
   BagChestFull
   BagSkillChestFull
   ItemWarehouseItemFull
   ItemWarehouseItemAdd
   ItemWarehouseItemSet
-  BagItemClear
+  BagItemClear()            --removes all items from the bag
   ItemWarehouseItemClear
   SetParadisePoint
   GetNeedParadisePoint

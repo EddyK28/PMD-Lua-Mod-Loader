@@ -111,6 +111,7 @@ UsedMenuKind
   USED_MENU_KIND_DUNGEON_8
 
 PokemonType
+  NONE
   GRASS
   FIRE
   WATER
@@ -127,6 +128,7 @@ PokemonType
   DRAGON
   DARK
   STEEL
+  NASHI  (No Type)
 
 
 ArQuestFloorType

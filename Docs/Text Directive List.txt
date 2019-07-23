@@ -1,10 +1,11 @@
-A list of Text Directives for Super Mystery Dungeon.  Most are available in Gates to Infinity as well.  Equivalent UTF-16 values shown in parentheses.
+A list of Text Directives for Super Mystery Dungeon.  Most are available in Gates to Infinity as well.  Equivalent UTF-16 values shown in parentheses (might not be the same in Gates even if the text is).
 
 Formatting:
   [CN] (C200)               --center align following text
   [RT] (C300)               --right align following text
 
   [CS:%d]                   --set font color (0-9)
+  [CR]                      --Color reset?
 
   [HO:%d]                   --set Horizontal offset from textbox origin
   [VO:%d]                   --set Vertical Offset from textbox origin
@@ -20,7 +21,7 @@ Formatting:
   [S:%d] (C4%x)             --adjustable width space
 
   [FT:%d] (C8%x)            --unknown font properties
-
+  [FR]                      --font reset?
 
 Text Replacement:
   [player]          --Player name (usually same as hero)
@@ -128,7 +129,7 @@ Icons:
     [M:I0405] (A004)        --Cheri berry
     [M:I0406] (A005)        --Chesto Berry
 
-    [M:I0801] (A006)       --Sitrus Berry
+    [M:I0801] (A006)        --Sitrus Berry
     [M:I0802] (A008)        --Max Elixir
     [M:I0803] (A009)        --Yellow Potion
     [M:I0804] (A00A)        --Red Potion
@@ -146,14 +147,14 @@ Icons:
     [M:ICOO1] (A049)        --four leaf cookie
     [M:ICHO1] (A039)        --chocolate bar (dirt brick?)
     
-    [M:I1301] (A01C)       --disk (TM)
-    [M:I1301_R] (A11E)     --disk with rainbow outline
+    [M:I1301] (A01C)        --disk (TM)
+    [M:I1301_R] (A11E)      --disk with rainbow outline
     
-    [M:I1302] (A01D)       --gray disk
-    [M:I1302_R] (A11F)     --gray disk with rainbow outline
+    [M:I1302] (A01D)        --gray disk
+    [M:I1302_R] (A11F)      --gray disk with rainbow outline
     
-    [M:I1303] (A01E)       --gold disk
-    [M:I1303_R] (A120)     --gold disk with rainbow outline
+    [M:I1303] (A01E)        --gold disk
+    [M:I1303_R] (A120)      --gold disk with rainbow outline
 
 
   Looplets & Emeras:
@@ -279,15 +280,15 @@ Icons:
 
     
   Progress Bars:
-    [M:NBKG1]       --orange progress bar left
-    [M:NBKG2]       --orange progress bar center
-    [M:NBKG3]       --orange progress bar right
-    [M:NBKG4]       --orange progress bar center small
+    [M:NBKG1] (A02E)    --orange progress bar left
+    [M:NBKG2] (A02F)    --orange progress bar center
+    [M:NBKG3] (A030)    --orange progress bar right
+    [M:NBKG4] (A031)    --orange progress bar center small
     
-    [M:NBK1]        --red progress bar start
-    [M:NBK2]        --red progress bar center
-    [M:NBK3]        --red progress bar end
-    [M:NBK4]        --red progress bar center small
+    [M:NBK1]  (A0FA)C0F0    --red progress bar start
+    [M:NBK2]  (A0FB)C0F1    --red progress bar center
+    [M:NBK3]  (A0FC)C0F2    --red progress bar end
+    [M:NBK4]  (A0FD)C0F3    --red progress bar center small
   
   
   Other:

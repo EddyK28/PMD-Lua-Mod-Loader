@@ -1,18 +1,22 @@
+--====PMD 3/4 Mod Loader====--
 --MIT License
---Copyright (c) 2018 EddyK28
+--Copyright (c) 2019 EddyK28
 
+
+--Running this loader from the injector has some weird quirks, so fix those here:
+--  In Super, 'injectorRunning' is always false, but loaded mods have the right value (go figure), and the function env IS global (more go figure)
+--  so just pass 'injectorRunning' as an arg when running from the injector (defaults to false)
+--  In Gates, the function environment is destroyed (blank table), so pass in global env and setenv function as well
+
+do
+local a,b = ...                 --get first 2 varargs
+injectorRunning = a or false    --set 'injectorRunning' to arg1 if present
+if b then                       --if arg2 present, use it to set function env
+  b[2](1, b[1])
+end
+end
 
 --<==\/============(General Utility Functions)============\/==>--
-
---TODO: make in groups of two lines and only split on spaces
---split text into chunks for printing with  WINDOW:SysMsg()
-local function splitByChunk(text, chunkSize, nLines)
-  local s = {}
-  for i=1, #text, chunkSize do
-    s[#s+1] = text:sub(i,i+chunkSize - 1)
-  end
-  return s
-end
 
 --load the specified config file (by path) with error checking
 local function loadConfig(cfgDir)
@@ -36,90 +40,76 @@ local function loadConfig(cfgDir)
   return res, "Success"
 end
 
---Print an error message to the screen  --TODO: rename? can be used for more than just errors
-local function errMsg(title, text)
-  if title then
-    WINDOW:SysMsg(title:gsub(" ","쐃"))
-    if text == nil then 
-      WINDOW:CloseMessage()
-      return
-    end
-  end
-  local err = splitByChunk(text,48)
-  for i,v in ipairs(err) do
-    WINDOW:SysMsg(v:gsub(" ","쐃"))
-  end
-  WINDOW:CloseMessage()
-end
-
 --load a mod from the given mod data
-function loadMod(mod)
+local function loadMod(mod,...)
   local func, er = loadfile(modDir .. mod.ID .. "/main.lua")
   if not func then
-    errMsg("Error Loading Mod '".. mod.name .."'",er)
+    printMsg("Error Loading Mod '".. mod.name .."'",er)
 	return false
   end
 
-  local stat, err = pcall(func)
+  local stat, err = pcall(func,...)
   if not stat then
-    errMsg("Error in Mod '".. mod.name .."'",err)
+    printMsg("Error in Mod '".. mod.name .."'",err)
     return false
   end
-  
   return true
+end
+
+local function injectionLoad(mod)
+  loadMod(mod)
+  injectionLoadWait = nil
+end
+
+--return true if game matches the current game, or is empty/nil
+local function gameCheck(game)
+  return game == nil or game == "" or (game == "gates" and bIsGates) or (game == "super" and not bIsGates)
+end
+
+--return true if bIsDungeon status is correct
+local function dungeonCheck(dungeon)
+  return dungeon == nil or dungeon == "" or dungeon == "yes" or (dungeon == "only" and bIsDungeon) or (dungeon == "no" and not bIsDungeon)
+end
+
+--return true if injectorRunning status is correct
+local function injectorCheck(bInjector)
+  if bInjector == "yes" then 
+    return true 
+  end
+  
+  if bInjector == "only" then 
+    return injectorRunning
+  end 
+
+  return not injectorRunning
+end
+
+local function getFailingCheck(mod)
+  if not gameCheck(mod.game) then
+    return "Not compatible with current game"
+  end
+  if not dungeonCheck(mod.allowDungeon) then
+    if bIsDungeon then
+      return "Not usable in dungeon"
+    else
+      return "Not usable out of dungeon"
+    end
+  end 
+  if not injectorCheck(mod.allowInjector) then
+    if injectorRunning then
+      return "Not usable with Injector"
+    else
+      return "Not usable without Injector"
+    end
+  end 
+  return "Something weird happened"
 end
 
 --Clear global variables
 local function clearGlob()
   modDir = nil
   curModDir = nil
-  bIsGates = nil
   bIsDungeon = nil
-end
-
---<==\/============(Gates Compatibility Fixes)============\/==>--
---TODO: add workarounds for other Gates issues
-
-local function GatesCompat()
-  
-  --replace broken string.gsub()    --WARNING: does not have full gsub functionality
-  string.gsub = function (str, patt, new, n)
-    local strOut = ""
-    local st, en
-    local f = 1
-    
-    while true do
-      st, en = str:find (patt,f)
-      if st then
-        strOut = strOut .. str:sub(f,st-1) .. new
-        f = en+1
-      else
-        strOut = strOut .. str:sub(f,str:len())
-        break
-      end
-    end
-    
-    return strOut
-  end
-
-  --(Re)define missing or broken vector functions
-  getmetatable(Vector).__add = function(s,v)
-    return Vector(s.x+v.x,s.y+v.y,s.z+v.z)
-  end
-  getmetatable(Vector).__sub = function(s,v)
-    return Vector(s.x-v.x,s.y-v.y,s.z-v.z)
-  end
-  Vector.Normalize = function(s)
-    local sz = s:Size()
-    s.x, s.y, s.z = s.x/sz, s.y/sz, s.z/sz
-    return s
-  end
-  
-
-  --Redefine broken menu function
-  function PageMenu.GetSelectedItem(self)
-    return self:GetItem(self:GetCursorItemIndex())
-  end
 end
 
 
@@ -127,7 +117,6 @@ end
 
 --Set up some global values
 modDir = "script/mods/"
-bIsGates = (GROUND.GetWorldContinentName == nil)
 bIsDungeon = SYSTEM:IsDungeon()
 curModDir = nil
 
@@ -137,82 +126,100 @@ local cfg, err = loadConfig("config.lua")
 
 --warn and return if config loading error
 if not cfg then
-  errMsg("Error Loading Config File",err)
+  printMsg("Error Loading Config File",err)
   clearGlob()
   return
 end
 
 
 local modData = {}
+local modErrors = {}
 
 --create a page menu for mod selection
-local menu = MENU:CreatePageMenu()
-menu:SetLayoutRectAndLines(32, 38, 256, 8)
-menu:ShowPageNum(true)
+local ldMenu = MENU:CreatePageMenu()
+ldMenu:SetLayoutRectAndLines(32, 38, 256, 8)
+ldMenu:ShowPageNum(true)
 
 
 --for each mod list entry,
 for i,modID in ipairs(cfg) do
 
-  --attempt to read the mod's config file     --TODO: warn on cfg load error?
+  --attempt to read the mod's config file
   local mod, err = loadConfig(modID .. "/config.lua")
   
   if mod then
     --if mod is for current game,
-    if mod.game == nil or mod.game == "" or (mod.game == "gates" and bIsGates) or (mod.game == "super" and not bIsGates) then
+    if gameCheck(mod.game) and dungeonCheck(mod.allowDungeon) and injectorCheck(mod.allowInjector) then
       --add mod data to mod table and add menu entry
       mod.name = mod.name or modID
       modData[#modData+1] = {ID=modID, name=mod.name, desc=mod.description or ""}
-      menu:AddItem(mod.name, #modData, nil)
+      ldMenu:AddItem(mod.name, #modData, nil)
+    else
+      --otherwise add to list of non-loaded mods
+      modErrors[#modErrors+1] = (mod.name or modID) .. " not loaded: " .. getFailingCheck(mod)
     end
+  else
+    --add to list of errors if unable to load mod config
+    modErrors[#modErrors+1] = err
   end
   
 end
 
---If game is Gates, set up some compatibility fixes
-if bIsGates then
-  GatesCompat()
-end
-
 if #modData == 0 then 
   --warn and return if no mod functions were loaded
-  errMsg("Error: No Mods Detected")
+  printMsg("Error: No Valid Mods Detected")
 elseif #modData == 1 then 
   --run directly if only one mod loaded
   loadMod(modData[1])
 else
-  --set menu functions
-  function menu:openedAction()
+  --otherwise setup and show menu
+  function ldMenu:openedAction()
     MENU:SetFocus(self)
-    CommonSys:OpenBasicMenu("PMD Mod Loader","[M:B12][M:B09]Select  [M:B05]Load Mod  [M:B06]Cancel", modData[1].desc)
+    CommonSys:OpenBasicMenu("PMD Mod Loader ","[M:B12][M:B09]Select  [M:B05]Load Mod  [M:B06]Cancel  [M:B03]Menu", modData[1].desc)
     self:SetCursorItemIndex(0)
   end
-  function menu:closedAction()
+  function ldMenu:closedAction()
     if CommonSys.basicMenuStack ~= nil then
       CommonSys:CloseBasicMenu()
     end
     MENU:ClearFocus(self)
   end
-  function menu:cancelAction()
+  function ldMenu:cancelAction()
     self:Close()
   end
-  function menu:currentItemChange()
+  function ldMenu:currentItemChange()
     local selectID = self:GetSelectedItem()
     if selectID and CommonSys.basicMenuStack ~= nil then
       CommonSys:UpdateBasicMenu_LineHelp(modData[selectID].desc)
     end
   end
-  function menu:decideAction()
+  function ldMenu:decideAction()
     local selectID = self:GetSelectedItem()
     --hide menu
     self:SetVisible(false)
     CommonSys:CloseBasicMenu()
     
-    --load mod
+    --==load mod==--
     curModDir = modDir .. modData[selectID].ID
-    if bIsDungeon then  --calling loadfile() from a menu function while in a dungeon crashes the game, so load the mod in a task.
+    
+    --running things from the injector is really strange, so do some wacky hacks
+    if injectorRunning then     
+      injectionLoadWait = true
+      TASK:Regist(Group("injectionLoad"), injectionLoad,{modData[selectID]})
+      while injectionLoadWait do
+        TASK:Sleep(TimeSec(2, TIME_TYPE.FRAME), TASK_EXIT.QUICK)
+      end
+      TASK:ExitNotifyTasks(Group("injectionLoad"))
+      
+      if not TASK:IsEndTasks(Group("injectionLoad")) then
+        printMsg("Warning: Injection task still running",nil)
+      end
+    
+    --calling loadfile() from a menu function while in a dungeon crashes the game, so load the mod in a task.
+    elseif bIsDungeon then      
       TASK:Regist(loadMod,{modData[selectID]})
       TASK:WaitTask()
+      
     else
       loadMod(modData[selectID])
     end
@@ -220,13 +227,21 @@ else
     
     --reshow menu
     self:SetVisible(true)
-    CommonSys:OpenBasicMenu("PMD Mod Loader","[M:B12][M:B09]Select  [M:B05]Load Mod  [M:B06]Cancel", modData[selectID].desc)
+    CommonSys:OpenBasicMenu("PMD Mod Loader","[M:B12][M:B09]Select  [M:B05]Load Mod  [M:B06]Cancel  [M:B03]Menu", modData[selectID].desc)
     MENU:SetFocus(self)
   end
+  function ldMenu:inputXSelectAction()
+    --TODO: add options menu (just shows non-loaded mods for now)
+    for i,v in ipairs(modErrors) do
+      printMsg(nil,v)
+    end
+    WINDOW:CloseMessage()
+  end
+  
   
   --open menu and wait for completion before continuing
-  menu:Open()
-  MENU:WaitClose(menu)
+  ldMenu:Open()
+  MENU:WaitClose(ldMenu)
 end
 
 --clear global vars

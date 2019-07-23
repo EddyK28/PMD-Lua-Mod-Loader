@@ -106,6 +106,8 @@ CH
   PlayTalkScene
   IsTargetQuest
   DirTo(CH target, Speed speed, ROT_TYPE type)
+  DirTo(Vector2 target, Speed speed, ROT_TYPE type)
+  DirTo(RotateTarget target, Speed speed, ROT_TYPE type)
   DirLockToChara
   DirLockOff
   IsMoveHeight

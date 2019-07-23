@@ -1,6 +1,7 @@
 A list of Face Types (Portraits) for Super Mystery Dungeon.  See "Portrait Samples" for images.  Almost identical in Gates to Infinity.
 
 FACE_TYPE.
+  NORMAL
   HAPPY
   PAIN
   ANGRY
@@ -9,6 +10,7 @@ FACE_TYPE.
   WEEP
   SHOUT
   TEARS
+  DECIDE
   GLADNESS
   EMOTION
   SURPRISE
