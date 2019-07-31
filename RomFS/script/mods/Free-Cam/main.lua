@@ -49,6 +49,14 @@ local function orbitChar()
   infoBox:SetTextOffset(1, 1)
   infoBox:Open()
   
+  if not CHARA:IsExist(FC_orbChar) then
+    if FC_orbChar == "HERO"then
+        FC_orbChar = "PARTNER"
+      else
+        FC_orbChar = "HERO"
+      end
+  end
+  
   --move camera to target
   cam.MoveFollowZoom(CAMERA,CH(FC_orbChar), Height(FC_orbheight/10), Distance(FC_orbdist/10), Speed(10))
   --TODO: set FOV too
@@ -59,9 +67,9 @@ local function orbitChar()
       break
     
     elseif PAD:Data("Y") then   --toggle cam target
-      if FC_orbChar == "HERO" then
+      if FC_orbChar == "HERO" and CHARA:IsExist("PARTNER") then
         FC_orbChar = "PARTNER"
-      else
+      elseif CHARA:IsExist("HERO") then
         FC_orbChar = "HERO"
       end
       cam.MoveFollowZoom(CAMERA,CH(FC_orbChar), Height(FC_orbheight/10), Distance(FC_orbdist/10), Speed(10))
@@ -190,11 +198,9 @@ local function tgtEye()
   while true do     --wait for button presses
     TASK:Sleep(TimeSec(1, TIME_TYPE.FRAME))
     if PAD:Data("X") and not injectorRunning then
-      if PAD:Data("R") then
-        --CH("PARTNER"):MoveTo(Vector2(camtgt.x, camtgt.z),Speed(350))
+      if PAD:Data("R") and CHARA:IsExist("PARTNER") then
         CH("PARTNER"):SetPosition(camtgt)
-      else
-        --CH("HERO"):MoveTo(Vector2(camtgt.x, camtgt.z),Speed(350))
+      elseif CHARA:IsExist("HERO") then
         CH("HERO"):SetPosition(camtgt)
       end
     end
@@ -571,7 +577,7 @@ end
   menu:AddItem("Exit", nil, {decideAction = function(self) self:Close() end})
   menu:AddItem("[CS:5]Mode:", 0, nil)
   menu:AddItem("  Fly Cam [M:CUL]     ", {flyCam}, nil)
-  if not injectorRunning then
+  if CHARA:IsExist("HERO") or CHARA:IsExist("PARTNER") then  --and not injectorRunning
     menu:AddItem("  Char Orbit", {orbitChar}, nil)  --Char Orbit not compatible with injector
   end
   menu:AddItem("  Cam Target", {tgtEye}, nil)
