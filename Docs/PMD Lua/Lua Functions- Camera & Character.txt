@@ -1,0 +1,360 @@
+;All member functions also take 'self' as first arg, so call as obj:func(<args not including self>)
+
+;========================================
+GLOBAL
+  CHARA_OBJ CH(string)  ;<+>  (ADDR=0013C76C LEN=00000074)
+
+;========================================
+CAMERA ;(internal name: ScriptFunc_CAMERA, ADDR=00128420, Ukn: <none>)
+  void SetPreset(<luaTable>)            ;<+>  (ADDR=00186358 LEN=00000064)
+  void SetPreset(Vector, SymPresetCam)  ;<+>  (ADDR=001863BC LEN=00000154)
+  void SetPreset(SymPos, SymPresetCam)  ;<+>  (ADDR=00186554 LEN=00000164)
+  void SetPreset(SymCam, SymPresetCam)  ;<+>  (ADDR=001453F0 LEN=00000164)
+  
+  void SetEye(Vector position)  ;snap the camera to the given vector coords  (ADDR=001821A0 LEN=0000005C)
+  void SetEye(SymPos pos)       ;<+>  (ADDR=001821FC LEN=000000EC)
+  void SetEye(SymCam camera)    ;sets the camera position from the given camera data  (ADDR=001414B4 LEN=000000EC)
+
+  void SetEyeR(<vector?> offset);snap the camera relative to its current position (ADDR=00183E38 LEN=0000005C)
+  void SetEyeR(Degree, Degree)  ;snap rotate the camera around the target from current position  (ADDR=00142760 LEN=0000011C)
+  
+  Vector GetEye()  ;returns a Vector representing the camera position (ADDR=0014136C LEN=00000078)
+  
+  void SetTgt(<luaTable>)   ;<+>  (ADDR=00182314 LEN=0000005C)  ;Vector?
+  void SetTgt(CHARA_OBJ)    ;<+>  (ADDR=00182370 LEN=000000E8)
+  void SetTgt(SymPos pos)   ;<+>  (ADDR=00182484 LEN=000000EC)
+  void SetTgt(SymCam camera);sets the camera target from the given camera data  (ADDR=001415CC LEN=000000EC)
+  
+  void SetTgtR(Vector offset)  ;snap the camera target relative to its current position  (ADDR=001429BC LEN=0000005C)
+  
+  Vector GetTgt()  ;returns a Vector representing the target position (ADDR=001413F8 LEN=00000078)
+  
+  void Move(<luaTable>)  ;<+>  (ADDR=0013FF7C LEN=0000005C)
+  
+  void MoveEye(<luaTable>, <luaTable>)  ;<+>  (ADDR=00182B00 LEN=00000078)  ;Vector, Speed ??
+  void MoveEye(Vector, TimeSec)         ;<+>  (ADDR=00182B78 LEN=000001B0)  ;+ <number>, <number> ??
+  void MoveEye(SymPos, Speed)           ;<+>  (ADDR=00182D6C LEN=00000140)
+  void MoveEye(SymPos, TimeSec)         ;<+>  (ADDR=00182EEC LEN=000001C0)  ;+ <number>, <number> ??
+  void MoveEye(SymCam, Speed)           ;<+>  (ADDR=001830F4 LEN=00000140)
+  void MoveEye(SymCam, TimeSec)         ;<+>  (ADDR=00142350 LEN=000001C0)  ;+ <number>, <number> ??
+  
+  void MoveEyeR(<luaTable>, <luaTable>) ;<+>  (ADDR=00184E50 LEN=00000078)  ;Vector, Speed ??
+  void MoveEyeR(Vector, TimeSec)        ;<+>  (ADDR=001433B8 LEN=000001B0)  ;+ <number>, <number> ??
+  
+  void MoveTgt(<luaTable>, <luaTable>)      ;<+>  (ADDR=00183274 LEN=00000078)  ;Vector, Speed ??
+  void MoveTgt(Vector, TimeSec)             ;<+>  (ADDR=001832EC LEN=000001B0)  ;+ <number>, <number> ??
+  void MoveTgt(CHARA_OBJ, Height, Speed)    ;<+>  (ADDR=001834E0 LEN=00000190)
+  void MoveTgt(CHARA_OBJ, Height, TimeSec)  ;<+>  (ADDR=001836C4 LEN=00000210)  ;+ <number>, <number> ??
+  void MoveTgt(SymPos, Speed)               ;<+>  (ADDR=00183930 LEN=00000140)
+  void MoveTgt(SymPos, TimeSec)             ;<+>  (ADDR=00183AB0 LEN=000001C0)  ;+ <number>, <number> ??
+  void MoveTgt(SymCam, Speed)               ;<+>  (ADDR=00183CB8 LEN=00000140)
+  void MoveTgt(SymCam, TimeSec)             ;<+>  (ADDR=00142558 LEN=000001C0)  ;+ <number>, <number> ??
+  
+  void MoveTgtR(<luaTable>, <luaTable>)     ;<+>  (ADDR=00184EC8 LEN=00000078)  ;Vector, Speed ??
+  void MoveTgtR(Vector, TimeSec)            ;<+>  (ADDR=001435AC LEN=000001B0)  ;+ <number>, <number> ??
+  
+  void MoveFollow(<luaTable>, <luaTable>)  ;1  ;<+>  (ADDR=0018798C LEN=00000078)  ;Vector, Speed ??
+  void MoveFollow(Vector, TimeSec)  ;2  ;<+>  (ADDR=00187A04 LEN=000001B0)  ;+ <number>, <number> ??
+  ~ MoveFollow(~)  ;3  ;<+>  (ADDR=00187BF8 LEN=00000190)
+  ~ MoveFollow(~)  ;4  ;<+>  (ADDR=00187DDC LEN=00000210)
+  ~ MoveFollow(~)  ;5  ;<+>  (ADDR=00188048 LEN=00000140)
+  ~ MoveFollow(~)  ;6  ;<+>  (ADDR=001881C8 LEN=000001C0)
+  ~ MoveFollow(~)  ;7  ;<+>  (ADDR=001883D0 LEN=00000140)
+  ~ MoveFollow(~)  ;8  ;<+>  (ADDR=00147588 LEN=000001C0)
+  
+  ~ MoveFollowR(~)  ;1  ;<+>  (ADDR=0018A9F8 LEN=00000078)
+  ~ MoveFollowR(~)  ;2  ;<+>  (ADDR=001499D4 LEN=000001B0)
+  
+  ~ MoveFollow2(~)  ;1  ;<+>  (ADDR=0018A0DC LEN=000000B4)
+  ~ MoveFollow2(~)  ;2  ;<+>  (ADDR=0018A190 LEN=0000021C)
+  ~ MoveFollow2(~)  ;3  ;<+>  (ADDR=0018A3F0 LEN=000001C4)
+  ~ MoveFollow2(~)  ;4  ;<+>  (ADDR=0018A5F4 LEN=0000023C)
+  ~ MoveFollow2(~)  ;5  ;<+>  (ADDR=0018A878 LEN=00000140)
+  ~ MoveFollow2(~)  ;6  ;<+>  (ADDR=001497CC LEN=000001C0)
+  
+  ~ MoveFollow2R(~)  ;1  ;<+>  (ADDR=0018B554 LEN=000000B4)
+  ~ MoveFollow2R(~)  ;2  ;<+>  (ADDR=0014B7C0 LEN=0000021C)
+  
+  ~ MoveFollowZoom(~)  ;1  ;<+>  (ADDR=0018E398 LEN=00000098)
+  ~ MoveFollowZoom(~)  ;2  ;<+>  (ADDR=0018E430 LEN=00000200)
+  ~ MoveFollowZoom(~)  ;3  ;<+>  (ADDR=0018E688 LEN=000001E0)
+  ~ MoveFollowZoom(~)  ;4  ;<+>  (ADDR=0018E8D0 LEN=00000260)
+  ~ MoveFollowZoom(~)  ;5  ;<+>  (ADDR=0018EBA0 LEN=00000198)
+  ~ MoveFollowZoom(~)  ;6  ;<+>  (ADDR=0018ED8C LEN=00000210)
+  ~ MoveFollowZoom(~)  ;7  ;<+>  (ADDR=0018EFF8 LEN=00000198)
+  ~ MoveFollowZoom(~)  ;8  ;<+>  (ADDR=00150764 LEN=00000210)
+  
+  ~ MoveFollowZoomR(~)  ;1  ;<+>  (ADDR=0018FC04 LEN=00000098)
+  ~ MoveFollowZoomR(~)  ;2  ;<+>  (ADDR=00153240 LEN=00000200)
+  
+  ~ Zoom(~)  ;1  ;<+>  (ADDR=00181150 LEN=0000005C)
+  ~ Zoom(~)  ;2  ;<+>  (ADDR=0013FFD8 LEN=000001A0)
+  
+  ~ ZoomReset(~)  ;1  ;<+>  (ADDR=00186700 LEN=0000003C)
+  ~ ZoomReset(~)  ;2  ;<+>  (ADDR=0014559C LEN=00000150)
+  
+  ~ MoveToHero(~)  ;1  ;<+>  (ADDR=00188550 LEN=0000003C)
+  ~ MoveToHero(~)  ;2  ;<+>  (ADDR=00147790 LEN=00000150)
+  
+  ~ MoveToPlayer(~)  ;1  ;<+>  (ADDR=0018B608 LEN=0000003C)
+  ~ MoveToPlayer(~)  ;2  ;<+>  (ADDR=0014BA20 LEN=00000150)
+  
+  ~ SetShake(~)  ;<+>  (ADDR=001437A0 LEN=00000074)
+  ~ SetShakeDungeon(~)  ;<+>  (ADDR=001534F4 LEN=00000074)
+  
+  void SetFovy(Degree fov)      ;sets the camera FOV (default is 20)  (ADDR=00183E94 LEN=0000003C)
+  void SetFovy(SymCam camera)   ;sets the camera FOV from the given camera data  (ADDR=001428A4 LEN=000000EC)
+  
+  void SetNearFar(<number>, <number>)   ;<+>  (ADDR=00147910 LEN=00000060)  ;float, float?
+  void ResetDefaultNearFar()            ;<+>  (ADDR=0015DA6C LEN=0000001C)
+  
+  void SetDefaultGroundFovy()   ;<+>  (ADDR=0015FEF4 LEN=0000001C)
+  void SetDefaultDungeonFovy()  ;<+>  (ADDR=0016256C LEN=0000001C)
+  
+  ~ SetRotateZ(~)  ;1  ;<+>  (ADDR=0018858C LEN=0000003C)
+  ~ SetRotateZ(~)  ;2  ;<+>  (ADDR=00147978 LEN=000000EC)
+  
+  void SetSisaAzimuthDifferenceVolume(<luaTable>)   ;<+>  (ADDR=001713DC LEN=0000003C)
+  void ResetSisaAzimuthDifferenceVolume()           ;<+>  (ADDR=0017296C LEN=0000001C)
+  
+  void SetSisaRateVolume(<luaTable>)    ;<+>  (ADDR=00158578 LEN=0000003C)
+  void ResetSisaRateVolume()            ;<+>  (ADDR=0015DA88 LEN=0000001C)
+  
+  void LockTarget(<luaTable>)   ;<+>  (ADDR=00147520 LEN=00000068)
+  void UnlockTarget()           ;<+>  (ADDR=0014BBA0 LEN=0000001C)
+  
+  ~ SetFreeMoveFixHeight(~)  ;1  ;<+>  (ADDR=00191D40 LEN=0000003C)
+  ~ SetFreeMoveFixHeight(~)  ;2  ;<+>  (ADDR=0015FF10 LEN=000000E8)
+  
+  ~ ResetFreeMoveFixHeight(~)  ;<+>  (ADDR=00164760 LEN=0000001C)
+  
+  ~ SetTgtAndFreeMoveEye(~)  ;1  ;<+>  (ADDR=00191D7C LEN=0000005C)
+  ~ SetTgtAndFreeMoveEye(~)  ;2  ;<+>  (ADDR=00191DD8 LEN=000000E8)
+  ~ SetTgtAndFreeMoveEye(~)  ;3  ;<+>  (ADDR=00191EEC LEN=000000EC)
+  ~ SetTgtAndFreeMoveEye(~)  ;4  ;<+>  (ADDR=00160024 LEN=000000EC)
+  
+  void SetFreeMovePlayerFollowMode()    ;<+>  (ADDR=0016D3C8 LEN=0000001C)
+  void ResetPlayerFreeMoveCameraOffset();NOP  (ADDR=00171C28 LEN=0000001C)
+  
+  bool IsMove()     ;<+>  (ADDR=00141484 LEN=00000030)
+  void WaitMove()   ;<+>  (ADDR=00143814 LEN=00000024)
+  
+  void SetFollowEffect(string, <number>)  ;<+>  (ADDR=00153498 LEN=00000054)
+  
+  void DebugControll(void)  ;NOP  (ADDR=0014E23C LEN=0000001C)
+
+
+;========================================
+CHARA ;(internal name: ScriptFunc_CHARA_SYS, ADDR=0012FFA4, Ukn: <none>)
+  CHARA_OBJ Get(string) ;<+>  (ADDR=0013EAD8 LEN=00000084)
+  void RemoveAll()      ;NOP  (ADDR=00143C74 LEN=0000001C)
+  bool IsExist(string)  ;<+>  (ADDR=001416E4 LEN=00000048)
+  
+  bool IsHeroCastCandidate(string)  ;<+>  (ADDR=0015B474 LEN=00000048)
+  bool IsMainActorSymbol(string)    ;NOP? Always returns false?  (ADDR=00155CEC LEN=00000048)
+  
+  void SetMotionBlendMode(<number>) ;<+>  (ADDR=00158A80 LEN=00000044)
+  
+  void SetRandomHeroPartner()       ;<+>  (ADDR=0015DB40 LEN=0000001C)
+  
+  void DynamicLoad(string, string)  ;<+>  (ADDR=00147A90 LEN=00000054)
+  void DynamicRemove(string)        ;<+>  (ADDR=0014BBBC LEN=0000003C)
+  void DynamicLoadLandNpc()         ;NOP  (ADDR=001585B4 LEN=0000001C)
+  void DynamicRemoveLandNpc()       ;NOP  (ADDR=0015DAA4 LEN=0000001C)
+  void ReloadPartyCharactorInstance()   ;NOP  (ADDR=0016D3E4 LEN=0000001C)
+  
+  <number> GetSymbolNum()           ;<+>  (ADDR=00149BC8 LEN=00000030)
+  string GetSymbol(<number>)        ;<+>  (ADDR=00143838 LEN=0000006C)
+  
+  void SetHeroPartnerFinalEvlolution()      ;<+>  (ADDR=0016EF70 LEN=0000001C)
+  void SetHeroFinalEvlolution()             ;<+>  (ADDR=001625D4 LEN=0000001C)
+  void SetPartnerFinalEvlolution()          ;<+>  (ADDR=00168588 LEN=0000001C)
+  void ClearHeroPartnerFinalEvlolution()    ;<+>  (ADDR=00171418 LEN=0000001C)
+  void PreLoadHeroPartnerFinalEvlolution()  ;<+>  (ADDR=00172988 LEN=0000001C)
+  
+  void SetAllCharacterShadowVisible(bool)   ;<+>  (ADDR=0016D400 LEN=00000044)
+  
+  void ReloadHeroPartner()  ;<+>  (ADDR=001560AC LEN=0000001C)
+
+
+;========================================
+CHARA_OBJ ;(internal name: ScriptFunc_CHARA_OBJ, ADDR=00128F6C, Ukn: <CHARA_OBJ___UknInit>)
+;As usual, all functions also take 'self' as first arg
+  <number> GetPokemonIndex()    ;<+>  (ADDR=0015B4E8 LEN=00000038)
+  void SetVisible(bool)         ;<+>  (ADDR=0014E73C LEN=00000044)
+  bool GetVisible()             ;<+>  (ADDR=0014E274 LEN=0000002C)
+  
+  void SetShadowOnlyMode(bool)  ;<+>  (ADDR=001601CC LEN=00000044)
+  
+  void SetVisibleScarf(bool bVisible)  ;Set the visibility of the character's scarf (only works if the model has one)  (ADDR=0015B598 LEN=00000044)
+  
+  bool IsPlayer()  ;returns true if this is the player character  (ADDR=00149C24 LEN=0000002C)
+  
+  void SetPosition(float,float,float)   ;<+>  (ADDR=0018F230 LEN=0000007C)
+  void SetPosition(Vector)              ;<+>  (ADDR=0018F2B4 LEN=000000DC)
+  void SetPosition(SymPos)              ;<+>  (ADDR=00150BDC LEN=000000EC)
+  
+  void SetPosition_NoTaiki(float,float,float)   ;<+>  (ADDR=001923BC LEN=0000007C)
+  void SetPosition_NoTaiki(Vector)              ;<+>  (ADDR=00192440 LEN=000000DC)
+  void SetPosition_NoTaiki(SymPos)              ;<+>  (ADDR=0016480C LEN=000000EC)
+  
+  Vector GetPosition()      ;<+>  (ADDR=00150AC8 LEN=00000078)
+  Vector2 GetPosition2d()   ;<+>  (ADDR=00155DE0 LEN=00000078)
+  
+  float GetGroundHeight()   ;<+>  (ADDR=0015B4BC LEN=0000002C)
+  
+  void SetHeight(<luaTable>)    ;<+>  (ADDR=0014BC50 LEN=0000003C)
+  float GetHeight()             ;<+>  (ADDR=0014BBF8 LEN=0000002C)
+  
+  void SetDir(<luaTable>)   ;<+>  (ADDR=00186B58 LEN=0000006C)
+  void SetDir(CHARA_OBJ)    ;<+>  (ADDR=00186BC4 LEN=000000E8)
+  void SetDir(Vector2)      ;<+>  (ADDR=00186CC4 LEN=000000DC)
+  void SetDir(RotateTarget) ;<+>  (ADDR=00186DCC LEN=000000C0)
+  void SetDir(RotateOffs)   ;<+>  (ADDR=00145944 LEN=000000C0)
+  
+  float GetDir()    ;<+>  (ADDR=0014571C LEN=0000002C)  
+
+  PosOffs GetDirPosOffs(float)  ;<+>  (ADDR=00155D34 LEN=00000090)
+  
+  void SetShadow(bool)          ;<+>  (ADDR=0014BE40 LEN=00000044)
+  void ForceMaterialUpdate()    ;<+>  (ADDR=0016477C LEN=0000001C)
+  
+  void ChangeColor(Color color, TimeSec duration)  ;change the color (multiplicative) of the character over time  (ADDR=001509D0 LEN=00000078)
+  void ChangeAddColor(Color color, TimeSec duration)  ;change the color (additive) of the character over time  (ADDR=001585D0 LEN=00000078)
+  
+  void SetSpotEnable(bool)  ;<+>  (ADDR=00156068 LEN=00000044)
+  
+  void SetMotionBlendMode(<number>)  ;<+>  (ADDR=00162588 LEN=00000044)
+  
+  ~ SetMotion(~)  ;1  ;<+>  (ADDR=0018B644 LEN=00000070)
+  ~ SetMotion(~)  ;2  ;<+>  (ADDR=0018B6BC LEN=00000124)
+  ~ SetMotion(~)  ;3  ;<+>  (ADDR=0018B818 LEN=00000130)
+  ~ SetMotion(~)  ;4  ;<+>  (ADDR=0018B968 LEN=00000150)
+  ~ SetMotion(~)  ;5  ;<+>  (ADDR=0018BAEC LEN=00000174)
+  ~ SetMotion(~)  ;6  ;<+>  (ADDR=0014BC8C LEN=00000180)
+  
+  ~ SetNextMotion(~)  ;1  ;<+>  (ADDR=0019080C LEN=000000A0)
+  ~ SetNextMotion(~)  ;2  ;<+>  (ADDR=001908B4 LEN=00000150)
+  ~ SetNextMotion(~)  ;3  ;<+>  (ADDR=00155EB4 LEN=00000180)
+  
+  ~ ResetMotion(~)  ;1  ;<+>  (ADDR=0018F1E4 LEN=00000044)
+  ~ ResetMotion(~)  ;2  ;<+>  (ADDR=00150B54 LEN=00000070)
+  
+  ~ SetMotionRaito(~)  ;1  ;<+>  (ADDR=00190DC4 LEN=0000003C)
+  ~ SetMotionRaito(~)  ;2  ;<+>  (ADDR=00158710 LEN=000000FC)
+  
+  void SetMotionPause(bool)     ;<+>  (ADDR=001586CC LEN=00000044)
+  
+  void SetFacialMotion(<number>);<+>  (ADDR=0015B54C LEN=00000044)
+  void SetEyeMotion(<number>)   ;<+>  (ADDR=001536B0 LEN=00000044)
+  void SetMouthMotion(<number>) ;<+>  (ADDR=00158840 LEN=00000044)
+  
+  void ResetFacialMotion()  ;<+>  (ADDR=001601B0 LEN=0000001C)
+  void ResetEyeMotion()     ;<+>  (ADDR=001586B0 LEN=0000001C)
+  void ResetMouthMotion()   ;<+>  (ADDR=0015DB08 LEN=0000001C)
+  
+  void SetNeckRot(<luaTable>, <luaTable>)                   ;<+>  (ADDR=0018CB6C LEN=00000088)
+  void SetNeckRot(CHARA_OBJ, TimeSec)                       ;<+>  (ADDR=0018CBF4 LEN=00000138)
+  void SetNeckRot(Vector, TimeSec)                          ;<+>  (ADDR=0018CD58 LEN=00000130)
+  void SetNeckRot(SymPos, RotateTarget, TimeSec)            ;<+>  (ADDR=0018CEC8 LEN=00000198)
+  void SetNeckRot(CHARA_OBJ, RotateTarget, TimeSec)         ;<+>  (ADDR=0018D0BC LEN=0000019C)
+  void SetNeckRot(Vector2, RotateTarget, TimeSec)           ;<+>  (ADDR=0018D29C LEN=00000188)
+  void SetNeckRot(RotateTarget,RotateTarget,RotateTarget)   ;<+>  (ADDR=0014E524 LEN=000001D4)
+  
+  void ResetNeckRot(TimeSec time)   ;<+>  (ADDR=00153674 LEN=0000003C)
+  
+  void SetTaiki()           ;<+>  (ADDR=00149D6C LEN=0000001C)
+  void SetActivityTaiki()   ;<+>  (ADDR=0015DB24 LEN=0000001C)
+  
+  void Remove()  ;<+>  (ADDR=0014592C LEN=00000018)
+  
+  void WalkTo(<luaTable>, <luaTable>, <number>) ;<+>  (ADDR=00186EBC LEN=00000098)  ;Vector2, Speed, ???
+  void WalkTo(SymPos, Speed)                    ;<+>  (ADDR=00186F5C LEN=0000017C)
+  void WalkTo(PosOffs, Speed)                   ;<+>  (ADDR=00187124 LEN=0000016C)
+  void WalkTo(SplinePath, Speed)                ;<+>  (ADDR=00145A34 LEN=0000016C)
+  
+  void RunTo(<luaTable>, <luaTable>, <number>)  ;<+>  (ADDR=001857A4 LEN=00000098)  ;Vector2, Speed, ???
+  void RunTo(SymPos, Speed)                     ;<+>  (ADDR=00185844 LEN=0000017C)
+  void RunTo(PosOffs, Speed)                    ;<+>  (ADDR=00185A0C LEN=0000016C)
+  void RunTo(SplinePath, Speed)                 ;<+>  (ADDR=00143ABC LEN=0000016C)
+  
+  void MoveTo(<luaTable>, <luaTable>, <number>) ;<+>  (ADDR=0018673C LEN=00000098)  ;Vector2, Speed, ???
+  void MoveTo(SymPos, Speed)                    ;<+>  (ADDR=001867DC LEN=0000017C)
+  void MoveTo(PosOffs, Speed)                   ;<+>  (ADDR=001869A4 LEN=0000016C)
+  void MoveTo(SplinePath, Speed)                ;<+>  (ADDR=00145774 LEN=0000016C)
+  
+  ~ MoveHeightTo(~)  ;<+>  (ADDR=00153618 LEN=0000005C)
+  
+  ~ JumpMoveTo(~)  ;1  ;<+>  (ADDR=0018C204 LEN=000000B8)
+  ~ JumpMoveTo(~)  ;2  ;<+>  (ADDR=0018C2C4 LEN=000001D4)
+  ~ JumpMoveTo(~)  ;3  ;<+>  (ADDR=0018C4F8 LEN=000001C4)
+  ~ JumpMoveTo(~)  ;4  ;<+>  (ADDR=0018C718 LEN=000001C4)
+  ~ JumpMoveTo(~)  ;5  ;<+>  (ADDR=0018C938 LEN=000001D4)
+  ~ JumpMoveTo(~)  ;6  ;<+>  (ADDR=0014E2CC LEN=000001C4)
+  
+  void SetScale(Scale newScale)                         ;set the scale of the character  (ADDR=00149CB8 LEN=0000003C)
+  void ChangeScale(Scale newScale, TimeSec duration)    ;change the scale of the character over time  (ADDR=00150A48 LEN=00000064)
+  
+  void EnableCalcGround()   ;<+>  (ADDR=0015DAC0 LEN=0000001C)
+  void DisableCalcGround()  ;<+>  (ADDR=0016013C LEN=0000001C)
+  bool IsCalcGround()       ;<+>  (ADDR=00153568 LEN=0000002C)
+  
+  bool HasQuest()               ;<+>  (ADDR=00149BF8 LEN=0000002C)
+  void FinishQuest()            ;<+>  (ADDR=00150AAC LEN=0000001C)
+  bool UpdateQuestFriendStage() ;<+>  (ADDR=0016A084 LEN=0000002C)
+  bool IsQuestExecution()       ;<+>  (ADDR=0015DADC LEN=0000002C)
+  bool IsQuestComplete()        ;<+>  (ADDR=0015B520 LEN=0000002C)
+  string GetQuestTalkMessage(<number>)  ;<+>  (ADDR=00164798 LEN=0000006C)
+  <number> EnableQuestExecution()       ;<+>  (ADDR=00166ACC LEN=00000030)
+  void EnableTargetQuestComplete()      ;<+>  (ADDR=0016EF54 LEN=0000001C)
+  void PlayTalkScene()                  ;<+>  (ADDR=00155E98 LEN=0000001C)
+  bool IsTargetQuest()                  ;<+>  (ADDR=00155E6C LEN=0000002C)
+  
+
+  ~ DirTo(~)  ;1  ;<+>  (ADDR=00184F40 LEN=000000B4)
+  ~ DirTo(~)  ;2  ;<+>  (ADDR=00185004 LEN=000001BC)
+  ~ DirTo(~)  ;3  ;<+>  (ADDR=001851FC LEN=000001B4)
+  ~ DirTo(~)  ;4  ;<+>  (ADDR=00185404 LEN=000001A4)
+  ~ DirTo(~)  ;5  ;<+>  (ADDR=001855FC LEN=0000015C)
+  ~ DirTo(~)  ;6  ;<+>  (ADDR=001438AC LEN=000001BC)
+  
+  void DirLockToChara(<luaTable>)  ;<+>  (ADDR=00158648 LEN=00000068)
+  void DirLockOff()  ;<+>  (ADDR=0014E258 LEN=0000001C)
+  
+  ~ IsMove(~)  ;<+>  (ADDR=00145748 LEN=0000002C)
+  ~ IsMoveHeight(~)  ;<+>  (ADDR=00153594 LEN=0000002C)
+  ~ IsJumpMove(~)  ;<+>  (ADDR=0014E2A0 LEN=0000002C)
+  ~ IsRotate(~)  ;<+>  (ADDR=00149C50 LEN=0000002C)
+  ~ IsPlayMotion(~)  ;<+>  (ADDR=001535C0 LEN=00000050)
+  ~ IsNextMotionExist(~)  ;<+>  (ADDR=00160158 LEN=00000050)
+  ~ IsNeckRot(~)  ;<+>  (ADDR=0014BC24 LEN=0000002C)
+  
+  void WaitMove()           ;<+>  (ADDR=0018AA70 LEN=00000024)
+  void WaitMove(<number>)   ;<+>  (ADDR=00149D88 LEN=000000B4)
+  
+  void WaitMoveHeight()         ;<+>  (ADDR=00190E00 LEN=00000024)
+  void WaitMoveHeight(<number>) ;<+>  (ADDR=0015888C LEN=000000B4)
+  
+  ~ WaitJumpMove(~)  ;1  ;<+>  (ADDR=0018FC9C LEN=00000024)
+  ~ WaitJumpMove(~)  ;2  ;<+>  (ADDR=001536FC LEN=000000B4)
+  
+  ~ WaitRotate(~)  ;1  ;<+>  (ADDR=0018D47C LEN=00000024)
+  ~ WaitRotate(~)  ;2  ;<+>  (ADDR=0014E780 LEN=000000B4)
+  
+  ~ WaitPlayMotion(~)  ;1  ;<+>  (ADDR=00190E24 LEN=00000024)
+  ~ WaitPlayMotion(~)  ;2  ;<+>  (ADDR=00190E48 LEN=000000B4)
+  ~ WaitPlayMotion(~)  ;3  ;<+>  (ADDR=00158960 LEN=00000100)
+  
+  ~ WaitNextMotionExist(~)  ;1  ;<+>  (ADDR=00192548 LEN=00000024)
+  ~ WaitNextMotionExist(~)  ;2  ;<+>  (ADDR=0019256C LEN=000000B4)
+  ~ WaitNextMotionExist(~)  ;3  ;<+>  (ADDR=00164928 LEN=00000100)
+  
+  ~ WaitNeckRot(~)  ;1  ;<+>  (ADDR=0018F3BC LEN=00000024)
+  ~ WaitNeckRot(~)  ;2  ;<+>  (ADDR=00150CF8 LEN=000000B4)
+  
+  ~ SetManpu(~)  ;<+>  (ADDR=00149C7C LEN=0000003C)
+  ~ WaitManpu(~)  ;<+>  (ADDR=0014BE84 LEN=0000001C)
+  ~ ResetManpu(~)  ;<+>  (ADDR=0014E4EC LEN=0000001C)
+  
+  void SetShake(<luaTable>, <luaTable>) ;<+>  (ADDR=00149CF4 LEN=00000078)
+  void ResetShake()                     ;<+>  (ADDR=0014E508 LEN=0000001C)

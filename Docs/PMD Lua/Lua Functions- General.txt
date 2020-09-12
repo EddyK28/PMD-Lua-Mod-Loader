@@ -1,0 +1,595 @@
+;All member functions also take 'self' as first arg, so call as obj:func(<args not including self>)
+
+;========================================
+FUNC_COMMON ;(internal name: MenuLuaFunc_COMMON, ADDR=0011D06C, Ukn: <none>)
+  ~ GetText(~)  ;<+>  (ADDR=0014C2D8 LEN=0000006C)
+  
+  ~ GetPokemonName(~)  ;<+>  (ADDR=0015E4A8 LEN=00000070)
+  ~ GetTypeName(~)  ;<+>  (ADDR=001569B0 LEN=00000070)
+  ~ GetAbilityName(~)  ;<+>  (ADDR=0015E35C LEN=00000070)
+  ~ GetStatusName(~)  ;<+>  (ADDR=0015C154 LEN=00000070)
+  ~ GetDungeonStatusName(~)  ;<+>  (ADDR=0016A844 LEN=00000070)
+  ~ GetDungeonName(~)  ;<+>  (ADDR=0015E430 LEN=00000070)
+  ~ GetDungeonShortKanjiName(~)  ;<+>  (ADDR=00170ADC LEN=00000070)
+  ~ GetOrderName(~)  ;<+>  (ADDR=001594C8 LEN=00000070)
+  
+  ~ GetDungeonFlowTypeNo(~)  ;<+>  (ADDR=0016A7E8 LEN=00000054)
+  
+  ~ SetMultiMemberChange(~)  ;<+>  (ADDR=0016AC98 LEN=0000001C)
+  ~ GetMultiMemberChange(~)  ;<+>  (ADDR=0016A918 LEN=0000002C)
+  ~ GetMultiMemberChangeNotEquip(~)  ;<+>  (ADDR=00173438 LEN=0000002C)
+  ~ ResetMultiMemberChange(~)  ;<+>  (ADDR=0016E0D8 LEN=0000001C)
+  
+  ~ GetCharaName(~)  ;<+>  (ADDR=001593A0 LEN=0000006C)
+  ~ GetPartyOrderName(~)  ;<+>  (ADDR=001654DC LEN=0000006C)
+  ~ GetEquippedItemName(~)  ;<+>  (ADDR=00168D70 LEN=0000006C)
+  ~ GetPokemonIndex(~)  ;<+>  (ADDR=00160E48 LEN=00000050)
+  
+  ~ GetWazaCount(~)  ;<+>  (ADDR=00159540 LEN=00000050)
+  ~ GetWazaIndex(~)  ;<+>  (ADDR=00159598 LEN=00000078)
+  ~ GetWazaName(~)  ;<+>  (ADDR=00156A58 LEN=0000009C)
+  ~ GetWazaNameFromWazaIndex(~)  ;1  ;<+>  (ADDR=00193358 LEN=0000006C)
+  ~ GetWazaNameFromWazaIndex(~)  ;2  ;<+>  (ADDR=00170B54 LEN=00000120)
+  ~ GetWazaNameFromWazaIndexOriginal(~)  ;<+>  (ADDR=0017460C LEN=0000009C)
+  ~ GetWazaMaxPPFromWazaIndex(~)  ;<+>  (ADDR=001715F0 LEN=00000050)
+  ~ GetWazaPP(~)  ;<+>  (ADDR=00151180 LEN=00000078)
+  ~ GetWazaMaxPP(~)  ;<+>  (ADDR=00159618 LEN=00000078)
+  ~ IsValidWaza(~)  ;<+>  (ADDR=00156B54 LEN=00000074)
+  ~ GetWazaCountFromStatus(~)  ;<+>  (ADDR=0016DF00 LEN=00000050)
+  ~ GetWazaIndexFromStatus(~)  ;<+>  (ADDR=0016DF58 LEN=00000078)
+  ~ GetWazaNameFromStatus(~)  ;<+>  (ADDR=0016C4E4 LEN=0000009C)
+  ~ GetWazaPPFromStatus(~)  ;<+>  (ADDR=00168E14 LEN=00000078)
+  ~ GetWazaMaxPPFromStatus(~)  ;<+>  (ADDR=0016DFD8 LEN=00000078)
+  ~ IsValidWazaFromStatus(~)  ;<+>  (ADDR=0016C634 LEN=00000074)
+  ~ GetWazaCountFromWarehouseId(~)  ;<+>  (ADDR=00172D24 LEN=00000054)
+  ~ GetWazaNameFromWarehouseId(~)  ;<+>  (ADDR=001723A8 LEN=000000A0)
+  ~ GetWazaNameFromWarehouseIdNonColor(~)  ;<+>  (ADDR=00174B70 LEN=000000A0)
+  ~ GetWazaPPFromWarehouseId(~)  ;<+>  (ADDR=00170C90 LEN=0000007C)
+  ~ GetWazaMaxPPFromWarehouseId(~)  ;<+>  (ADDR=00172E60 LEN=0000007C)
+  ~ GetCharaNameFromWarehouseId(~)  ;<+>  (ADDR=00172CAC LEN=00000070)
+  ~ GetWazaIndexFromWarehouseId(~)  ;<+>  (ADDR=00172D80 LEN=0000007C)
+  ~ IsValidWazaFromWarehouseId(~)  ;<+>  (ADDR=00172450 LEN=00000078)
+  
+  ~ GetItemExplainTextId(~)  ;<+>  (ADDR=0016A8BC LEN=00000054)
+  ~ GetItemExplainTextId(~)  ;1  ;<+>  (ADDR=00192ED0 LEN=00000054)
+  ~ GetItemExplainTextId(~)  ;2  ;<+>  (ADDR=0016AA24 LEN=00000104)
+  
+  ~ ChangeXlWazaIndex(~)  ;<+>  (ADDR=001653FC LEN=00000078)
+  
+  ~ GetAbilityExplainTextId(~)  ;<+>  (ADDR=0016F7F0 LEN=00000054)
+  ~ GetDungeonStatusExplainTextId(~)  ;<+>  (ADDR=001739BC LEN=00000054)
+  ~ GetOrderExplainTextId(~)  ;<+>  (ADDR=0016C240 LEN=00000054)
+  ~ GetStatusExplainTextId(~)  ;<+>  (ADDR=0016DEA4 LEN=00000054)
+  ~ GetTeamSkillExplainTextId(~)  ;<+>  (ADDR=001715A4 LEN=0000004C)
+  
+  ~ GetTypeIconTag(~)  ;<+>  (ADDR=0015E520 LEN=00000070)
+  
+  ~ GetTeamName(~)  ;<+>  (ADDR=00156960 LEN=00000050)
+  ~ SetTeamName(~)  ;1  ;<+>  (ADDR=00190AFC LEN=0000003C)
+  ~ SetTeamName(~)  ;2  ;<+>  (ADDR=00156C34 LEN=000000AC)
+  
+  ~ GetTeamSkillName(~)  ;<+>  (ADDR=00162F80 LEN=00000068)
+  ~ GetTeamSkillMax(~)  ;<+>  (ADDR=00160EA0 LEN=00000030)
+  ~ HasTeamSkill(~)  ;<+>  (ADDR=00159698 LEN=0000004C)
+  ~ IsEnableTeamSkill(~)  ;<+>  (ADDR=0016557C LEN=0000004C)
+  ~ SetEnableTeamSkill(~)  ;<+>  (ADDR=00167210 LEN=00000060)
+  ~ SetTeamSkill(~)  ;<+>  (ADDR=00159880 LEN=00000040)
+  ~ IsDisplayTeamSkill(~)  ;<+>  (ADDR=0016712C LEN=00000048)
+  ~ GetTeamSkillOneLineExplainText(~)  ;<+>  (ADDR=00173F2C LEN=00000068)
+  
+  ~ GetPartyMemberCount(~)  ;<+>  (ADDR=00168DE4 LEN=00000030)
+  ~ GetDrawPartyMemberCount(~)  ;<+>  (ADDR=0016F87C LEN=00000030)
+  ~ SearchDrawPartyNum(~)  ;<+>  (ADDR=00167174 LEN=00000050)
+  
+  ~ SetOrderIndex(~)  ;<+>  (ADDR=0015C3E0 LEN=0000006C)
+  ~ GetOrderIndex(~)  ;<+>  (ADDR=0015C0FC LEN=00000050)
+  ~ GetOrderOneLineExplainText(~)  ;<+>  (ADDR=00172330 LEN=00000070)
+  ~ GetOrderMax(~)  ;<+>  (ADDR=00156900 LEN=00000030)
+  
+  ~ ClearBagItem(~)  ;<+>  (ADDR=00159338 LEN=0000001C)
+  ~ GetBagItemCount(~)  ;<+>  (ADDR=00160D18 LEN=00000030)
+  ~ GetBagItemMaxCount(~)  ;<+>  (ADDR=001670D0 LEN=00000030)
+  ~ GetBagItem(~)  ;<+>  (ADDR=00153E88 LEN=0000007C)
+  ~ GetOverflowItemCount(~)  ;<+>  (ADDR=0016A944 LEN=00000030)
+  ~ GetOverflowItem(~)  ;<+>  (ADDR=00160DA8 LEN=0000007C)
+  ~ AddOverflowItems(~)  ;<+>  (ADDR=00162F00 LEN=00000078)
+  
+  ~ IsChest(~)  ;<+>  (ADDR=0014C3A0 LEN=0000004C)
+  ~ IsChestExist(~)  ;<+>  (ADDR=001596EC LEN=0000002C)
+  ~ IsFootItemExist(~)  ;<+>  (ADDR=00160ED0 LEN=0000002C)
+  
+  ~ SetLowerScreenVisible(~)  ;<+>  (ADDR=0016C6CC LEN=00000044)
+  ~ GetWazaIndexFromWazamachine(~)  ;<+>  (ADDR=00172E04 LEN=00000054)
+  ~ IsLearningWazaMachine(~)  ;<+>  (ADDR=0016C588 LEN=00000078)
+  ~ IsUsingEvolutionItem(~)  ;<+>  (ADDR=0016ABC4 LEN=00000078)
+  ~ IsUsingDevise(~)  ;<+>  (ADDR=0015C2D8 LEN=00000078)
+  ~ IsUsableHelper(~)  ;<+>  (ADDR=0015E5C4 LEN=00000078)
+  ~ GetItemKind(~)  ;<+>  (ADDR=001568A8 LEN=00000050)
+  ~ IsPlayer(~)  ;<+>  (ADDR=0014ED54 LEN=0000004C)
+  ~ IsPartner(~)  ;<+>  (ADDR=00151200 LEN=0000004C)
+  ~ IsAlive(~)  ;<+>  (ADDR=0014C34C LEN=0000004C)
+  ~ ExecuteWarehouseBox(~)  ;<+>  (ADDR=00168C74 LEN=0000001C)
+  ~ OpenLogHistory(~)  ;<+>  (ADDR=0015E644 LEN=0000001C)
+  ~ CloseLogHistory(~)  ;<+>  (ADDR=00160CFC LEN=0000001C)
+  ~ GetLogHistoryLink(~)  ;<+>  (ADDR=001654AC LEN=00000030)
+  ~ GetLevel(~)  ;<+>  (ADDR=0014EBF8 LEN=00000050)
+  ~ GetExperience(~)  ;<+>  (ADDR=0015C0A4 LEN=00000050)
+  ~ GetHp(~)  ;<+>  (ADDR=00147ECC LEN=00000050)
+  ~ GetMaxHp(~)  ;<+>  (ADDR=0014EC50 LEN=00000050)
+  ~ GetAttack(~)  ;<+>  (ADDR=001510D0 LEN=00000050)
+  ~ GetDefend(~)  ;<+>  (ADDR=00151128 LEN=00000050)
+  ~ GetExAttack(~)  ;<+>  (ADDR=001567F8 LEN=00000050)
+  ~ GetExDefend(~)  ;<+>  (ADDR=00156850 LEN=00000050)
+  ~ IsBousou(~)  ;<+>  (ADDR=0014ED00 LEN=0000004C)
+  ~ IsUsableItem(~)  ;<+>  (ADDR=0015979C LEN=0000004C)
+  ~ IsDungeonClear(~)  ;<+>  (ADDR=0015E598 LEN=0000002C)
+  ~ IsTheaterDungeonEscape(~)  ;<+>  (ADDR=0016E058 LEN=0000002C)
+  ~ IsTheaterDungeonError(~)  ;<+>  (ADDR=0016C608 LEN=0000002C)
+  ~ GenDungeonResultText(~)  ;<+>  (ADDR=0016A6CC LEN=00000050)
+  ~ GenRestPointResultText(~)  ;<+>  (ADDR=0016DDA0 LEN=00000050)
+  ~ GenRescueResultText(~)  ;<+>  (ADDR=00168C90 LEN=00000050)
+  ~ GenDungeonReplayResultText(~)  ;<+>  (ADDR=00172270 LEN=00000050)
+  ~ SetAlreadyDispResult(~)  ;<+>  (ADDR=0016AC44 LEN=0000001C)
+  ~ IsAlreadyDispResult(~)  ;<+>  (ADDR=00168E94 LEN=0000002C)
+  
+  ~ IsMenuQuestOpen(~)  ;<+>  (ADDR=00160F28 LEN=0000002C)
+  ~ IsPasswordQuestOpen(~)  ;<+>  (ADDR=00168EC0 LEN=0000002C)
+  ~ IsDottekotsuOpen(~)  ;<+>  (ADDR=00162FE8 LEN=0000002C)
+  ~ IsAROpen(~)  ;<+>  (ADDR=0014ECA8 LEN=0000002C)
+  ~ IsTeamOpen(~)  ;<+>  (ADDR=00153F28 LEN=0000002C)
+  ~ IsOrderOpen(~)  ;<+>  (ADDR=00156AFC LEN=0000002C)
+  ~ IsVWaveOpen(~)  ;<+>  (ADDR=00156B28 LEN=0000002C)
+  ~ IsGoldIngotOpen(~)  ;<+>  (ADDR=00160EFC LEN=0000002C)
+  
+  ~ CheckScenarioLevelOpenFlag(~)  ;<+>  (ADDR=001721EC LEN=00000084)
+  ~ CheckHaveEverExcutedHint(~)  ;<+>  (ADDR=001709C8 LEN=00000084)
+  ~ EquipmentItem(~)  ;<+>  (ADDR=0015BFFC LEN=00000074)
+  ~ ReturnEquipmentItem(~)  ;<+>  (ADDR=00169094 LEN=0000004C)
+  ~ IsPossibleGradeup(~)  ;<+>  (ADDR=001655D0 LEN=00000050)
+  ~ UpdateWarehouseStatusFromPartyPokemonStatus(~)  ;<+>  (ADDR=00175560 LEN=0000001C)
+  ~ UseWazaMachine(~)  ;<+>  (ADDR=0015E73C LEN=00000074)
+  ~ WarehouseWazaMachine(~)  ;<+>  (ADDR=0016ACB4 LEN=00000074)
+  ~ ForgetWazaForParty(~)  ;<+>  (ADDR=00166FFC LEN=00000074)
+  ~ ForgetWazaForWareHouse(~)  ;<+>  (ADDR=0016DD24 LEN=00000074)
+  ~ GetGoldIngot(~)  ;<+>  (ADDR=00159414 LEN=00000030)
+  ~ GetGoldIngotMax(~)  ;<+>  (ADDR=00160D48 LEN=00000030)
+  ~ SetGoldIngot(~)  ;<+>  (ADDR=00159838 LEN=00000040)
+  ~ SetVisibleIngot(~)  ;<+>  (ADDR=00160FC8 LEN=0000001C)
+  ~ OverflowReplaceItem(~)  ;<+>  (ADDR=00168FE4 LEN=000000A8)
+  ~ CheckIsPoke(~)  ;<+>  (ADDR=001566FC LEN=00000050)
+  ~ CheckIsIngot(~)  ;<+>  (ADDR=001592E0 LEN=00000050)
+  ~ CheckIsMaterial(~)  ;<+>  (ADDR=00160CA4 LEN=00000050)
+  
+  ~ GetOverflowMaterials(~)  ;<+>  (ADDR=0016A974 LEN=00000078)
+  ~ GetOverflowItemsToBag(~)  ;<+>  (ADDR=0016C3DC LEN=0000007C)
+  ~ GetOverflowItemsToBox(~)  ;<+>  (ADDR=0016C460 LEN=0000007C)
+  ~ GetOverflowChestToBag(~)  ;<+>  (ADDR=0016C29C LEN=00000098)
+  ~ GetOverflowChestToBox(~)  ;<+>  (ADDR=0016C33C LEN=00000098)
+  ~ GetOverflowChestToTrash(~)  ;<+>  (ADDR=0016F90C LEN=00000098)
+  ~ ClearOverflowItems(~)  ;<+>  (ADDR=00166FC4 LEN=0000001C)
+  
+  ~ GetItemPrice(~)  ;<+>  (ADDR=00159444 LEN=0000007C)
+  
+  void SetParadisePoint(<number>)   ;NOP  (ADDR=00163068 LEN=00000040)
+  
+  void SetMessageSpeed(<number>)    ;<+>  (ADDR=00160F80 LEN=00000040)
+  <number> GetMessageSpeed()        ;<+>  (ADDR=00160D78 LEN=00000030)
+  
+  void SetWindowType(<number>)  ;<+>  (ADDR=0015C498 LEN=00000040)
+  <number> GetWindowType()      ;<+>  (ADDR=0015C1CC LEN=00000030)
+  
+  void SetBGMVolume(<number>)   ;<+>  (ADDR=001597F0 LEN=00000040)
+  <number> GetBGMVolume()       ;<+>  (ADDR=00159370 LEN=00000030)
+  
+  void SetSEVolume(<number>)    ;<+>  (ADDR=00156BEC LEN=00000040)
+  <number> GetSEVolume()        ;<+>  (ADDR=00156930 LEN=00000030)
+  
+  void SetEnableGrid(bool)      ;<+>  (ADDR=0015C39C LEN=00000044)
+  bool IsEnableGrid()           ;<+>  (ADDR=00159718 LEN=0000002C)
+  
+  void SetWalkType(<number>)    ;<+>  (ADDR=00156CFC LEN=00000040)
+  <number> GetWalkType()        ;<+>  (ADDR=00156A28 LEN=00000030)
+  
+  void SetAutoOrangeSeed(<number>)      ;<+>  (ADDR=00165670 LEN=00000040)
+  <number> GetEnableAutoOrangeSeed()    ;<+>  (ADDR=0016F8AC LEN=00000030)
+
+  void SetDamageTurnAround(bool)    ;<+>  (ADDR=0016915C LEN=00000044)
+  bool IsDamageTurnAround()         ;<+>  (ADDR=00167100 LEN=0000002C)
+  
+  void SetVisibleFloorMap(bool)     ;<+>  (ADDR=00167278 LEN=00000044)
+  bool IsVisibleFloorMap()          ;<+>  (ADDR=00165628 LEN=0000002C)
+  
+  void SetWazaSkip(bool)    ;NOP  (ADDR=00156D44 LEN=00000044)
+  bool IsWazaSkip()         ;<+>  (ADDR=00153F54 LEN=0000002C)
+  
+  void SetCameraDirection(bool)     ;<+>  (ADDR=001671CC LEN=00000044)
+  bool IsCameraDirection()          ;<+>  (ADDR=00165550 LEN=0000002C)
+  
+  void SetWazaChainAuto(bool)   ;<+>  (ADDR=001630B0 LEN=00000044)
+  bool IsWazaChainAuto()        ;<+>  (ADDR=00160F54 LEN=0000002C)
+
+  void DecisionOptionSetting()  ;???  (ADDR=00192FA0 LEN=0000001C)
+  void DecisionOptionSetting()  ;???  (ADDR=0016C1BC LEN=00000070)
+  
+  void CancelOptionSetting()    ;<+>  (ADDR=00168C58 LEN=0000001C)
+  
+  void SetNoticeInfomation(<number>)    ;<+>  (ADDR=001691E8 LEN=00000040)
+  void ClearNoticeInfomation()          ;<+>  (ADDR=0016C1A0 LEN=0000001C)
+  
+  void SetPlayHintOpened(<number>, bool)    ;<+>  (ADDR=001656FC LEN=00000060)
+  bool IsPlayHintOpened(<number>)           ;<+>  (ADDR=00163014 LEN=0000004C)
+  
+  ~ GetTutorialHintCount(~)  ;<+>  (ADDR=0016A9F4 LEN=00000030)
+  ~ GetGreaterMostDisplayNo(~)  ;<+>  (ADDR=0016F8DC LEN=00000030)
+  ~ GetDisplayNoToFlagId(~)  ;<+>  (ADDR=0016A790 LEN=00000050)
+  
+  ~ IsValidTutorialHintFromFlagId(~)  ;<+>  (ADDR=00173A18 LEN=0000004C)
+  ~ IsTutorialHintExecuted(~)  ;<+>  (ADDR=0016E084 LEN=0000004C)
+  ~ IsTutorialHintForceDisplayProgress(~)  ;<+>  (ADDR=00174C18 LEN=0000004C)
+  ~ SetTutorialHintOpened(~)  ;<+>  (ADDR=0016C710 LEN=00000060)
+  ~ IsTutorialHintOpened(~)  ;<+>  (ADDR=0016AB70 LEN=0000004C)
+  ~ GetTutorialHintCaptionTextId(~)  ;<+>  (ADDR=00173464 LEN=00000050)
+  ~ GetTutorialHintContentTextId(~)  ;<+>  (ADDR=001734BC LEN=00000050)
+  ~ AllOpenTutorialHint(~)  ;<+>  (ADDR=00168C3C LEN=0000001C)
+  
+  ~ NoticeSimpleRequest(~)  ;1  ;<+>  (ADDR=00192CA4 LEN=00000040)
+  ~ NoticeSimpleRequest(~)  ;2  ;<+>  (ADDR=00192CEC LEN=000000F0)
+  ~ NoticeSimpleRequest(~)  ;3  ;<+>  (ADDR=00192DF8 LEN=000000A8)
+  ~ NoticeSimpleRequest(~)  ;4  ;<+>  (ADDR=00168EEC LEN=000000DC)
+  ~ ClearNoticeSimpleRequest(~)  ;<+>  (ADDR=00170A4C LEN=0000001C)
+  
+  void SetArFirstFlag(bool) ;<+>  (ADDR=0015E660 LEN=00000044)
+  bool GetArFirstFlag()     ;<+>  (ADDR=0015E3D4 LEN=0000002C)
+  
+  ~ AddArClearCount(~)  ;<+>  (ADDR=00160C88 LEN=0000001C)
+  ~ SetArSaveFlag(~)  NOP  ;<+>  (ADDR=0015C358 LEN=00000044)
+  ~ GetArSaveFlag(~)  ;<+>  (ADDR=0015C078 LEN=0000002C)
+  ~ GetArPokemonID(~)  ;<+>  (ADDR=0015E400 LEN=00000030)
+  ~ SetArPokemonID(~)  NOP  ;<+>  (ADDR=0015E6A4 LEN=00000044)
+  
+  ~ ClearArBuddyPokemonID(~)  NOP  ;<+>  (ADDR=0016C184 LEN=0000001C)
+  ~ SetArBuddyPokemonID(~)  NOP?  ;<+>  (ADDR=001690E8 LEN=0000006C)
+  ~ IsArPokemonID(~)  ;<+>  (ADDR=0015C1FC LEN=00000050)
+
+  ~ RemoveArRentalPokemon(~)  NOP  ;<+>  (ADDR=0016C6B0 LEN=0000001C)
+  ~ ChangeArPokemonID(~)  ;<+>  (ADDR=001653A0 LEN=00000054)
+  
+  ~ GetArRpMax(~)  ;<+>  (ADDR=00153E58 LEN=00000030)
+  ~ GetArRpName(~)  ;<+>  (ADDR=00156754 LEN=0000009C)
+  ~ GetArRpID(~)  ;<+>  (ADDR=00151050 LEN=00000078)
+  
+  ~ GetArPokemonWazaNum(~)  ;<+>  (ADDR=00168CE0 LEN=00000030)
+  ~ GetArPokemonWazaId(~)  ;<+>  (ADDR=00167078 LEN=00000050)
+  ~ GetArPokemonWazaName(~)  ;<+>  (ADDR=0016A71C LEN=0000006C)
+  ~ GetArPokemonWazaOverCheck(~)  ;<+>  (ADDR=00171578 LEN=0000002C)
+  ~ GetArPokemonEditWazaNum(~)  ;<+>  (ADDR=0016F84C LEN=00000030)
+  ~ GetArPokemonEditWazaId(~)  ;<+>  (ADDR=0016DDF0 LEN=00000050)
+  ~ GetArPokemonEditWazaName(~)  ;<+>  (ADDR=00170A68 LEN=0000006C)
+  ~ GetArPokemonEditWazaChange(~)  NOP  ;<+>  (ADDR=001722C0 LEN=00000068)
+  
+  ~ SetArRand(~)  NOP  ;<+>  (ADDR=00151254 LEN=00000044)
+  ~ GetArRand(~)  ;<+>  (ADDR=00150FF8 LEN=00000050)
+  ~ IsArRand(~)  ;<+>  (ADDR=0014ECD4 LEN=0000002C)
+  
+  ~ GetArRandBuddyNum(~)  ;<+>  (ADDR=0016547C LEN=00000030)
+  
+  ~ IsArResultSearchFlag(~)  ;<+>  (ADDR=0016AB44 LEN=0000002C)
+  ~ GetArResultQuestNum(~)  ;<+>  (ADDR=00168D10 LEN=00000030)
+  ~ GetDebugSoundSwitch(~)  ;<+>  (ADDR=00168D40 LEN=00000030)
+  ~ SetDebugSoundSwitch(~)  NOP  ;<+>  (ADDR=001691A0 LEN=00000040)
+  ~ SetDebugCursorPosition(~)  NOP  ;<+>  (ADDR=0016E0F4 LEN=0000006C)
+  ~ GetDebugCursorPosition(~)  ;<+>  (ADDR=0016DE48 LEN=00000054)
+  
+  ~ SetUsedMenuLog(~)  ;<+>  (ADDR=0015E6F0 LEN=00000044)
+  ~ IsUsedMenuLog(~)  ;<+>  (ADDR=0015C280 LEN=00000050)
+  
+  ~ IsMenuDecide(~)  ;<+>  (ADDR=00159770 LEN=0000002C)
+  ~ IsMenuCancel(~)  ;<+>  (ADDR=00159744 LEN=0000002C)
+  
+  ~ SetSdmcEnable(~)  ;<+>  (ADDR=0015C454 LEN=00000044)
+  
+  ~ IsOpenCaption(~)  ;<+>  (ADDR=0015C254 LEN=0000002C)
+  ~ OpenCaption(~)  ;<+>  (ADDR=00156BD0 LEN=0000001C)
+  ~ CloseCaption(~)  ;<+>  (ADDR=00159354 LEN=0000001C)
+  
+  ~ SetCaption(~)  ;1  ;<+>  (ADDR=0018FF88 LEN=00000040)
+  ~ SetCaption(~)  ;2  ;<+>  (ADDR=00153F80 LEN=000000A8)
+  ~ SetCaptionVisible(~)  ;<+>  (ADDR=001656B8 LEN=00000044)
+  
+  ~ IsScenarioProgressionGreater(~)  ;<+>  (ADDR=00173514 LEN=00000084)
+  ~ SetCaptionButtonNone(~)  ;<+>  (ADDR=0016AC7C LEN=0000001C)
+  ~ SetCaptionButtonHelp(~)  ;<+>  (ADDR=0016AC60 LEN=0000001C)
+  ~ SetCaptionButtonHelpNoWaitAnimation(~)  ;<+>  (ADDR=00174E0C LEN=0000001C)
+  ~ OpenTopMenuWindow(~)  ;<+>  (ADDR=00165654 LEN=0000001C)
+  ~ OpenTopMenuWindowForSaveAfter(~)  ;<+>  (ADDR=00173A6C LEN=0000001C)
+  ~ CloseTopMenuWindow(~)  ;<+>  (ADDR=00166FE0 LEN=0000001C)
+
+
+;========================================
+SYSTEM ;(internal name: ScriptFunc_SYSTEM, ADDR=0012CDE4, Ukn: <none>)
+  void NextEntry()  ;1  ;<+>  (ADDR=00187438 LEN=0000001C)
+  void NextEntry(<number>)  ;2  ;<+>  (ADDR=001465C4 LEN=000000B0)
+  
+  void NextMapEntry(<luaTable>)  ;<+>  (ADDR=0018BFC8 LEN=0000003C)
+  void NextMapEntry(<ScriptType_ScriptFlagValue>, <number?>)  ;<+>, slightly unsure of args  (ADDR=0014D3CC LEN=000000FC)
+  
+  void NextSpecialEntry(<number>)   ;<+>  (ADDR=00190D30 LEN=00000044)
+  void NextSpecialEntry(<ScriptType_SymbolSpecialEntry>)  ;<+>, slightly unsure of args  (ADDR=00157D9C LEN=000000F0)
+  
+  void GoToMapStartEntry()  ;<+>  (ADDR=0015AB8C LEN=0000001C)
+  void GoToTopMenyuEntry()  ;<+>  (ADDR=0015ABA8 LEN=0000001C)
+  
+  void ParadiseToNormalDungeon()    ;<+>  (ADDR=00167E08 LEN=0000001C)
+  void EnterWorldMenu()             ;<+>  (ADDR=0015232C LEN=0000001C)
+  void EnterPokemonAtlas()          ;<+>  (ADDR=0015AB40 LEN=0000001C)
+  
+  void EnterNewDiagramProduction(<luaTable>)  ;<+>  (ADDR=0016B69C LEN=00000068)
+  
+  bool IsUpdateDiagram()                ;<+>  (ADDR=00155354 LEN=0000002C)
+  bool IsChousadanRankUpStatus()        ;<+>  (ADDR=00167DDC LEN=0000002C)
+  bool IsUpdateCompletePokemonAtlas()   ;<+>  (ADDR=001702D8 LEN=0000002C)
+  
+  ~ CreateEffect(~)  ;<+>  (ADDR=0014D248 LEN=00000090)
+  ~ SetEffectPosition(~)  ;1  ;<+>  (ADDR=001912DC LEN=00000090)
+  ~ SetEffectPosition(~)  ;2  ;<+>  (ADDR=0019136C LEN=0000018C)
+  ~ SetEffectPosition(~)  ;3  ;<+>  (ADDR=0015AE14 LEN=00000158)
+  ~ SetEffectDir(~)  ;<+>  (ADDR=0014D5B8 LEN=00000070)
+  ~ PauseEffect(~)  ;<+>  (ADDR=0014AE08 LEN=00000058)
+  ~ ResumeEffect(~)  ;<+>  (ADDR=0014D560 LEN=00000058)
+  ~ RemoveEffect(~)  ;<+>  (ADDR=0014D508 LEN=00000058)
+  ~ WaitEffect(~)  ;<+>  (ADDR=00148A8C LEN=00000058)
+  
+  bool IsDebugMasterSwitch()    ;hard coded to return false  (ADDR=0015F74C LEN=0000002C)
+  bool IsDebugMode()            ;<+>  (ADDR=0014ADB0 LEN=0000002C)
+  void DebugPrint(string)       ;MOP  (ADDR=001489DC LEN=0000003C)
+  
+  void DebugDumpBacktrace()             ;NOP  (ADDR=0015CE28 LEN=00000024)
+  void SetDebugDispTriggerRange(bool)   ;<+>  (ADDR=00169B64 LEN=00000044)
+  void SetDebugLineTraceFunction()      ;<+>  (ADDR=00192F2C LEN=00000074)
+  void SetDebugLineTraceFunction(<?>)   ;<+>  (ADDR=0016B760 LEN=00000070)
+  
+  bool FreeMoveScriptEventStart()               ;<+>  (ADDR=00169A8C LEN=0000002C)
+  bool FreeMoveScriptEventStartIgnoreCollsion() ;<+>  (ADDR=00174A00 LEN=0000002C)
+  bool FreeMoveScriptEventStartAll()            ;<+>  (ADDR=0016EC38 LEN=0000002C)
+  bool FreeMoveScriptEventStartForMenu()        ;<+>  (ADDR=001728BC LEN=0000002C)
+  
+  void ForceStartTownNpcFreeMoveScript()    ;NOP  (ADDR=001728A0 LEN=0000001C)
+  
+  void SYS_LoadMessageDataAtDofile(string)  ;<+>  (ADDR=0016ECD8 LEN=0000003C)
+  void SYS_DoFileWrapper(string)            ;<+>  (ADDR=0015ADA8 LEN=00000040)
+  
+  void SetParadiseCenterLevel(<number>) ;<+>  (ADDR=001661C0 LEN=00000044)
+  void SetParadiseHomeLevel(<number>)   ;<+>  (ADDR=00161FC4 LEN=00000044)
+  void SetNextDungeonBanner(bool)       ;<+>  (ADDR=00161F80 LEN=00000044)
+  void SetStatusViewVisible(bool)       ;<+>  (ADDR=00162010 LEN=00000044)
+  
+  void LockEventProcessEncountMapField()    ;<+>  (ADDR=001728E8 LEN=0000001C)
+  void UnlockEventProcessEncountMapField()  ;<+>  (ADDR=00173830 LEN=0000001C)
+  
+  bool IsSavedByTentSpecial()  ;<+>  (ADDR=00161EAC LEN=0000002C)
+  
+  bool IsDebugRButton()  ;<+>  (ADDR=0015243C LEN=0000002C)
+  
+  bool IsDungeonLoadDLC()  ;<+>  (ADDR=00157D70 LEN=0000002C)
+  void SetDLCErrorDungeonLoad(bool)  ;<+>  (ADDR=0016617C LEN=00000044)
+  
+  void ClearEncountDungeonLog()  ;NOP  (ADDR=00166094 LEN=0000001C)
+  
+  void SetForceSyncStop(bool)   ;<+>  (ADDR=00157EF8 LEN=00000044)
+  void AddPartyDokkoras()       ;NOP  (ADDR=00157D28 LEN=0000001C)
+  void ChangeSazandoraParameterLevel(<number>)  ;NOP  (ADDR=0017123C LEN=00000040)
+  
+  void RemovePartyNotForceMemberToWarehouse()   ;<+>  (ADDR=00174408 LEN=0000001C)
+  void RemovePartyBuddyToWarehouse(<number>)    ;<+>  (ADDR=0016EC90 LEN=00000040)
+  
+  void UpdateNextDayParameter() ;NOP  (ADDR=0016620C LEN=0000001C)
+  void ResetNextDayCounter()    ;<+>  (ADDR=0015F828 LEN=0000001C)
+  <number> GetNextDayCounter()  ;<+>  (ADDR=0015AB5C LEN=00000030)
+  
+  void RareItemDirection(<number>)      ;<+>  (ADDR=0015AD5C LEN=00000044)
+  bool IsRareItemComplete()             ;<+>  (ADDR=0015CF64 LEN=0000002C)
+  bool IsRareItemCompleteFirstTalked()  ;<+>  (ADDR=00171284 LEN=0000002C)
+  void SetRareItemCompleteFirstTalked() ;<+>  (ADDR=00171B04 LEN=0000001C)
+  
+  void ForceUpdateVWaveForecast()       ;<+>  (ADDR=00169A70 LEN=0000001C)
+  void UpdateNextDayVWave()             ;NOP  (ADDR=0015D26C LEN=0000001C)
+  void SetVWaveType(<number>, <number>) ;NOP  (ADDR=0014D628 LEN=0000006C)
+  
+  bool Debug_CreateCecBox()     ;<+>  (ADDR=0015CE4C LEN=0000002C)
+  void Debug_DeleteCecBox()     ;<+>  (ADDR=0015CE78 LEN=0000001C)
+  bool Debug_ResetCecScanning() ;<+>  (ADDR=001660B0 LEN=0000002C)
+  bool IsCecBox()               ;<+>  (ADDR=001448B8 LEN=0000002C)
+  
+  void SetSaveStatus(<number>)  ;<+>  (ADDR=0014FD14 LEN=00000044)
+  <number> GetSaveStatus()      ;<+>  (ADDR=0014FBE0 LEN=00000030)
+  
+  void DeleteSaveFile() ;<+>  (ADDR=00152310 LEN=0000001C)
+  void DeleteBossFile() ;NOP  (ADDR=001522F4 LEN=0000001C)
+  
+  void SetNextSaveWithOutPlacement()  ;<+>  (ADDR=0016ED14 LEN=0000001C)
+  
+  bool SaveHeader() ;<+>  (ADDR=00148A60 LEN=0000002C)
+  bool SaveGame()   ;<+>  (ADDR=00144968 LEN=0000002C)
+  
+  bool ArRewardSaveGame()   ;<+>  (ADDR=00157D44 LEN=0000002C)
+  bool TopSaveGame()        ;<+>  (ADDR=0014AED0 LEN=0000002C)
+  
+  void GiveupDungeon()      ;<+>  (ADDR=0014FC10 LEN=0000001C)
+  
+  void TransitionsToTopMenu()   ;<+>  (ADDR=00162054 LEN=0000001C)
+  
+  bool SaveDungeon(bool, bool)  ;<+>  (ADDR=0014AE60 LEN=00000070)
+  bool SaveRescueDungeon(~)     ;<+>  (ADDR=0015ADE8 LEN=0000002C)
+  
+  void UpdateDungeonSeed()  ;<+>  (ADDR=0015AFF4 LEN=0000001C)
+  
+  void ReturnTopMenu()          ;NOP  (ADDR=0014FC90 LEN=0000001C)
+  void ReturnTopMenuException() ;<+>  (ADDR=00166160 LEN=0000001C)
+  void GroundEncountGiveup()    ;NOP  (ADDR=0015F704 LEN=0000001C)
+  
+  bool IsDungeon()              ;<+>  (ADDR=00146598 LEN=0000002C)
+  bool IsSimpleDungeonMode()    ;always returns false  (ADDR=0015F7FC LEN=0000002C)
+  
+  bool IsBuildFinal()  ;hard coded to return true  (ADDR=0014D32C LEN=0000002C)
+  
+  bool IsGround()               ;<+>  (ADDR=001448E4 LEN=0000002C)
+  bool IsEncountInstance()      ;<+>  (ADDR=0015AC90 LEN=0000002C)
+  bool IsEncountMapField()      ;<+>  (ADDR=0015ACBC LEN=0000002C)
+  bool IsEncountMapBattle()     ;<+>  (ADDR=0015CF0C LEN=0000002C)
+  bool IsEncountGroundMode()    ;<+>  (ADDR=0015F778 LEN=0000002C)
+  bool IsEncountBattleResume()  ;<+>  (ADDR=00163D90 LEN=0000002C)
+  bool IsEncountMapFieldContinue()  ;always returns false  (ADDR=0016B734 LEN=0000002C)
+  
+  ~ IsTrialDemo(~)  ;<+>  (ADDR=0014ADDC LEN=0000002C)
+  ~ IsEndTrialDemoStory(~)  ;<+>  (ADDR=0015F7A4 LEN=0000002C)
+  ~ SetEndTrialDemoStory(~)  ;<+>  (ADDR=00161F20 LEN=0000001C)
+  
+  ~ CanPlayDungeonDiver(~)  ;<+>  (ADDR=0015F560 LEN=0000002C)
+  ~ IsDungeonMenu(~)  ;<+>  (ADDR=0014FC48 LEN=0000002C)
+  ~ CanOpenDungeonMenu(~)  ;<+>  (ADDR=0015CDFC LEN=0000002C)
+  ~ GetItemColorSymbol(~)  ;<+>  (ADDR=0015CE94 LEN=00000070)
+  ~ GroundEncountSuspend(~)  NOP  ;<+>  (ADDR=00161E90 LEN=0000001C)
+  ~ GroundEncountResumeParameter(~)  NOP  ;<+>  (ADDR=001702BC LEN=0000001C)
+  ~ IsParadiseMode(~)  ;<+>  (ADDR=00152494 LEN=0000002C)
+  ~ IsMultiPlayMode(~)  ;<+>  (ADDR=001552D0 LEN=0000002C)
+  ~ IsPerippaaMode(~)  ;<+>  (ADDR=001524C0 LEN=0000002C)
+  ~ IsNyaasuDungeonMode(~)  ;<+>  (ADDR=0015F7D0 LEN=0000002C)
+  ~ IsTopMenuFromDungeon(~)  ;<+>  (ADDR=00161ED8 LEN=0000002C)
+  ~ CheckRescuePerippaaEnter(~)  ;<+>  (ADDR=001699EC LEN=0000001C)
+  ~ IsFriendRescureTicketNumForDungeonFloorAfter(~)  ;<+>  (ADDR=00175270 LEN=0000002C)
+  
+  ~ IsPerformedPenalty(~)  ;<+>  (ADDR=0015CF38 LEN=0000002C)
+  ~ IsResultPenalty(~)  ;<+>  (ADDR=00155328 LEN=0000002C)
+  ~ IsResultAllSeedPenalty(~)  ;<+>  (ADDR=00166134 LEN=0000002C)
+  ~ IsResultAllDeletePenalty(~)  ;<+>  (ADDR=00169B38 LEN=0000002C)
+  ~ IsResultNoPenalty(~)  ;<+>  (ADDR=0015AD14 LEN=0000002C)
+  ~ IsNowDungeonStateClear(~)  ;<+>  (ADDR=00166108 LEN=0000002C)
+  
+  ~ GetRandomValue(~)  ;1  ;<+>  (ADDR=0018F88C LEN=00000078)
+  ~ GetRandomValue(~)  ;2  ;<+>  (ADDR=00152364 LEN=000000BC)
+  
+  ~ ResetTimer(~)  ;<+>  (ADDR=00148A44 LEN=0000001C)
+  ~ ResetDebugTimer(~)  ;<+>  (ADDR=0015539C LEN=0000001C)
+  ~ SyncWaitFromTimer(~)  ;<+>  (ADDR=0015AFB4 LEN=00000040)
+  
+  void ShowDebugTimer(bool) ;NOP  (ADDR=001524EC LEN=00000044)
+  
+  ~ ExecuteTutorialHint(~)  ;1  ;<+>  (ADDR=00191ABC LEN=00000090)
+  ~ ExecuteTutorialHint(~)  ;2  ;<+>  (ADDR=0015F5E8 LEN=000000F4)
+  ~ ExecuteTutorialHintB(~)  ;1  ;<+>  (ADDR=00192088 LEN=00000090)
+  ~ ExecuteTutorialHintB(~)  ;2  ;<+>  (ADDR=00161D74 LEN=000000F4)
+  ~ ResetRescueCount(~)  ;<+>  (ADDR=00157EDC LEN=0000001C)
+  ~ IncAdventureCount(~)  ;<+>  (ADDR=0015ABC4 LEN=0000001C)
+  
+  ~ IsForceEndOpening(~)  ;<+>  (ADDR=0015ACE8 LEN=0000002C)
+  ~ CheckForceEndOpening(~)  ;<+>  (ADDR=00161D2C LEN=0000001C)
+  
+  ~ StartStaffRoll(~)  ;<+>  (ADDR=00152530 LEN=0000001C)
+  ~ SetStaffRollString(~)  ;1  ;<+>  (ADDR=00191620 LEN=000000DC)
+  ~ SetStaffRollString(~)  ;2  ;<+>  (ADDR=0015D020 LEN=00000208)
+  ~ IsEndStaffRoll(~)  ;<+>  (ADDR=00152468 LEN=0000002C)
+  
+  bool KeyBreak()  ;<+>  (ADDR=0014493C LEN=0000002C)
+  
+  ~ WaitStaffRoll(~)  ;<+>  (ADDR=0014FDA8 LEN=00000024)
+  ~ EndStaffRoll(~)  ;<+>  (ADDR=0014D2F4 LEN=0000001C)
+  
+  ~ SetDungeonEnterLog(~)  ;<+>  (ADDR=0015CFD4 LEN=00000044)
+  ~ IsDungeonEnterLog(~)  ;<+>  (ADDR=0015AC38 LEN=00000050)
+  ~ PopDungeonOpenNoticeLog(~)  ;<+>  (ADDR=00167E24 LEN=00000054)
+  ~ SetPartnerSex(~)  ;<+>  (ADDR=0014FCC8 LEN=00000044)
+  ~ IsPartnerFemale(~)  ;<+>  (ADDR=001552FC LEN=0000002C)
+  ~ SetAddContentsMode(~)  ;<+>  (ADDR=0015CF90 LEN=00000044)
+  ~ IsAddContentsMode(~)  ;<+>  (ADDR=0015ABE0 LEN=0000002C)
+  ~ IsPrevAddContentsMode(~)  ;<+>  (ADDR=00163DBC LEN=0000002C)
+  ~ IsPrevArMode(~)  ;<+>  (ADDR=0014D3A0 LEN=0000002C)
+  ~ IsDebugRescueMode(~)  ;<+>  (ADDR=0015AC0C LEN=0000002C)
+  ~ CheckGameRestMessage(~)  ;<+>  (ADDR=00161D48 LEN=0000002C)
+  ~ CheckDlcDungeon(~)  ;<+>  (ADDR=001551B4 LEN=0000004C)
+  ~ CheckDlcDungeonForLoad(~)  ;<+>  (ADDR=00166064 LEN=00000030)
+  ~ IsDlcDungeon(~)  ;<+>  (ADDR=0014D358 LEN=00000048)
+  ~ SetBossAccess(~)  NOP  ;<+>  (ADDR=0014FCAC LEN=0000001C)
+  ~ StartBossTask(~)  ;<+>  (ADDR=0014FD60 LEN=0000002C)
+  ~ IsBossFirstTaskDone(~)  ;<+>  (ADDR=0015F720 LEN=0000002C)
+  ~ WaitHomeButtonAnimation(~)  ;<+>  (ADDR=00167E78 LEN=0000001C)
+  ~ IsWakeup(~)  ;<+>  (ADDR=00144910 LEN=0000002C)
+  ~ SetForceStereoRender(~)  NOP  ;<+>  (ADDR=00161F3C LEN=00000044)
+  
+  <number> GetLanguageType()  ;<+>  (ADDR=00155274 LEN=00000030)
+  
+  bool IsUS()       ;<+>  (ADDR=001405A4 LEN=0000002C)
+  bool IsEuropean() ;<+>  (ADDR=00148A18 LEN=0000002C)
+  
+  void ExecuteDiagram()  ;NOP  (ADDR=00152348 LEN=0000001C)
+  void ExecuteProductionDiagram(<luaTable>)  ;<+>  (ADDR=00169A08 LEN=00000068)
+  
+  ~ ConvertPokemonIndex(~)  ;<+>  (ADDR=0015F58C LEN=00000054)
+  ~ GetTalkSceneTalkerSymbol(~)  ;<+>  (ADDR=00169AE8 LEN=00000050)
+  ~ GetTalkSceneTalkerPattern(~)  ;<+>  (ADDR=0016B704 LEN=00000030)
+  ~ GetTalkSceneNowMessageId(~)  ;<+>  (ADDR=00169AB8 LEN=00000030)
+  ~ SetDungeonGadgetTransparency(~)  ;<+>  (ADDR=00170304 LEN=0000005C)
+  ~ SetDungeonPuppetTransparency(~)  ;<+>  (ADDR=00170368 LEN=0000005C)
+  ~ PlayFriendRewardSceneForEpisode(~)  ;<+>  (ADDR=00172904 LEN=00000068)
+  ~ ExecutePersonalityAnalysis3dsCameraMode(~)  ;<+>  (ADDR=00174CE8 LEN=0000001C)
+  ~ SelectPlayerAndPartnerCharcter(~)  ;<+>  (ADDR=00171AC0 LEN=00000044)
+  ~ HeroNameInput(~)  ;<+>  (ADDR=0014FC2C LEN=0000001C)
+  ~ PartnerNameInput(~)  ;<+>  (ADDR=00157EC0 LEN=0000001C)
+  ~ TeamNameInput(~)  ;<+>  (ADDR=0014FD8C LEN=0000001C)
+  ~ ExecuteTutorial(~)  ;<+>  (ADDR=00155200 LEN=00000074)
+  ~ ExecuteTutorialOpenPlaceForReward(~)  ;<+>  (ADDR=00173814 LEN=0000001C)
+  ~ BeginWaterMode(~)  ;<+>  (ADDR=001522D8 LEN=0000001C)
+  ~ EndWaterMode(~)  ;<+>  (ADDR=0014D310 LEN=0000001C)
+  ~ ChangeWaterPokemonBokashi(~)  ;<+>  (ADDR=0016B638 LEN=0000005C)
+  ~ OpenLeaderChangeMenu(~)  ;<+>  (ADDR=00161F04 LEN=0000001C)
+  ~ IsEnableChangeLeaderModeAll(~)  ;<+>  (ADDR=0016EC64 LEN=0000002C)
+  ~ IsDungeonGiveup(~)  ;<+>  (ADDR=001552A4 LEN=0000002C)
+  ~ OpenTypeGuide(~)  ;<+>  (ADDR=0014FC74 LEN=0000001C)
+  ~ OpenPlayHelpGuide(~)  ;<+>  (ADDR=0015AD40 LEN=0000001C)
+  ~ WazaMachineSelect(~)  ;<+>  (ADDR=0015B010 LEN=00000030)
+  ~ LostItemMessage(~)  NOP  ;<+>  (ADDR=00155380 LEN=0000001C)
+  ~ IsDungeonRescueWaiting(~)  ;<+>  (ADDR=001660DC LEN=0000002C)
+  ~ SetProhibitStereoGram(~)  ;<+>  (ADDR=00163DE8 LEN=00000044)
+
+
+;========================================
+TOP ;(internal name: MenuLuaFunc_TOP, ADDR=00124B14, Ukn: <none>)
+  void OpenUpperMenu()      ;<+>  (ADDR=00148C9C LEN=0000001C)
+  void CloseUpperMenu()     ;<+>  (ADDR=0014AFB0 LEN=0000001C)
+  void UpdateUpperMenu()    ;<+>  (ADDR=0014D88C LEN=0000001C)
+  void SetUpperMenuVisible(bool)    ;<+>  (ADDR=00157FEC LEN=00000044)
+  
+  void OpenUpperHomeButtonMenu()    ;<+>  (ADDR=0016216C LEN=0000001C)
+  void CloseUpperHomeButtonMenu()   ;<+>  (ADDR=00163F08 LEN=0000001C)
+  void SetUpperHomeButtonMenuVisible(bool)  ;<+>  (ADDR=0016D034 LEN=00000044)
+  
+  void EndBgm()         ;<+>  (ADDR=0013FE2C LEN=0000001C)
+
+  void ChangeUpperMenuAlpha(<number>)    ;NOP  (ADDR=0015B0BC LEN=0000003C)
+  
+
+  void SetUpperMenuNormalFaceType()         ;<+>  (ADDR=00168030 LEN=0000001C)
+  void SetUpperMenuSaveDeleteFaceType(bool) ;<+>  (ADDR=0016ED78 LEN=00000044)
+  
+  bool IsLastRevival()          ;<+>  (ADDR=00148C70 LEN=0000002C)
+  <number> GetNokoriRevival()   ;<+>  (ADDR=00150030 LEN=00000030)
+  
+  void ExecuteDLCDownloadMessage()  ;<+>  (ADDR=001662B0 LEN=0000001C)
+  bool ExecuteItsunomaniMessage()   ;NOP?  Always returns false  (ADDR=00163F24 LEN=0000002C)
+  bool IsInitializeBossManager()    ;NOP?  Always returns false  (ADDR=00162140 LEN=0000002C)
+  bool IsEnableDlcContents()        ;<+>  (ADDR=00157FC0 LEN=0000002C)
+  void SetDisableDlcContents()      ;<+>  (ADDR=0015D55C LEN=0000001C)
+
+
+;========================================
+PAD ;(internal name: ScriptFunc_PAD_SYS, ADDR=0012B944, Ukn: <none>)
+  bool Edge(string buttons) ;returns true if the specified buttons are currently down  (ADDR=0013E8DC LEN=0000004C)  ;[232]
+  bool Data(string buttons) ;returns true if the specified buttons are currently down  (ADDR=0013E890 LEN=0000004C)  ;[228]
+  ;Button strings are the name of the buttons along with and (&) and or (|).  eg "A|B", "START|X&Y", etc
+  
+  bool Repeat(string)       ;<+>  (ADDR=0013F700 LEN=0000004C)  ;[236]
+  bool Moment(string)       ;<+>  (ADDR=0013F6B4 LEN=0000004C)  ;[248]
+  float StickX()            ;returns the X value of the stick (circle pad)  (ADDR=0013F74C LEN=0000002C)
+  float StickY()            ;returns the Y value of the stick (circle pad)  (ADDR=0013F778 LEN=0000002C)
+  Vector2 TouchPointEdge()  ;<+>  (ADDR=0014AB28 LEN=00000078)
+  Vector2 TouchPointData()  ;<+>  (ADDR=0014AA9C LEN=00000078)
+;------------------

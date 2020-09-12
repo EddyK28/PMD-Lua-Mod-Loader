@@ -1,0 +1,387 @@
+;All member functions also take 'self' as first arg, so call as obj:func(<args not including self>)
+
+;======================================== 
+CHARA_TASK ;(internal name: ScriptFunc_CHARA_TASK, ADDR=00129E1C, Ukn: <none>) 
+  ~ SetFreeMoveTask(~)  ;<+>  (ADDR=0015DB5C LEN=000000AC)
+  ~ StartFreeMove(~)  ;<+>  (ADDR=00158ACC LEN=00000068)
+  ~ StopFreeMove(~)  ;<+>  (ADDR=001560C8 LEN=00000068)
+  ~ WaitFreeMove(~)  ;<+>  (ADDR=00156130 LEN=00000068)
+  ~ StartFreeMoveAll(~)  ;<+>  (ADDR=00160210 LEN=00000024)
+  ~ StopFreeMoveAll(~)  ;<+>  (ADDR=0015DC08 LEN=00000024)
+  ~ WaitFreeMoveAll(~)  ;<+>  (ADDR=0015DC2C LEN=00000024)
+  ;TODO: check at LuaInitMain+16F2C 
+
+
+;======================================== 
+CUT ;(internal name: ScriptFunc_CUT, ADDR=0012A1F0, Ukn: <none>) 
+  ~ Load(~)  ;<+>  (ADDR=0013E4C8 LEN=00000068)
+  ~ LoadFromId(~)  ;<+>  (ADDR=00142A34 LEN=00000040)
+  ~ Play(~)  ;1   ;<+>  (ADDR=00180780 LEN=0000001C)
+  ~ Play(~)  ;2   ;<+>  (ADDR=0013E530 LEN=000000E8)
+  ~ PlayLoop(~)  ;<+>  (ADDR=00140C74 LEN=0000001C)
+  ~ SeekFrame(~)  ;<+>  (ADDR=0014172C LEN=00000084)
+  ~ ForceUpdateFrame(~)  ;<+>  (ADDR=0014E854 LEN=00000040)
+  ~ Wait(~)  ;1  ;<+>  (ADDR=0018079C LEN=0000001C)
+  ~ Wait(~)  ;2  ;<+>  (ADDR=001807B8 LEN=000000B0) 
+  ~ Wait(~)  ;3  ;<+>  (ADDR=0013E640 LEN=00000120)
+  ~ Wait2(~)  ;<+>  (ADDR=0013EC5C LEN=0000001C)
+  ~ IsPassedFrame(~)  ;<+>  (ADDR=00147AE4 LEN=00000090)
+  ~ Pause(~)  ;<+>  (ADDR=0013EC40 LEN=0000001C)
+  ~ IsCancel(~)  ;<+>  (ADDR=00140C48 LEN=0000002C)
+  ~ IsEnd(~)  ;<+>  (ADDR=0013EC14 LEN=0000002C)
+  ~ SetIgnoreForceEndArea(~)  ;<+>  (ADDR=0015B5DC LEN=00000044)
+  ~ IsIgnoreForceEndArea(~)  ;<+>  (ADDR=00158B34 LEN=0000002C)
+  ~ IsHomeButtonBan(~)  ;<+>  (ADDR=0014BEA0 LEN=0000002C)
+  ~ ClearHomeButtonBan(~)  ;<+>  (ADDR=001537D0 LEN=0000001C)
+  ~ AddIgnoreTargetName(~)  ;<+>  (ADDR=00156198 LEN=0000003C)
+  ~ RemoveIgnoreTargetName(~)  ;<+>  (ADDR=0015DC50 LEN=0000003C)
+  ~ ClearIgnoreTargetSymbol(~)  ;<+>  (ADDR=00160234 LEN=0000001C)
+  ~ Destroy(~)  ;<+>  (ADDR=001401BC LEN=0000001C)
+  ~ CancelLoop(~)  ;<+>  (ADDR=00142A18 LEN=0000001C)
+
+
+;======================================== 
+DEC_OBJ ;(internal name: ScriptFunc_DEC_OBJ, ADDR=0012A4D0, Ukn: <DEC_OBJ___UknInit>) 
+  ~ SetWalkSpeed(~)  ;<+>  (ADDR=0014E9E0 LEN=0000003C)
+  ~ SetRunSpeed(~)  ;<+>  (ADDR=0014BF9C LEN=0000003C)
+  ~ SetJumpHeght(~)  ;<+>  (ADDR=0014E960 LEN=0000003C)
+  ~ SetJumpSpeed(~)  ;<+>  (ADDR=0014E9A4 LEN=0000003C)
+  ~ Think_SetManpu(~)  ;<+>  (ADDR=001537EC LEN=0000003C)
+  ~ Think_ResetManpu(~)  ;<+>  (ADDR=00158BD8 LEN=0000001C)
+  ~ Think_MoveHeight(~)  ;<+>  (ADDR=00158B7C LEN=0000005C)
+  ~ Think_WaitMoveHeight(~)  ;<+>  (ADDR=001625F0 LEN=0000001C)
+  ~ Think_MoveYaw(~)  ;<+>  (ADDR=00150DCC LEN=00000060)
+  ~ Think_MoveNeckYaw(~)  ;<+>  (ADDR=0015B668 LEN=00000060)
+  ~ Think_WaitMoveNeck(~)  ;<+>  (ADDR=0015DDC0 LEN=0000001C)
+  ~ Think_ResetNeck(~)  ;<+>  (ADDR=00156308 LEN=0000001C)
+  ~ Think_SetMotion(~)  ;<+>  (ADDR=00156324 LEN=00000088)
+  ~ Think_SetNextMotion(~)  ;<+>  (ADDR=0016038C LEN=00000088)
+  ~ Think_WaitMotion(~)  ;<+>  (ADDR=00158BF4 LEN=0000001C)
+  ~ Think_ResetMotion(~)  ;<+>  (ADDR=0015B6C8 LEN=0000001C)
+  ~ Think_Wait(~)  ;<+>  (ADDR=00149E5C LEN=0000003C)
+  ~ Think_WaitR(~)  ;<+>  (ADDR=0014BFD8 LEN=00000060)
+  ~ Think_LockPlayerDirection(~)  ;<+>  (ADDR=0016BC3C LEN=0000001C)
+  ~ Think_UnlockPlayerDirection(~)  ;<+>  (ADDR=0016EF8C LEN=0000001C)
+  ~ Think_CheckPlayerInArea(~)  ;<+>  (ADDR=001685A4 LEN=00000040)
+  ~ Think_CheckPlayerOutArea(~)  ;<+>  (ADDR=0016A0EC LEN=00000040)
+  ~ Think_CheckMapHit(~)  ;<+>  (ADDR=0015B620 LEN=00000040)
+  ~ Think_CheckEnemyHit(~)  ;<+>  (ADDR=00160344 LEN=00000040)
+  ~ Think_SetMainProc(~)  ;<+>  (ADDR=0015B6E4 LEN=00000040)
+  ~ Think_Urochoro(~)  ;<+>  (ADDR=00153828 LEN=0000001C)
+
+
+;======================================== 
+MAP ;(internal name: ScriptFunc_MAP, ADDR=0012B7E8, Ukn: <none>) 
+  void SetVisible(bool bVisible)  ;set the visibility of the map model  (ADDR=00142B0C LEN=00000044)
+  ~ IsVisible(~)  ;<+>  (ADDR=00141B40 LEN=0000002C)
+  
+  void SetVisibleMaterial(string matName, bool bVisible)  ;doesn't seem to do anything  (ADDR=0015442C LEN=0000005C)
+  
+  void DynamicLoadGroundMap(SymMap newMap)  ;loads the given map (no collision for some reason)  (ADDR=0015A138 LEN=00000068)
+  void DynamicUnloadGroundMap()  ;unloads current map model and collision  (ADDR=0015EF40 LEN=0000001C)
+  
+  void SetBG(<luaTable>)    ;<+>  (ADDR=001809B4 LEN=00000068) 
+  void SetBG(SymImg image)  ;set the background behind the map model (2D screen-space render)  (ADDR=0013EE1C LEN=000000E8)   
+  void SetVisibleBG(bool bVisible)  ;set the visibility of background image  (ADDR=00145DA8 LEN=00000044)
+  
+  ~ SetBG2(~)  ;1  ;<+>  (ADDR=00180DD0 LEN=00000068) 
+  ~ SetBG2(~)  ;2  ;<+>  (ADDR=0013F504 LEN=000000E8) 
+  ~ SetVisibleBG2(~)  ;<+>  (ADDR=00148200 LEN=00000044)
+  
+  ~ ChangeLightColor(~)  ;<+>  (ADDR=0014F2BC LEN=00000078)
+  ~ ChangeProjectionShadowAlpha(~)  ;<+>  (ADDR=00169564 LEN=0000005C)
+  ~ SetFog(~)  ;<+>  (ADDR=0013F614 LEN=00000098)
+  ~ ClearFog(~)  ;<+>  (ADDR=00140DA4 LEN=0000001C)
+  ~ AddRangeBoxCollision(~)  NOP?  ;<+>  (ADDR=0015A0D4 LEN=00000064)  
+  ~ SetEnableRangeBoxCollision(~)  NOP?  ;<+>  (ADDR=00167844 LEN=00000084) 
+  ~ ClearRangeBoxCollision(~)  NOP  ;<+>  (ADDR=0015EF24 LEN=0000001C) 
+  ~ ReturnLightColor(~)  ;<+>  (ADDR=0014F334 LEN=0000003C)
+
+
+;======================================== 
+SOUND ;(internal name: ScriptFunc_SOUND, ADDR=0012C718, Ukn: <none>) 
+  ~ Stop(~)  ;<+>  (ADDR=0013F7A4 LEN=0000001C)
+  ~ FadeOut(~)  ;<+>  (ADDR=00141CE8 LEN=0000003C)
+  ~ PlayBgm(~)  ;1  ;<+>  (ADDR=001829AC LEN=00000068) 
+  ~ PlayBgm(~)  ;2  ;<+>  (ADDR=00141D24 LEN=00000140) 
+  
+  ;TODO: check at LuaInitMain+197F4 
+  
+  ~ PauseBgm(~)  ;1  ;<+>  (ADDR=00183F0C LEN=00000044) 
+  ~ PauseBgm(~)  ;2  ;<+>  (ADDR=00142D88 LEN=00000120) 
+  ~ FadeInBgm(~)  ;1  ;<+>  (ADDR=00185E78 LEN=00000080) 
+  ~ FadeInBgm(~)  ;2  ;<+>  (ADDR=001443B0 LEN=00000194) 
+  ~ StopBgm(~)  ;<+>  (ADDR=00142024 LEN=0000001C)
+  ~ FadeOutBgm(~)  ;1  ;<+>  (ADDR=00187348 LEN=0000003C) 
+  ~ FadeOutBgm(~)  ;2  ;<+>  (ADDR=0014627C LEN=00000138) 
+  ~ WaitBgm(~)  ;<+>  (ADDR=0014205C LEN=00000024)
+  ~ PlayEnv(~)  ;1  ;<+>  (ADDR=00182A14 LEN=00000068) 
+  ~ PlayEnv(~)  ;2  ;<+>  (ADDR=00141EA4 LEN=00000140) 
+  ~ FadeInEnv(~)  ;1  ;<+>  (ADDR=00185EF8 LEN=00000080) 
+  ~ FadeInEnv(~)  ;2  ;<+>  (ADDR=00144598 LEN=00000194) 
+  ~ StopEnv(~)  ;<+>  (ADDR=00142040 LEN=0000001C)
+  ~ FadeOutEnv(~)  ;<+>  (ADDR=001463F4 LEN=0000003C)
+  ~ WaitEnv(~)  ;<+>  (ADDR=00142080 LEN=00000024)
+  ~ PlayMe(~)  ;1  ;<+>  (ADDR=00181FD0 LEN=00000068) 
+  ~ PlayMe(~)  ;2  ;<+>  (ADDR=00140E0C LEN=00000140) 
+  ~ StopMe(~)  ;<+>  (ADDR=0014110C LEN=0000001C)
+  ~ WaitMe(~)  ;<+>  (ADDR=00141190 LEN=00000024)
+  ~ PlaySe(~)  ;1  ;<+>  (ADDR=00182038 LEN=00000068) 
+  ~ PlaySe(~)  ;2  ;<+>  (ADDR=00140F8C LEN=00000140) 
+  ~ StopSe(~)  ;<+>  (ADDR=00141128 LEN=00000068)
+  ~ FadeOutSe(~)  ;<+>  (ADDR=00144780 LEN=00000080)
+  ~ WaitSe(~)  ;<+>  (ADDR=001411B4 LEN=00000068)
+  ~ IsPlaySe(~)  ;<+>  (ADDR=00142D14 LEN=00000074)
+  ~ VolumeBgm(~)  ;<+>  (ADDR=00144800 LEN=0000005C)
+  ~ VolumeEnv(~)  ;<+>  (ADDR=0014485C LEN=0000005C)
+
+
+;======================================== 
+TASK ;(internal name: ScriptFunc_TASK_SYS, ADDR=0012F2E4, Ukn: <none>) 
+  ~ Regist(~)  ;1  ;<+>  (ADDR=001816C8 LEN=00000078) 
+  ~ Regist(~)  ;2  ;<+>  (ADDR=00181740 LEN=00000138) 
+  ~ Regist(~)  ;3  ;<+>  (ADDR=001818A0 LEN=0000010C) 
+  ~ Regist(~)  ;4  ;<+>  (ADDR=00140720 LEN=00000180) 
+  ~ Sleep(~)  ;<+>  (ADDR=0013FDBC LEN=00000068)
+  ~ Sleep_CanBreak(~)  ;<+>  (ADDR=0014D810 LEN=00000074)
+  ~ WaitTask(~)  ;1  ;<+>  (ADDR=00182A7C LEN=00000048) 
+  ~ WaitTask(~)  ;2  ;<+>  (ADDR=001420A4 LEN=0000012C) 
+  ~ WaitIf(~)  ;<+>  (ADDR=001408C8 LEN=00000098)
+  ~ ExitNotifyTasks(~)  ;1  ;<+>  (ADDR=0018E1B4 LEN=00000044) 
+  ~ ExitNotifyTasks(~)  ;2  ;<+>  (ADDR=0014FF18 LEN=000000F0) 
+  ~ IsEndTasks(~)  ;<+>  (ADDR=00144DDC LEN=0000007C)
+  ~ GroupSync(~)  ;<+>  (ADDR=0014300C LEN=00000048)
+   
+  ;TODO: Where exactly does this belong? 
+  ~ TaskL_GetTbl(~) ; "TaskL_GetTbl" 
+
+
+;======================================== 
+ThinkStatus ;(internal name: DungeonEncountPokemonThinkStatus, ADDR=0013063C, Ukn: <ThinkStatus___UknInit>) 
+  ThinkStatus ;<+>  (ADDR=00144EE4 LEN=00000034); =constructorId 
+  new_local(~) ;<+>  (ADDR=00152628 LEN=00000048)
+  .call(~) ;<+>  (ADDR=00152628 LEN=00000048)
+  
+  ~ SetMainProc(~)  ;<+>  (ADDR=00158060 LEN=00000040)
+  ~ GetMainProc(~)  ;<+>  (ADDR=00158030 LEN=00000030)
+  ~ IsEnemyInArea(~)  ;<+>  (ADDR=0015D578 LEN=0000002C)
+  ~ GetEdgeEnemyInArea(~)  ;<+>  (ADDR=0016804C LEN=0000002C)
+  ~ IsEdgeMapHit(~)  ;<+>  (ADDR=0015B100 LEN=0000002C)
+  ~ IsEdgeEnemyHit(~)  ;<+>  (ADDR=0015F99C LEN=0000002C)
+   
+  IS_ENEMY_IN_AREA 
+    .set ;<+>  (ADDR=00174D04 LEN=00000028)
+    .get ;<+>  (ADDR=00174D5C LEN=0000003C)
+     
+  EDGE_ENEMY_IN_AREA 
+    .set ;<+>  (ADDR=00175098 LEN=0000003C)
+    .get ;<+>  (ADDR=00175070 LEN=00000028)
+     
+  PROC 
+    .set ;<+>  (ADDR=0016EE98 LEN=00000038)
+    .get ;<+>  (ADDR=0016EE6C LEN=0000002C)
+ 
+ 
+;======================================== 
+;TODO: may need some verification 
+DungeonDebugBase ;(internal name: DungeonDebugBase, ADDR=00114D7C, Ukn: <none>) 
+   
+  ;---------------------------------------- 
+  IndexArray ;(internal name: DungeonDebugBase::IndexArray, ADDR=00114F2C, Ukn: <IndexArray___UknInit>) 
+    hashArray 
+      .set ;<+>  (ADDR=00170404 LEN=)
+      .get ;<+>  (ADDR=001703CC LEN=)
+       
+    idArray 
+      .set ;<+>  (ADDR=0016D164 LEN=)
+      .get ;<+>  (ADDR=0016D078 LEN=)
+       
+    bProsseced 
+      .set ;<+>  (ADDR=001712D8 LEN=)
+      .get ;<+>  (ADDR=001712B0 LEN=)
+
+
+;======================================== 
+;TODO: may need some verification 
+QUEST ;(internal name: MenuLuaFunc_QUEST, ADDR=0011AD0C, Ukn: <none>) 
+  ~ GetOwnerSymbol(~)  ;<+>  (ADDR=0014F644 LEN=00000050)
+  ~ GetTargetSymbol(~)  ;<+>  (ADDR=00151FCC LEN=00000050)
+  ~ GetNowSystemMessageIdForRequest(~)  ;<+>  (ADDR=00171A90 LEN=00000030)
+  ~ GetNowSystemMessageIdForExecution(~)  ;<+>  (ADDR=001731D8 LEN=00000030)
+  ~ GetNowSystemMessageIdForQuestFinish(~)  ;<+>  (ADDR=00173C38 LEN=00000030)
+  ~ GetNowSystemMessageIdForReward(~)  ;<+>  (ADDR=0017120C LEN=00000030)
+  ~ SetMessageTagSettingFromNowScene(~)  ;<+>  (ADDR=00172884 LEN=0000001C)
+  ~ IsQuestShoppingRefund(~)  ;<+>  (ADDR=00161A68 LEN=0000002C)
+  ~ BeginShowQuestTicketInfomationForEpisode(~)  ;<+>  (ADDR=00174CCC LEN=0000001C)
+  ~ EndShowQuestTicketInfomationForEpisode(~)  ;<+>  (ADDR=0017475C LEN=0000001C)
+ 
+  ;---------------------------------------- 
+  QuestParam1 ;(internal name: MenuLuaFunc_QUEST::QuestParam1, ADDR=0011AD30, Ukn: <QuestParam1___UknInit>) 
+    QuestParam1(~)  ;<+>  (ADDR=0015201C LEN=000000DC) ;=constructorId 
+    new_local(~)  ;<+>  (ADDR=00161A94 LEN=000000F0)
+    .call(~)  ;<+>  (ADDR=00161A94 LEN=000000F0)
+   
+ 
+  ;---------------------------------------- 
+  QuestParam2 ;(internal name: MenuLuaFunc_QUEST::QuestParam2, ADDR=0011AD90, Ukn: <QuestParam2___UknInit>) 
+    QuestParam2(~)  ;<+>  (ADDR=00152120 LEN=000000DC) ;=constructorId 
+    new_local(~)  ;<+>  (ADDR=00161BAC LEN=000000F0)
+    .call(~)  ;<+>  (ADDR=00161BAC LEN=000000F0)
+
+
+;======================================== 
+ITEM ;(internal name: MenuLuaFunc_ITEM, ADDR=0011C368, Ukn: <none>) 
+  ~ GetItemOneLineExplainTextIdFromItemIndex(~)  ;<+>  (ADDR=001749A4 LEN=00000054)
+  ~ GetItemOneLineExplainTextFromItemIndex(~)  ;<+>  (ADDR=00174390 LEN=00000070)
+  ~ GetItemExplainTextIdFromItemIndex(~)  ;<+>  (ADDR=001726E4 LEN=00000054)
+  ~ GetItemExplainTextFromItemIndex(~)  ;<+>  (ADDR=00170ED4 LEN=00000070)
+  ~ GetInnExplainTextFromInnIndex(~)  ;<+>  (ADDR=0016E638 LEN=00000068)
+  ~ GetInnExplainTextIdFromInnIndex(~)  ;<+>  (ADDR=00170E88 LEN=0000004C)
+  ~ GetItemKind(~)  ;<+>  (ADDR=00145D4C LEN=00000054)
+  ~ IsItemGrouped(~)  ;<+>  (ADDR=0014A800 LEN=00000050)
+  
+  ;----------------------------------------
+  ItemIns ;(internal name: MenuLuaFunc_ITEM::ItemIns, ADDR=0011C38C, Ukn: <ItemIns___UknInit>) 
+    ~ GetIndex(~)  ;<+>  (ADDR=001517D4 LEN=00000030)
+    ~ GetCount(~)  ;<+>  (ADDR=001517A4 LEN=00000030)
+    ~ GetKind(~)  ;<+>  (ADDR=0014F0D4 LEN=00000030)
+    ~ GetUniqueId(~)  ;<+>  (ADDR=0015A004 LEN=00000030)
+    ~ GetBagIndex(~)  ;<+>  (ADDR=00159FD8 LEN=0000002C)
+    ~ GetItemText_forDungeonBag(~)  ;<+>  (ADDR=001727E0 LEN=00000050)
+    ~ GetItemText_forGroundBag(~)  ;<+>  (ADDR=001717F4 LEN=00000050)
+    ~ GetItemText_forShopTalk(~)  ;<+>  (ADDR=00170F4C LEN=00000050)
+    ~ GetItemText_forShopGoodsBag(~)  ;<+>  (ADDR=00173714 LEN=00000068)
+    ~ GetItemText_forSellItemBag(~)  ;<+>  (ADDR=0017305C LEN=0000009C)
+    ~ GetItemOneLineExplainText(~)  ;<+>  (ADDR=00172740 LEN=00000050)
+    ~ GetItemExplainText(~)  ;<+>  (ADDR=001694CC LEN=00000050)
+    ~ GetItemExplainTextId(~)  ;<+>  (ADDR=0016CBDC LEN=00000030)
+    ~ GetItemText_RecycleShopItem(~)  ;<+>  (ADDR=00173674 LEN=00000050)
+    ~ GetText_RecycleShopName(~)  ;<+>  (ADDR=00170F9C LEN=00000050)
+    ~ GetItemText_TreasureShopMap(~)  ;<+>  (ADDR=001736C4 LEN=00000050)
+    ~ GetItemText_IngotShopItem(~)  ;<+>  (ADDR=00172790 LEN=00000050)
+    ~ GetEquipRemainCount(~)  ;<+>  (ADDR=0016B2C4 LEN=00000030)
+    ~ GetEquipSealCount(~)  ;<+>  (ADDR=0016778C LEN=00000030)
+    ~ CreateEquipItemSeal(~)  ;<+>  (ADDR=0016B224 LEN=0000007C)
+    ~ DestroyEquipItemSeal(~)  ;<+>  (ADDR=0016CBC0 LEN=0000001C)
+    ~ IsEqualInstance(~)  ;<+>  (ADDR=00163524 LEN=00000048)
+    ~ IsNowEquipped(~)  ;<+>  (ADDR=0015EDEC LEN=0000002C)
+    ~ IsPlaced(~)  ;<+>  (ADDR=00151830 LEN=0000002C)
+    ~ IsBagFull(~)  ;<+>  (ADDR=001543D4 LEN=0000002C)
+    ~ IsPickup(~)  ;<+>  (ADDR=00151804 LEN=0000002C)
+    ~ IsShopGoods(~)  ;<+>  (ADDR=0015A08C LEN=0000002C)
+    ~ IsUseEnemy(~)  ;<+>  (ADDR=0015750C LEN=0000002C)
+    ~ IsUseParty(~)  ;<+>  (ADDR=00157564 LEN=0000002C)
+    ~ IsUseOther(~)  ;<+>  (ADDR=00157538 LEN=0000002C)
+    ~ IsEat(~)  ;<+>  (ADDR=0014A858 LEN=0000002C)
+    ~ IsDrink(~)  ;<+>  (ADDR=0014F104 LEN=0000002C)
+    ~ IsShoot(~)  ;<+>  (ADDR=0014F1B4 LEN=0000002C)
+    ~ IsStone(~)  ;<+>  (ADDR=0014F1E0 LEN=0000002C)
+    ~ IsGift(~)  ;<+>  (ADDR=0014C688 LEN=0000002C)
+    ~ IsLearn(~)  ;<+>  (ADDR=0014F15C LEN=0000002C)
+    ~ IsEquip(~)  ;<+>  (ADDR=0014F130 LEN=0000002C)
+    ~ IsReturn(~)  ;<+>  (ADDR=0015185C LEN=0000002C)
+    ~ IsEquipExchange(~)  ;<+>  (ADDR=0016356C LEN=0000002C)
+    ~ IsPut(~)  ;<+>  (ADDR=0014A884 LEN=0000002C)
+    ~ IsExchange(~)  ;<+>  (ADDR=001574B4 LEN=0000002C)
+    ~ IsThrow(~)  ;<+>  (ADDR=0014F264 LEN=0000002C)
+    ~ IsSet(~)  ;<+>  (ADDR=0014A8B0 LEN=0000002C)
+    ~ IsUnSet(~)  ;<+>  (ADDR=0014F290 LEN=0000002C)
+    ~ IsStuck(~)  ;<+>  (ADDR=0014F20C LEN=0000002C)
+    ~ IsStuckFromEquip(~)  ;<+>  (ADDR=001659C8 LEN=0000002C)
+    ~ IsStuckTarget(~)  ;<+>  (ADDR=0015EE18 LEN=00000050)
+    ~ IsSwing(~)  ;<+>  (ADDR=0014F238 LEN=0000002C)
+    ~ IsStep(~)  ;<+>  (ADDR=0014C70C LEN=0000002C)
+    ~ IsTrapPickup(~)  ;<+>  (ADDR=0015CA94 LEN=0000002C)
+    ~ IsMove(~)  ;<+>  (ADDR=0014C6B4 LEN=0000002C)
+    ~ IsQuest(~)  ;<+>  (ADDR=0014F188 LEN=0000002C)
+    ~ IsSave(~)  ;<+>  (ADDR=0014C6E0 LEN=0000002C)
+    ~ IsWazaMachine(~)  ;<+>  (ADDR=0015EE70 LEN=0000002C)
+    ~ IsSummonCall(~)  ;<+>  (ADDR=0015CA68 LEN=0000002C)
+    ~ IsSummonReturn(~)  ;<+>  (ADDR=0016140C LEN=0000002C)
+    ~ IsSticky(~)  ;<+>  (ADDR=00151888 LEN=0000002C)
+    ~ IsUseWazaMachine(~)  ;<+>  (ADDR=001659F4 LEN=0000002C)
+    ~ IsMenuUseParty(~)  ;<+>  (ADDR=001613E0 LEN=0000002C)
+    ~ IsUsable(~)  ;<+>  (ADDR=001518B4 LEN=0000002C)
+    ~ IsEnableSet(~)  ;<+>  (ADDR=0015A060 LEN=0000002C)
+    ~ IsEnablePut(~)  ;<+>  (ADDR=0015A034 LEN=0000002C)
+    ~ IsEnableThrow(~)  ;<+>  (ADDR=0015EDC0 LEN=0000002C)
+    ~ IsEnableStuds(~)  ;<+>  (ADDR=0015ED94 LEN=0000002C)
+    ~ IsEnableStudsFromEquip(~)  ;<+>  (ADDR=0016FF34 LEN=0000002C)
+    ~ IsEnableRemoveFromEquip(~)  ;<+>  (ADDR=00170FEC LEN=0000002C)
+    ~ IsAlreadySetMega(~)  ;<+>  (ADDR=00165974 LEN=0000004C)
+    ~ IsAlreadySetMegaFromEquip(~)  ;<+>  (ADDR=00172830 LEN=0000004C)
+    ~ IsItemMega(~)  ;<+>  (ADDR=001574E0 LEN=0000002C)
+    ~ IsEquipPokemonBousou(~)  ;<+>  (ADDR=0016CC0C LEN=0000002C)
+
+
+;================================================================================
+;================================================================================
+ 
+ 
+;======================================== 
+SCENE ;(internal name: ScriptFunc_SCENE_SYS, ADDR=0013020C, Ukn: <none>) 
+  ~ SetupGroup(~)  ;<+>  (ADDR=00146088 LEN=00000064)
+  ~ UnvisibleGroup(~)  ;<+>  (ADDR=0014F710 LEN=00000064)
+ 
+ 
+;======================================== 
+CharacterControlManager ;(internal name: CharacterControlManager, ADDR=0011509C, Ukn: <none>) 
+ 
+;======================================== 
+PokemonStatus ;(internal name: PokemonStatus, ADDR=00113BB0, Ukn: <none>) 
+ 
+;======================================== 
+ScriptFunc_FLAG ;(internal name: ScriptFunc_FLAG, ADDR=00114D50, Ukn: <none>) 
+ 
+;======================================== 
+EC ;(internal name: MenuLuaFunc_EC, ADDR=00121EB4, Ukn: <none>) 
+ 
+;======================================== 
+EFFECT_HANDLE ;(internal name: ScriptFunc_EFFECT_HANDLE, ADDR=0012FF74, Ukn: <EFFECT_HANDLE___UknInit>) 
+
+
+;======================================== 
+ScriptFlagValue ;(internal name: ScriptType_ScriptFlagValue, ADDR=00114B94, Ukn: <ScriptFlagValue___UknInit>) 
+  ScriptFlagValue(~)  ;<+>  (ADDR=0014D708 LEN=00000084) ; =constructorId 
+  new_local(~)  ;<+>  (ADDR=0015D42C LEN=00000098)
+  .call(~)  ;<+>  (ADDR=0015D42C LEN=00000098)
+  
+  ~ .eq(~)  ;<+>  (ADDR=0014D69C LEN=0000006C)
+  ~ getDebugValueName(~)  ;<+>  (ADDR=0016CFE4 LEN=00000050)
+
+
+;============================================================================; 
+;========================================  Unknown  Stuff  ==================; 
+;============================================================================; 
+ 
+
+;======================================== 
+R1; "GrayedItemList" 
+R2, #0 
+LuaInitEnumTable 
+R1; "GrayedItemList" 
+InitLuaEntry 
+
+
+;======================================== 
+R2, #0 
+R1; "PartyMemberId" 
+LuaInitEnumTable 
+R1; "PartyMemberId" 
+InitLuaEntry 
+ 
+ 
+;======================================== 
+R1, =aIndexarray ; "IndexArray" 
+R2, #0 
+LuaInitEnumTable 
+R1, =aIndexarray ; "IndexArray" 
+InitLuaEntry 
+ 
+ 
+;======================================== 
+GLOBAL
+  ~ DEC(~)  ;<+>  (ADDR=0013E0D8 LEN=00000078)
+  ~ DPRINTF(~)  ;<+>  (ADDR=0013E490 LEN=0000001C)
+  ;TODO: check at LuaInitMain+1CBE4 
+  ~ TestLuaFuncCall(~)  ;<+>  (ADDR=00144E58 LEN=0000008C)

@@ -1,1 +1,1 @@
-An incomplete list of system Lua Objects and Functions for Super Mystery Dungeon.  No actual function documentation yet, sorry.
+Here's a complete list of PSMD Lua Functions, "Classes", Enums and whatnot.  All items are marked with their address in the US executable, and some functions have actual documentation.  Contributions are welcome.

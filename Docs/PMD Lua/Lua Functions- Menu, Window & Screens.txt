@@ -1,0 +1,904 @@
+;All member functions also take 'self' as first arg, so call as obj:func(<args not including self>)
+
+;========================================
+MENU ;(internal name: MenuLuaFunc_MENU, ADDR=00115708, Ukn: <none>)
+  ~ CreatePageMenu(~)  ;1  ;<+>  (ADDR=0018BCAC LEN=00000054)
+  ~ CreatePageMenu(~)  ;2  ;<+>  (ADDR=0014C85C LEN=000000E0)
+  ~ CreatePageMenuBigStack(~)  ;<+>  (ADDR=001615CC LEN=00000054)
+  ~ CreatePageGroupMenu(~)  ;<+>  (ADDR=0015A1A0 LEN=00000054)
+  ~ CreatePageGroupMenuNoMela(~)  ;<+>  (ADDR=00167944 LEN=00000054)
+  ~ CreateParameterMenu(~)  ;<+>  (ADDR=0015A270 LEN=00000054)
+  ~ CreateScrollMenu(~)  ;<+>  (ADDR=00151934 LEN=00000054)
+  ~ CreateAskMenu(~)  ;<+>  (ADDR=0014A8DC LEN=00000054)
+  ~ CreateButtonMenu(~)  ;<+>  (ADDR=001518E0 LEN=00000054)
+  ~ CreateButtonMenuWindow(~)  ;<+>  (ADDR=00161578 LEN=00000054)
+  ~ CreateInfomationMenuWindow(~)  ;<+>  (ADDR=00169644 LEN=00000074)
+  ~ CreateInfomationScrollWindow(~)  ;<+>  (ADDR=0016CD10 LEN=00000074)
+  ~ CreatePartyMemberWindow(~)  ;<+>  (ADDR=001637E4 LEN=00000054)
+  ~ CreatePartyMenu(~)  ;<+>  (ADDR=0014F3C4 LEN=00000054)
+  ~ CreateWazaDetailWindow(~)  ;<+>  (ADDR=00161620 LEN=00000054)
+  ~ CreatePartyWazaWindow(~)  ;<+>  (ADDR=0015F080 LEN=00000054)
+  ~ CreatePokemonSelect(~)  ;<+>  (ADDR=0015A2C4 LEN=00000054)
+  ~ CreatePokemonStatusWindow(~)  ;<+>  (ADDR=00167998 LEN=00000054)
+  ~ CreateWazaSelectWindow(~)  ;<+>  (ADDR=00161674 LEN=00000054)
+  ~ CreateWazaStatusWindow(~)  ;<+>  (ADDR=001616C8 LEN=00000074)
+  ~ CreateArPokemonStatusWindow(~)  ;<+>  (ADDR=0016B3BC LEN=00000054)
+  ~ CreateArExplainWindow(~)  ;<+>  (ADDR=0015EF5C LEN=00000054)
+  ~ CreateArTopMenu(~)  ;<+>  (ADDR=0014F370 LEN=00000054)
+  ~ CreateDungeonMenuWaza(~)  ;<+>  (ADDR=0015F02C LEN=00000054)
+  ~ CreateBoardMenuWindow(~)  ;<+>  (ADDR=0015EFB0 LEN=00000074)
+  ~ CreateExplainMenuWindow(~)  ;<+>  (ADDR=001636EC LEN=00000074)
+  ~ CreateExplainMenuWindowNotButton(~)  ;<+>  (ADDR=00171844 LEN=00000074)
+  ~ CreateExplainMenuWindowPageOneType(~)  ;<+>  (ADDR=0017312C LEN=00000074)
+  ~ CreateExplainMenuWindowForceNomalWindow(~)  ;<+>  (ADDR=001746E0 LEN=00000074)
+  ~ CreateNumInputMenu(~)  ;<+>  (ADDR=001576A4 LEN=00000074)
+  ~ CreateCutSceneSelectMenu(~)  ;<+>  (ADDR=00165B50 LEN=00000054)
+  ~ CreateNumericMenuWindow(~)  ;<+>  (ADDR=00163768 LEN=00000074)
+  ~ CreatePageTimerMenu(~)  ;<+>  (ADDR=0015A1F4 LEN=00000074)
+  ~ CreateArrowBoardMenuWindow(~)  ;<+>  (ADDR=001695C8 LEN=00000074)
+  ~ CreateFaceMenuWindow(~)  ;<+>  (ADDR=0015CADC LEN=00000074)
+  ~ CreateScratchMenu(~)  ;<+>  (ADDR=00154488 LEN=00000054)
+  ~ CreateSimpleStatusWindow(~)  ;<+>  (ADDR=00165BA4 LEN=00000054)
+  ~ CreateLotteryPremiumsMenu(~)  ;<+>  (ADDR=001678C8 LEN=00000074)
+  ~ CreateMenuMela(~)  ;<+>  (ADDR=0014C7E0 LEN=00000074)
+  ~ DestroyMenu(~)  ;<+>  (ADDR=00145DEC LEN=0000003C)
+  ~ CreateEcSelectMenu(~)  ;<+>  (ADDR=00157650 LEN=00000054)
+  ~ CreateEcMenuWindow(~)  ;<+>  (ADDR=001575D4 LEN=00000074)
+  ~ CallPartyMenu2(~)  ;<+>  (ADDR=0014C738 LEN=00000050)
+  ~ SetFocus(~)  ;<+>  (ADDR=00141B6C LEN=0000003C)
+  ~ ClearFocus(~)  ;1  ;<+>  (ADDR=00185D24 LEN=0000003C)
+  ~ ClearFocus(~)  ;2  ;<+>  (ADDR=00143FC4 LEN=000000C0)
+  ~ WaitClose(~)  ;1  ;<+>  (ADDR=00183ED0 LEN=0000003C)
+  ~ WaitClose(~)  ;2  ;<+>  (ADDR=00142B50 LEN=0000010C)
+  ~ WaitSync(~)  ;<+>  (ADDR=00141BA8 LEN=0000001C)
+  ~ ShowAskSelect(~)  ;<+>  (ADDR=0014AA40 LEN=0000005C)
+  ~ ShowAskMessage(~)  ;<+>  (ADDR=0014CAC0 LEN=00000054)
+  ~ ShowTalkAskMessage(~)  ;1  ;<+>  (ADDR=00190CC4 LEN=0000006C)
+  ~ ShowTalkAskMessage(~)  ;2  ;<+>  (ADDR=0015794C LEN=0000012C)
+  ~ SetTag_Floor(~)  ;<+>  (ADDR=00148360 LEN=00000088)
+  ~ SetTag_Value(~)  ;<+>  (ADDR=00148460 LEN=00000068)
+  ~ SetTag_Money(~)  ;<+>  (ADDR=001483F0 LEN=00000068)
+  ~ SetTag_MyMoney(~)  ;<+>  (ADDR=0014CA50 LEN=00000068)
+  ~ SetTag_Bank(~)  ;<+>  (ADDR=00145E28 LEN=00000068)
+  ~ SetTag_MoneyMuji(~)  ;<+>  (ADDR=00151AA4 LEN=00000068)
+  ~ SetTag_MyMoneyMuji(~)  ;<+>  (ADDR=0015780C LEN=00000068)
+  ~ SetTag_BankMuji(~)  ;<+>  (ADDR=0014F48C LEN=00000068)
+  ~ SetTag_String(~)  ;1  ;<+>  (ADDR=0018B400 LEN=00000058)
+  ~ SetTag_String(~)  ;2  ;<+>  (ADDR=0014A930 LEN=000000F4)
+  ~ SetTag_MonsterIndex(~)  ;1  ;<+>  (ADDR=00191014 LEN=0000006C)
+  ~ SetTag_MonsterIndex(~)  ;2  ;<+>  (ADDR=0015A4A4 LEN=0000011C)
+  ~ SetTag_ItemIndex(~)  ;<+>  (ADDR=00151A30 LEN=0000006C)
+  ~ SetTag_ItemIndexNoCount(~)  ;<+>  (ADDR=00163838 LEN=0000006C)
+  ~ SetTag_ItemIndexAndCount(~)  ;<+>  (ADDR=00165BF8 LEN=00000088)
+  ~ SetTag_DungeonIndex(~)  ;1  ;<+>  (ADDR=00190F80 LEN=0000008C)
+  ~ SetTag_DungeonIndex(~)  ;2  ;<+>  (ADDR=0015A318 LEN=00000170)
+  ~ SetTag_Fhushigido(~)  ;<+>  (ADDR=001544DC LEN=0000006C)
+  ~ SetTag_MonsterString(~)  ;<+>  (ADDR=0015CB58 LEN=00000058)
+  ~ PushTag_MonsterString(~)  ;<+>  (ADDR=0015F12C LEN=00000058)
+  ~ PullTag_MonsterString(~)  ;<+>  (ADDR=0015F110 LEN=0000001C)
+  ~ SetTag_ItemString(~)  ;<+>  (ADDR=00154550 LEN=00000058)
+  ~ PushTag_ItemString(~)  ;<+>  (ADDR=0015773C LEN=00000058)
+  ~ PullTag_ItemString(~)  ;<+>  (ADDR=00157720 LEN=0000001C)
+  ~ SetTag_ContinentIndex(~)  ;<+>  (ADDR=0015F18C LEN=00000058)
+  ~ SetTag_PlaceString(~)  ;<+>  (ADDR=0015787C LEN=00000058)
+  ~ SetTag_PrefectureString(~)  ;<+>  (ADDR=001638AC LEN=00000058)
+  ~ SetTag_DamageValue(~)  ;<+>  (ADDR=0015779C LEN=00000068)
+  ~ SetTag_ExperienceValue(~)  ;<+>  (ADDR=00161744 LEN=00000068)
+  ~ SetWindowFrameAndGroundVariation(~)  ;<+>  (ADDR=001718C0 LEN=00000044)
+  ~ SetTag_ShopPrice(~)  ;<+>  (ADDR=00151B14 LEN=00000068)
+  ~ SetTag_TicketIndex(~)  ;<+>  (ADDR=001578DC LEN=00000068)
+  ~ ReplaceTagText(~)  ;1  ;<+>  (ADDR=0018BD00 LEN=00000068)
+  ~ ReplaceTagText(~)  ;2  ;<+>  (ADDR=0014C958 LEN=000000DC)
+  ~ GetTextPoolText(~)  ;<+>  (ADDR=0014F418 LEN=0000006C)
+  ~ GetTextWidth(~)  ;1  ;<+>  (ADDR=00189740 LEN=0000006C)
+  ~ GetTextWidth(~)  ;2  ;<+>  (ADDR=00148244 LEN=000000F8)
+  ~ GetTextReturnNum(~)  ;<+>  (ADDR=00151988 LEN=0000004C)
+  ~ LoadMenuTextPool(~)  ;<+>  (ADDR=001519D4 LEN=0000005C)
+  ~ CheckGroupItem(~)  ;<+>  (ADDR=0014C788 LEN=00000050)
+  ~ CallLuaFunctionWithLuaGlobalEnvGuard(~)  ;<+>  (ADDR=00173BC4 LEN=00000074)
+  ~ DebugReloadMenuScript(~)  NOP  ;<+>  (ADDR=0015F0D4 LEN=0000003C)
+  ~ DebugReloadGlobalGameSetting(~)  NOP  ;<+>  (ADDR=0016CD8C LEN=0000001C)
+
+
+;========================================
+BaseLayoutWindow ;(internal name: MenuLuaWrapper_BaseLayoutWindow, ADDR=0011AE9C, Ukn: <BaseLayoutWindow___UknInit>)
+  BaseLayoutWindow(~)  ;<+>  (ADDR=0014DFA8 LEN=00000034); =constructorId(~)
+  new_local(~)  ;<+>  (ADDR=0015D7C0 LEN=00000048)
+  .call(~)  ;<+>  (ADDR=0015D7C0 LEN=00000048)
+
+  ~ delete(~)  ;<+>  (ADDR=0015592C LEN=00000028)
+  ~ Open(~)  ;<+>  (ADDR=001506A0 LEN=0000001C)
+  ~ Close(~)  ;<+>  (ADDR=00153040 LEN=0000001C)
+  ~ CloseAndClearFocus(~)  ;<+>  (ADDR=0016EF38 LEN=0000001C)
+  ~ IsFocus(~)  ;<+>  (ADDR=001583A0 LEN=0000002C)
+  ~ NotifyForceClose(~)  ;<+>  (ADDR=0016BAD8 LEN=0000001C)
+  ~ IsForceClosed(~)  ;<+>  (ADDR=0016667C LEN=0000002C)
+  ~ IsOpened(~)  ;<+>  (ADDR=0015B2F0 LEN=0000002C)
+  ~ GetLeft(~)  ;<+>  (ADDR=00158374 LEN=0000002C)
+  ~ GetRight(~)  ;<+>  (ADDR=0015B2C4 LEN=0000002C)
+  ~ GetTop(~)  ;<+>  (ADDR=00155900 LEN=0000002C)
+  ~ GetBottom(~)  ;<+>  (ADDR=0015D794 LEN=0000002C)
+  ~ AddAnimeTask(~)  ;<+>  (ADDR=001643C8 LEN=0000008C)
+  ~ IsExistAnimeTask(~)  ;<+>  (ADDR=0016BA90 LEN=00000048)
+  ~ SetVisible(~)  ;<+>  (ADDR=0015FD74 LEN=00000044)
+
+
+;========================================
+BaseMenu extends BaseLayoutWindow;(internal name: MenuLuaWrapper_BaseMenu, ADDR=0011B390, Ukn: <BaseMenu___UknInit>)
+  BaseMenu(~)  ;<+>  (ADDR=00140BFC LEN=00000034); =constructorId
+  new_local(~)  ;<+>  (ADDR=001494D4 LEN=00000048)
+  .call(~)  ;<+>  (ADDR=001494D4 LEN=00000048)
+
+  ~ delete(~)  ;<+>  (ADDR=00143374 LEN=00000028)
+  ~ SetLayoutPosition(~)  ;<+>  (ADDR=0015D828 LEN=00000068)
+  ~ SetLayoutPositionY(~)  ;<+>  (ADDR=0015FE60 LEN=00000040)
+  ~ SetLayoutSize(~)  ;<+>  (ADDR=00153160 LEN=00000068)
+  ~ SetLayoutSizeH(~)  ;<+>  (ADDR=001559F8 LEN=00000040)
+  ~ SetOption(~)  ;<+>  (ADDR=00149458 LEN=0000007C)
+  ~ DrawHorizontalLine(~)  ;<+>  (ADDR=0015FDD4 LEN=00000084)
+  ~ SetTextAlpha(~)  ;<+>  (ADDR=001506BC LEN=00000040)
+  ~ SetFrameAlpha(~)  ;<+>  (ADDR=00153118 LEN=00000040)
+  ~ SetParallax(~)  ;<+>  (ADDR=0014E160 LEN=0000003C)
+  ~ SetParallaxFromLevel(~)  ;<+>  (ADDR=00164454 LEN=00000044)
+  ~ SetAnimeOffsPosX(~)  ;<+>  (ADDR=0015B37C LEN=00000040)
+  ~ SetAnimeOffsPosY(~)  ;<+>  (ADDR=0015B3C4 LEN=00000040)
+  ~ GetAnimeOffsPosX(~)  ;<+>  (ADDR=0015B31C LEN=00000030)
+  ~ GetAnimeOffsPosY(~)  ;<+>  (ADDR=0015B34C LEN=00000030)
+  ~ SetDecideSound(~)  ;<+>  (ADDR=001559B4 LEN=00000044)
+  ~ SetCancelSound(~)  ;<+>  (ADDR=00155970 LEN=00000044)
+  ~ IsDecideSound(~)  ;<+>  (ADDR=001530EC LEN=0000002C)
+  ~ IsCancelSound(~)  ;<+>  (ADDR=001530C0 LEN=0000002C)
+  ~ SetEnableXButtonDecide(~)  ;<+>  (ADDR=00168500 LEN=00000044)
+  ~ SetMela(~)  ;<+>  (ADDR=001453B4 LEN=0000003C)
+
+
+;========================================
+ArExplainWindow extends PageMenu ;(internal name: MenuLuaWrapper_ArExplainWindow, ADDR=0012503C, Ukn: <none>)
+  ~ Open(~)  ;<+>  (ADDR=0014DF70 LEN=0000001C)
+  ~ SetTextId(~)  ;<+>  (ADDR=0015B27C LEN=00000040)
+
+
+;========================================
+ArPokemonStatusWindow extends WazaStatusWindow ;(internal name: MenuLuaWrapper_ArPokemonStatusWindow, ADDR=00125088, Ukn: <none>)
+  ~ Open(~)  ;<+>  (ADDR=0015D75C LEN=0000001C)
+  ~ SetMemberId(~)  ;<+>  (ADDR=0016BA48 LEN=00000040)
+  ~ SetWarehouseId(~)  NOP  ;<+>  (ADDR=00170440 LEN=00000044)
+  ~ SetPokemonId(~)  ;<+>  (ADDR=0016D1DC LEN=00000044)
+  ~ SetFixdmapPokemonId(~)  ;<+>  (ADDR=0017390C LEN=00000040)
+
+
+;========================================
+ArrowBoardMenuWindow extends BoardMenuWindow ;(internal name: MenuLuaWrapper_ArrowBoardMenuWindow, ADDR=00125104, Ukn: <none>)
+  ~ PushLeftArrow(~)  ;<+>  (ADDR=0016D228 LEN=0000001C)
+  ~ PushRightArrow(~)  ;<+>  (ADDR=0016EED8 LEN=0000001C)
+  ~ ShowLeftArrow(~)  ;<+>  (ADDR=0016D244 LEN=00000044)
+  ~ ShowRightArrow(~)  ;<+>  (ADDR=0016EEF4 LEN=00000044)
+  ~ SetLeftArrowPos(~)  ;<+>  (ADDR=0017048C LEN=00000068)
+  ~ SetRightArrowPos(~)  ;<+>  (ADDR=00171314 LEN=00000068)
+  ~ SetParallax(~)  ;<+>  (ADDR=00169FBC LEN=0000003C)
+  ~ SetOption(~)  ;<+>  (ADDR=00166600 LEN=0000007C)
+  ~ Close(~)  ;<+>  (ADDR=0015D778 LEN=0000001C)
+
+
+;========================================
+ArTopMenu extends PageMenu ;(internal name: MenuLuaWrapper_ArTopMenu, ADDR=001251C0, Ukn: <none>)
+  ~ Open(~)  ;<+>  (ADDR=00142334 LEN=0000001C)
+  ~ ModeFirst(~)  ;<+>  (ADDR=0014B760 LEN=0000001C)
+  ~ ModeDataNon(~)  ;<+>  (ADDR=00150684 LEN=0000001C)
+  ~ ModeNormal(~)  ;<+>  (ADDR=0014DF8C LEN=0000001C)
+
+
+;========================================
+AskMenu extends PageMenu ;(internal name: MenuLuaWrapper_AskMenu, ADDR=0012522C, Ukn: <none>)
+  ~ Setup(~)  ;<+>  (ADDR=001412E8 LEN=00000084)
+  ~ SetPositionAndWidth(~)  ;<+>  (ADDR=0015FCE8 LEN=00000084)
+  ~ IsOpened(~)  ;<+>  (ADDR=00145338 LEN=0000002C)
+
+
+;========================================
+BoardMenuWindow extends BaseMenu ;(internal name: MenuLuaWrapper_BoardMenuWindow, ADDR=00125288, Ukn: <none>)
+  ~ Open(~)  ;<+>  (ADDR=0014E1A4 LEN=0000001C)
+  ~ SetFontType(~)  ;<+>  (ADDR=0015FEA8 LEN=00000044)
+  ~ SetTextOffset(~)  ;<+>  (ADDR=001644DC LEN=00000068)
+  ~ SetText(~)  ;1  ;<+>  (ADDR=001907C4 LEN=00000040)
+  ~ SetText(~)  ;2  ;<+>  (ADDR=00155A40 LEN=000000A8)
+  ~ SetLayoutRect(~)  ;<+>  (ADDR=001644A0 LEN=0000003C)
+  ~ SetDownCursorPosition(~)  ;<+>  (ADDR=00171384 LEN=00000058)
+  ~ ShowDownCursor(~)  ;<+>  (ADDR=001666F0 LEN=00000044)
+  ~ Resize(~)  ;<+>  (ADDR=001531D0 LEN=00000068)
+
+
+;========================================
+ButtonMenu extends BaseListMenu ;(internal name: MenuLuaWrapper_ButtonMenu, ADDR=00125344, Ukn: <none>)
+  ~ Open(~)  ;<+>  (ADDR=0014339C LEN=0000001C)
+  ~ SetOption(~)  ;<+>  (ADDR=0014E1C0 LEN=0000007C)
+  ~ SetVisible(~)  ;<+>  (ADDR=00150720 LEN=00000044)
+  ~ GetCursorItemIndex(~)  ;<+>  (ADDR=001646E8 LEN=00000030)
+  ~ SetCursorItemIndex(~)  ;<+>  (ADDR=00164718 LEN=00000040)
+  ~ IsExistCursorItemIndex(~)  ;<+>  (ADDR=0016BB88 LEN=0000004C)
+  ~ AddItem(~)  ;1  ;<+>  (ADDR=00189BCC LEN=00000104)
+  ~ AddItem(~)  ;2  ;<+>  (ADDR=00189CD0 LEN=000001A4)
+  ~ AddItem(~)  ;3  ;<+>  (ADDR=00189EA4 LEN=00000208)
+  ~ AddItem(~)  ;4  ;<+>  (ADDR=00149534 LEN=0000020C)
+  ~ AddAdhesionItem(~)  ;1  ;<+>  (ADDR=00191778 LEN=00000104)
+  ~ AddAdhesionItem(~)  ;2  ;<+>  (ADDR=0015D898 LEN=000001A4)
+  ~ AddFixedPatternItem(~)  ;<+>  (ADDR=00166954 LEN=00000170)
+  ~ AddFacePatternItem(~)  ;<+>  (ADDR=00164588 LEN=00000158)
+  ~ AddDummy(~)  ;<+>  (ADDR=0014B7A4 LEN=0000001C)
+  ~ IsDummy(~)  ;<+>  (ADDR=00149778 LEN=0000004C)
+  ~ AddButtonMenuWindowItem(~)  ;<+>  (ADDR=0016D2F4 LEN=000000D4)
+  ~ SetItemLink4(~)  ;<+>  (ADDR=00155B08 LEN=000000C4)
+  ~ SetItemLink8(~)  ;<+>  (ADDR=00155BD4 LEN=00000110)
+  ~ SetBlinkButton(~)  ;<+>  (ADDR=0015B40C LEN=00000060)
+  ~ GetIconCursor(~)  ;<+>  (ADDR=001584E0 LEN=00000074)
+  ~ SetVisibleIconCursor(~)  ;<+>  (ADDR=00168544 LEN=00000044)
+  ~ SetVisibleNormalCursor(~)  ;<+>  (ADDR=0016BBDC LEN=00000044)
+
+
+;========================================
+ButtonMenuWindow extends BaseMenu ;(internal name: MenuLuaWrapper_ButtonMenuWindow, ADDR=00125DFC, Ukn: <none>)
+  ~ Open(~)  ;<+>  (ADDR=0014339C LEN=0000001C)
+  ~ SetText(~)  ;1  ;<+>  (ADDR=00190D7C LEN=00000040)
+  ~ SetText(~)  ;2  ;<+>  (ADDR=001583CC LEN=000000A8)
+  ~ SetRectangle(~)  ;<+>  (ADDR=0016454C LEN=0000003C)
+  ~ SetTextOffset(~)  ;<+>  (ADDR=001668FC LEN=00000058)
+  ~ SetType(~)  ;<+>  (ADDR=00158494 LEN=00000044)
+  ~ LoadSpriteImage(~)  ;<+>  (ADDR=0016A000 LEN=0000007C)
+  ~ ClearSpriteImage(~)  ;<+>  (ADDR=0016BB3C LEN=00000044)
+  ~ SetSpriteInfo(~)  ;1  ;<+>  (ADDR=001928D4 LEN=00000088)
+  ~ SetSpriteInfo(~)  ;2  ;<+>  (ADDR=00166734 LEN=000001A0)
+  ~ SetSpriteBlendMul(~)  ;<+>  (ADDR=0016D288 LEN=00000064)
+
+
+
+;========================================
+DungeonMenuWaza extends ButtonMenu ;(internal name: MenuLuaWrapper_DungeonMenuWaza, ADDR=00125F94, Ukn: <none>)
+  ~ Open(~)  ;<+>  (ADDR=0014EA9C LEN=0000001C)
+  ~ UpdatePokemon(~)  ;<+>  (ADDR=001652B0 LEN=0000001C)
+
+
+;========================================
+EcMenuWindow extends BaseMenu ;(internal name: MenuLuaWrapper_EcMenuWindow, ADDR=00125FE0, Ukn: <none>)
+  ~ Open(~)  ;<+>  (ADDR=00147EB0 LEN=0000001C)
+  ~ SetPositionY(~)  ;<+>  (ADDR=0015BD68 LEN=00000040)
+  ~ SetSizeH(~)  ;<+>  (ADDR=00150FB0 LEN=00000040)
+  ~ SetTextOffset(~)  ;<+>  (ADDR=0015E264 LEN=00000068)
+  ~ SetTextOffsetDesc(~)  ;<+>  (ADDR=00166E58 LEN=00000068)
+  ~ SetTextOffsetDif(~)  ;<+>  (ADDR=00165330 LEN=00000068)
+  ~ SetTextOffsetRelease(~)  ;<+>  (ADDR=0016C0F8 LEN=00000068)
+  ~ SetTextOffsetBlock(~)  ;<+>  (ADDR=00168AD4 LEN=00000068)
+  ~ SetTextOffsetPrice(~)  ;<+>  (ADDR=00168B44 LEN=00000068)
+  ~ SetFontType(~)  ;<+>  (ADDR=00159114 LEN=00000044)
+  ~ SetText(~)  ;1  ;<+>  (ADDR=0018D4A0 LEN=00000040)
+  ~ SetText(~)  ;2  ;<+>  (ADDR=0014EB34 LEN=000000A8)
+  ~ SetTextDesc(~)  ;1  ;<+>  (ADDR=00190F1C LEN=00000040)
+  ~ SetTextDesc(~)  ;2  ;<+>  (ADDR=00159160 LEN=000000A8)
+  ~ SetTextDif(~)  ;1  ;<+>  (ADDR=00190AB4 LEN=00000040)
+  ~ SetTextDif(~)  ;2  ;<+>  (ADDR=0015661C LEN=000000A8)
+  ~ SetTextRelease(~)  ;1  ;<+>  (ADDR=00192040 LEN=00000040)
+  ~ SetTextRelease(~)  ;2  ;<+>  (ADDR=00160B0C LEN=000000A8)
+  ~ SetTextBlock(~)  ;1  ;<+>  (ADDR=00191548 LEN=00000040)
+  ~ SetTextBlock(~)  ;2  ;<+>  (ADDR=0015BDB0 LEN=000000A8)
+  ~ SetTextPrice(~)  ;1  ;<+>  (ADDR=00191590 LEN=00000040)
+  ~ SetTextPrice(~)  ;2  ;<+>  (ADDR=0015BE74 LEN=000000A8)
+  ~ SetTextAmount(~)  ;1  ;<+>  (ADDR=001918F8 LEN=00000040)
+  ~ SetTextAmount(~)  ;2  ;<+>  (ADDR=0015E1A0 LEN=000000A8)
+  ~ SetMsgLineFeedHeight(~)  ;<+>  (ADDR=0016C0DC LEN=0000001C)
+  ~ SetVisibleNew(~)  ;<+>  (ADDR=0015E2D4 LEN=00000044)
+  ~ SetVisibleReceived(~)  ;<+>  (ADDR=00168BF8 LEN=00000044)
+  ~ SetVisibleDoneShopping(~)  ;<+>  (ADDR=0016F7AC LEN=00000044)
+  ~ SetIndex(~)  ;<+>  (ADDR=00150F68 LEN=00000040)
+  ~ SelectItem(~)  ;<+>  (ADDR=00156600 LEN=0000001C)
+  ~ UnselectItem(~)  ;<+>  (ADDR=0015BF38 LEN=0000001C)
+  ~ SetVisibleText(~)  ;<+>  (ADDR=00160BD0 LEN=00000044)
+  ~ IsVisibleText(~)  ;<+>  (ADDR=0015E174 LEN=0000002C)
+  ~ SetVisibleItemIcon(~)  ;<+>  (ADDR=00168BB4 LEN=00000044)
+  ~ IsVisibleItemIcon(~)  ;<+>  (ADDR=00166E2C LEN=0000002C)
+
+
+;========================================
+EcSelectMenu extends BaseListMenu ;(internal name: MenuLuaWrapper_EcSelectMenu, ADDR=001265B4, Ukn: <none>)
+  ~ SetNumOfItem(~)  ;<+>  (ADDR=0015BF98 LEN=00000040)
+  ~ GetSelectItemData(~)  ;<+>  (ADDR=00166EC8 LEN=00000088)
+  ~ AddItemData(~)  ;<+>  (ADDR=00159224 LEN=000000BC)
+  ~ GetCursorIndex(~)  ;<+>  (ADDR=00160C14 LEN=00000030)
+  ~ SetLeftArrow(~)  ;<+>  (ADDR=0015BF54 LEN=00000044)
+  ~ SetRightArrow(~)  ;<+>  (ADDR=0015E318 LEN=00000044)
+  ~ SelectItem(~)  ;<+>  (ADDR=001566E0 LEN=0000001C)
+  ~ UnselectItem(~)  ;<+>  (ADDR=0015BFE0 LEN=0000001C)
+  ~ SetArrowVisible(~)  ;<+>  (ADDR=00162E6C LEN=00000044)
+  ~ SetChangeFoucs(~)  ;<+>  (ADDR=00160C44 LEN=00000044)
+  ~ SetChangeFoucs_Up(~)  ;<+>  (ADDR=00166F64 LEN=0000001C)
+  ~ SetChangeFoucs_Down(~)  ;<+>  (ADDR=0016A63C LEN=0000001C)
+  ~ SetChangeFoucs_Touch(~)  ;<+>  (ADDR=0016C168 LEN=0000001C)
+  ~ SetUpdateCallFlag(~)  ;<+>  (ADDR=00166F80 LEN=00000044)
+  ~ SetIsRequireFocusFlag(~)  ;<+>  (ADDR=0016DCE0 LEN=00000044)
+
+
+;========================================
+ExplainMenuWindow extends BoardMenuWindow ;(internal name: MenuLuaWrapper_ExplainMenuWindow, ADDR=001266D0, Ukn: <none>)
+  ~ Open(~)  ;1  ;<+>  (ADDR=0018FD34 LEN=00000068)
+  ~ Open(~)  ;2  ;<+>  (ADDR=0018FDA4 LEN=000000E0)
+  ~ Open(~)  ;3  ;<+>  (ADDR=0018FEB0 LEN=000000AC)
+  ~ Open(~)  ;4  ;<+>  (ADDR=00153DC4 LEN=00000070)
+  ~ GetCaption(~)  ;<+>  (ADDR=00162EB0 LEN=00000050)
+  ~ GetCaptionText(~)  ;<+>  (ADDR=0016A658 LEN=0000006C)
+  ~ SetDrawExplainIndex(~)  ;<+>  (ADDR=00171530 LEN=00000040)
+
+
+;========================================
+FaceMenuWindow extends BoardMenuWindow ;(internal name: MenuLuaWrapper_FaceMenuWindow, ADDR=0012676C, Ukn: <none>)
+  ~ SetPokemonIndex(~)  ;<+>  (ADDR=001672BC LEN=00000044)
+  ~ SetFemale(~)  ;<+>  (ADDR=001598C8 LEN=00000044)
+  ~ SetFaceType(~)  ;<+>  (ADDR=0015E7B8 LEN=00000044)
+  ~ SetFacePos(~)  ;<+>  (ADDR=0015C4E0 LEN=00000068)
+
+
+;========================================
+InfomationMenuWindow extends BaseMenu ;(internal name: MenuLuaWrapper_InfomationMenuWindow, ADDR=001267D8, Ukn: <none>)
+  ~ Open(~)  ;<+>  (ADDR=0015CAC0 LEN=0000001C)
+  ~ SetPositionY(~)  ;<+>  (ADDR=0016CC38 LEN=00000040)
+  ~ SetSizeH(~)  ;<+>  (ADDR=00165A20 LEN=00000040)
+  ~ SetTextOffset(~)  ;<+>  (ADDR=0016E6A0 LEN=00000068)
+  ~ SetFontType(~)  ;<+>  (ADDR=0016B2F4 LEN=00000044)
+  ~ SetText(~)  ;1  ;<+>  (ADDR=0019232C LEN=00000040)
+  ~ SetText(~)  ;2  ;<+>  (ADDR=00163598 LEN=000000A8)
+  ~ SetMsgLineFeedHeight(~)  ;<+>  (ADDR=00173BA8 LEN=0000001C)
+  ~ SetDrawPriority(~)  ;<+>  (ADDR=00171018 LEN=00000040)
+
+
+;========================================
+InfomationScrollWindow extends InfomationMenuWindow ;(internal name: MenuLuaWrapper_InfomationScrollWindow, ADDR=00126894, Ukn: <none>)
+  ~ Open(~)  ;<+>  (ADDR=00161438 LEN=0000001C)
+  ~ SetClipRegion(~)  ;<+>  (ADDR=00171060 LEN=00000068)
+  ~ CountReset(~)  ;<+>  (ADDR=0016CC9C LEN=0000001C)
+  ~ CountClear(~)  ;<+>  (ADDR=0016CC80 LEN=0000001C)
+  ~ SetSpeed(~)  ;<+>  (ADDR=0016951C LEN=00000040)
+  ~ SetInterval(~)  ;<+>  (ADDR=0016E710 LEN=00000040)
+  ~ SetWaitCount(~)  ;<+>  (ADDR=0016FF60 LEN=00000040)
+  ~ SetScrollStop(~)  ;<+>  (ADDR=001710D0 LEN=00000044)
+
+
+;========================================
+LotteryPremiumsMenu extends BoardMenuWindow ;(internal name: MenuLuaWrapper_LotteryPremiumsMenu, ADDR=00126CC4, Ukn: <none>)
+  ~ Open(~)  ;<+>  (ADDR=0015A0B8 LEN=0000001C)
+  ~ SetLotteryType(~)  ;<+>  (ADDR=0016E758 LEN=00000040)
+  ~ Update(~)  ;<+>  (ADDR=0015EF08 LEN=0000001C)
+
+
+;========================================
+MenuMela extends BaseMenu ;(internal name: MenuLuaWrapper_MenuMela, ADDR=00126D20, Ukn: <none>)
+  ~ Open(~)  ;<+>  (ADDR=00141BC4 LEN=0000003C)
+  ~ SetVisible(~)  ;<+>  (ADDR=0014CB14 LEN=00000044)
+  ~ SetFont(~)  ;<+>  (ADDR=00145E98 LEN=00000058)
+  ~ ClearMessage(~)  ;<+>  (ADDR=00151B84 LEN=0000001C)
+  ~ SetMessageStr(~)  ;<+>  (ADDR=001545B0 LEN=00000054)
+  ~ SetMessageId(~)  ;<+>  (ADDR=00151BA0 LEN=00000058)
+
+
+;========================================
+NumericMenuWindow extends BaseMenu ;(internal name: MenuLuaWrapper_NumericMenuWindow, ADDR=00126DAC, Ukn: <none>)
+  ~ Open(~)  ;<+>  (ADDR=0015464C LEN=0000001C)
+  ~ SetFontType(~)  ;<+>  (ADDR=00165C88 LEN=00000044)
+  ~ SetTextOffset(~)  ;<+>  (ADDR=00169740 LEN=00000068)
+  ~ SetTagLine(~)  ;<+>  (ADDR=00163948 LEN=00000084)
+  ~ SetTagLineVisible(~)  ;<+>  (ADDR=00170044 LEN=00000044)
+  ~ SetText(~)  ;1  ;<+>  (ADDR=001915D8 LEN=00000040)
+  ~ SetText(~)  ;2  ;<+>  (ADDR=0015CBB8 LEN=000000A8)
+  ~ SetTagTextOffset(~)  ;<+>  (ADDR=0016E7A0 LEN=00000068)
+  ~ SetTagText(~)  ;1  ;<+>  (ADDR=00192374 LEN=00000040)
+  ~ SetTagText(~)  ;2  ;<+>  (ADDR=001639D4 LEN=000000A8)
+  ~ SetLayoutRect(~)  ;<+>  (ADDR=00169704 LEN=0000003C)
+  ~ SetPlace(~)  ;<+>  (ADDR=0015F234 LEN=00000040)
+  ~ SetDigit(~)  ;<+>  (ADDR=0015F1EC LEN=00000040)
+  ~ SetCaption(~)  ;<+>  (ADDR=0016390C LEN=0000003C)
+  ~ GetSettingData(~)  ;<+>  (ADDR=0016B410 LEN=00000030)
+  ~ SetStartNum(~)  ;<+>  (ADDR=00165CD4 LEN=00000040)
+  ~ SetType(~)  ;<+>  (ADDR=0015CC84 LEN=00000044)
+  ~ SetMaxNum(~)  ;<+>  (ADDR=001617B4 LEN=00000040)
+  ~ SetMinNum(~)  ;<+>  (ADDR=001617FC LEN=00000040)
+  ~ SetActiveFlag(~)  ;<+>  (ADDR=001696C0 LEN=00000044)
+
+
+;========================================
+NumInputMenu extends BoardMenuWindow ;(internal name: MenuLuaWrapper_NumInputMenu, ADDR=00126F5C, Ukn: <none>)
+  ~ SetNumber(~)  ;<+>  (ADDR=00154604 LEN=00000040)
+
+
+;========================================
+PageGroupMenu extends PageMenu ;(internal name: MenuLuaWrapper_PageGroupMenu, ADDR=00126F9C, Ukn: <PageGroupMenu___UknInit>)
+  PageGroupMenu(~)  ;<+>  (ADDR=001484D0 LEN=00000034) =constructorId(~)
+  new_local(~)  ;<+>  (ADDR=00157AAC LEN=00000048)
+  .call(~)  ;<+>  (ADDR=00157AAC LEN=00000048)
+  
+  ~ delete(~)  ;<+>  (ADDR=0014F4FC LEN=00000028)
+  ~ AddPageGroup(~)  ;1  ;<+>  (ADDR=001919D8 LEN=0000001C)
+  ~ AddPageGroup(~)  ;2  ;<+>  (ADDR=001919F4 LEN=000000A8)
+  ~ AddPageGroup(~)  ;3  ;<+>  (ADDR=0015F27C LEN=000000AC)
+  ~ SetCursorItemIndex(~)  ;<+>  (ADDR=0016B440 LEN=00000040)
+  ~ SetCurrentPageGroup(~)  ;1  ;<+>  (ADDR=00192FBC LEN=00000040)
+  ~ SetCurrentPageGroup(~)  ;2  ;<+>  (ADDR=0016CDA8 LEN=000000F4)
+  ~ SetCaption(~)  ;1  ;<+>  (ADDR=00191088 LEN=0000003C)
+  ~ SetCaption(~)  ;2  ;<+>  (ADDR=001910C4 LEN=000000AC)
+  ~ SetCaption(~)  ;3  ;<+>  (ADDR=00191198 LEN=000000E0)
+  ~ SetCaption(~)  ;4  ;<+>  (ADDR=0015A610 LEN=000000F4)
+  ~ SetCurrentModifyItem(~)  ;1  ;<+>  (ADDR=00193020 LEN=00000068)
+  ~ SetCurrentModifyItem(~)  ;2  ;<+>  (ADDR=0016E810 LEN=000000AC)
+  ~ AddItem(~)  ;1  ;<+>  (ADDR=0018F3E0 LEN=000000D4)
+  ~ AddItem(~)  ;2  ;<+>  (ADDR=0018F4B4 LEN=00000140)
+  ~ AddItem(~)  ;3  ;<+>  (ADDR=0018F61C LEN=00000174)
+  ~ AddItem(~)  ;4  ;<+>  (ADDR=00151C00 LEN=00000184)
+  ~ SetEquipFaceIconVisible(~)  ;1  ;<+>  (ADDR=001933CC LEN=00000044)
+  ~ SetEquipFaceIconVisible(~)  ;2  ;<+>  (ADDR=0017190C LEN=000000E8)
+  ~ ChangeSelectEquip(~)  ;1  ;<+>  (ADDR=00192EB4 LEN=0000001C)
+  ~ ChangeSelectEquip(~)  ;2  ;<+>  (ADDR=001697B0 LEN=000000AC)
+  ~ GetCurrentPageGroupNum(~)  ;<+>  (ADDR=001711AC LEN=00000030)
+  ~ GetPageGroupCount(~)  ;<+>  (ADDR=00169884 LEN=00000030)
+  ~ SetWindowSize(~)  ;<+>  (ADDR=00161844 LEN=00000084)
+  ~ ListUpdate(~)  ;<+>  (ADDR=0015A5F4 LEN=0000001C)
+
+
+;========================================
+PageTimerMenu extends PageMenu ;(internal name: MenuLuaWrapper_PageTimerMenu, ADDR=001274BC, Ukn: <none>)
+  ~ ResetTimer(~)  ;<+>  (ADDR=0015A888 LEN=0000001C)
+  ~ ChangeOff(~)  ;<+>  (ADDR=00157BC8 LEN=0000001C)
+  ~ SetTimerLimit(~)  ;<+>  (ADDR=001619D4 LEN=00000040)
+
+
+;========================================
+PartyMemberWindow extends BaseMenu ;(internal name: MenuLuaWrapper_PartyMemberWindow, ADDR=00127518, Ukn: <none>)
+  ~ Open(~)  ;<+>  (ADDR=00154D68 LEN=0000001C)
+  ~ SetMemberId(~)  ;<+>  (ADDR=00165E6C LEN=00000040)
+
+
+;========================================
+PartyMenu extends ButtonMenu ;(internal name: MenuLuaWrapper_PartyMenu, ADDR=00127564, Ukn: <none>)
+  ~ Open(~)  ;<+>  (ADDR=00142C90 LEN=0000001C)
+  ~ SetOption(~)  ;<+>  (ADDR=0014CC54 LEN=0000007C)
+  ~ SetVisible(~)  ;<+>  (ADDR=0014F5E4 LEN=00000044)
+  ~ GetCursorItemIndex(~)  ;<+>  (ADDR=00163C58 LEN=00000030)
+  ~ SetCursorItemIndex(~)  ;<+>  (ADDR=00163C88 LEN=00000040)
+  ~ AddPartyWindow(~)  ;<+>  (ADDR=0015A978 LEN=00000108)
+
+
+;========================================
+PartyMenu2 extends BaseMenu ;(internal name: MenuLuaWrapper_PartyMenu2, ADDR=001275F0, Ukn: <none>)
+  ~ Open(~)  ;<+>  (ADDR=001440E0 LEN=0000001C)
+  ~ SetOption(~)  ;<+>  (ADDR=0014F568 LEN=0000007C)
+  ~ SetVisible(~)  ;<+>  (ADDR=00151F88 LEN=00000044)
+
+
+;========================================
+PartyWazaWindow extends BaseMenu ;(internal name: MenuLuaWrapper_PartyWazaWindow, ADDR=0012764C, Ukn: <none>)
+  ~ Open(~)  ;<+>  (ADDR=0014F628 LEN=0000001C)
+
+
+;========================================
+PokemonSelect extends BaseMenu ;(internal name: MenuLuaWrapper_PokemonSelect, ADDR=00127688, Ukn: <none>)
+  ~ Open(~)  ;<+>  (ADDR=0014AC14 LEN=0000001C)
+  ~ GetWarehouseId(~)  ;<+>  (ADDR=00163CD0 LEN=00000030)
+
+
+;========================================
+PokemonStatusWindow extends ExplainMenuWindow ;(internal name: MenuLuaWrapper_PokemonStatusWindow, ADDR=001276D4, Ukn: <none>)
+  ~ Open(~)  ;<+>  (ADDR=0015AA88 LEN=0000001C)
+  ~ SetMemberId(~)  ;<+>  (ADDR=001698FC LEN=00000040)
+  ~ SetWarehouseId(~)  ;<+>  (ADDR=0016EBEC LEN=00000044)
+  ~ SetType(~)  ;<+>  (ADDR=00161A1C LEN=00000044)
+  ~ GetConditionPageNum(~)  ;<+>  (ADDR=001731A8 LEN=00000030)
+  ~ GetLinkMessegeId(~)  ;<+>  (ADDR=001711DC LEN=00000030)
+  ~ SetParallax(~)  ;<+>  (ADDR=00169944 LEN=0000003C)
+  ~ SetParallaxFromLevel(~)  ;<+>  (ADDR=001737C8 LEN=00000044)
+  ~ SetScreenType(~)  ;<+>  (ADDR=0016CF98 LEN=00000044)
+
+
+;========================================
+ScratchMenu extends BoardMenuWindow ;(internal name: MenuLuaWrapper_ScratchMenu, ADDR=00127BA0, Ukn: <none>)
+  ~ Open(~)  ;<+>  (ADDR=00146690 LEN=0000001C)
+  ~ StartupScratch(~)  ;<+>  (ADDR=0015F980 LEN=0000001C)
+  ~ ShutDownScratch(~)  ;<+>  (ADDR=00162124 LEN=0000001C)
+  ~ ResetScratch(~)  ;<+>  (ADDR=0015B084 LEN=0000001C)
+  ~ GetResult(~)  ;<+>  (ADDR=0015254C LEN=00000030)
+  ~ SetScratchType(~)  ;<+>  (ADDR=0015F938 LEN=00000040)
+
+
+;========================================
+ScrollMenu extends PageMenu ;(internal name: MenuLuaWrapper_ScrollMenu, ADDR=00127C2C, Ukn: <none>)
+  ~ ShowPageNum(~)  ;<+>  (ADDR=001553B8 LEN=00000044)
+  ~ SetLoop(~)  ;<+>  (ADDR=0014AEFC LEN=00000044)
+  ~ IsCurrentItemChange(~)  ;<+>  (ADDR=00168004 LEN=0000002C)
+
+
+;========================================
+SIMPLE_STATUS ;(internal name: MenuLuaWrapper_SimpleStatusManager, ADDR=00127C88, Ukn: <none>)
+  ~ WindowOpen(~)  ;<+>  (ADDR=0015AAE8 LEN=0000001C)
+  ~ WindowClose(~)  ;<+>  (ADDR=0015CDA4 LEN=0000001C)
+  ~ SetVisible(~)  ;<+>  (ADDR=0015AAA4 LEN=00000044)
+  ~ Suspend(~)  ;<+>  (ADDR=00152278 LEN=0000001C)
+  ~ Resume(~)  ;<+>  (ADDR=0014F984 LEN=0000001C)
+
+
+;========================================
+SimpleStatusWindow extends BoardMenuWindow ;(internal name: MenuLuaWrapper_SimpleStatusWindow, ADDR=00127D04, Ukn: <none>)
+  ~ Open(~)  ;<+>  (ADDR=00157FA4 LEN=0000001C)
+  ~ Close(~)  ;<+>  (ADDR=0015B0A0 LEN=0000001C)
+  ~ SetVisible(~)  ;<+>  (ADDR=0016626C LEN=00000044)
+
+
+;========================================
+WazaDetailWindow extends BaseMenu ;(internal name: MenuLuaWrapper_WazaDetailWindow, ADDR=00128104, Ukn: <none>)
+  ~ Open(~)  ;<+>  (ADDR=0015289C LEN=0000001C)
+  ~ SetWazaOriginal(~)  ;<+>  (ADDR=0016B948 LEN=00000044)
+  ~ SetWazaIndex(~)  ;1  ;<+>  (ADDR=00192864 LEN=00000068)
+  ~ SetWazaIndex(~)  ;2  ;<+>  (ADDR=001662CC LEN=000000AC)
+  ~ SetRememberWazaIndex(~)  ;<+>  (ADDR=00171B6C LEN=00000068)
+  ~ SetBarPriority(~)  ;<+>  (ADDR=00169D28 LEN=00000040)
+  ~ SetLineFlag(~)  ;<+>  (ADDR=00163F50 LEN=00000044)
+  ~ SetArrowFlags(~)  ;<+>  (ADDR=001680C0 LEN=00000040)
+  ~ AddArrowFlags(~)  ;<+>  (ADDR=00168078 LEN=00000040)
+  ~ ClearArrowFlags(~)  ;<+>  (ADDR=0016B900 LEN=00000040)
+  ~ SetParallax(~)  ;<+>  (ADDR=00163F94 LEN=0000003C)
+  ~ SetParallaxFromLevel(~)  ;<+>  (ADDR=00171B20 LEN=00000044)
+
+
+;========================================
+WazaSelectWindow extends PageMenu ;(internal name: MenuLuaWrapper_WazaSelectWindow, ADDR=00128228, Ukn: <none>)
+  ~ Open(~)  ;<+>  (ADDR=001528B8 LEN=0000001C)
+  ~ SetMemberId(~)  ;<+>  (ADDR=00163FD8 LEN=00000040)
+  ~ SetWarehouseId(~)  ;<+>  (ADDR=00169D70 LEN=00000044)
+  ~ SetParallax(~)  ;<+>  (ADDR=00164020 LEN=0000003C)
+  ~ SetParallaxFromLevel(~)  ;<+>  (ADDR=00171BDC LEN=00000044)
+
+
+;========================================
+WazaStatusWindow extends BaseMenu ;(internal name: MenuLuaWrapper_WazaStatusWindow, ADDR=001282A4, Ukn: <none>)
+  ~ Open(~)  ;<+>  (ADDR=001528D4 LEN=0000001C)
+  ~ SetMemberId(~)  ;<+>  (ADDR=00164064 LEN=00000040)
+  ~ SetWarehouseId(~)  ;<+>  (ADDR=00169E9C LEN=00000044)
+  ~ SetPokemonId(~)  ;<+>  (ADDR=00166480 LEN=00000044)
+  ~ SetNewMemberPokemonStatus(~)  ;<+>  (ADDR=0017403C LEN=0000001C)
+  ~ SetLayoutRect(~)  ;<+>  (ADDR=00168178 LEN=000000A8)
+  ~ SetFacePos(~)  ;<+>  (ADDR=00162358 LEN=00000068)
+  ~ SetNameWindowRect(~)  ;<+>  (ADDR=0016EDBC LEN=000000A8)
+  ~ SetType1Pos(~)  ;<+>  (ADDR=001640AC LEN=00000068)
+  ~ SetType2Pos(~)  ;<+>  (ADDR=0016411C LEN=00000068)
+  ~ SetLvPos(~)  ;<+>  (ADDR=0015D6D0 LEN=00000068)
+  ~ SetHpPos(~)  ;<+>  (ADDR=0015D660 LEN=00000068)
+  ~ SetAttackPos(~)  ;<+>  (ADDR=001663A0 LEN=00000068)
+  ~ SetDefendPos(~)  ;<+>  (ADDR=00166410 LEN=00000068)
+  ~ SetAttackExPos(~)  ;<+>  (ADDR=00169DBC LEN=00000068)
+  ~ SetDefendExPos(~)  ;<+>  (ADDR=00169E2C LEN=00000068)
+  ~ SetAbilityPos(~)  ;<+>  (ADDR=00168108 LEN=00000068)
+  ~ SetWaza1Pos(~)  ;<+>  (ADDR=0016418C LEN=00000068)
+  ~ SetWaza2Pos(~)  ;<+>  (ADDR=001641FC LEN=00000068)
+  ~ SetWaza3Pos(~)  ;<+>  (ADDR=0016426C LEN=00000068)
+  ~ SetWaza4Pos(~)  ;<+>  (ADDR=001642DC LEN=00000068)
+
+
+;========================================
+;TODO: may need some verification
+BaseListMenu extends BaseMenu ;(internal name: MenuLuaWrapper_BaseListMenu, ADDR=0011B540, Ukn: <BaseListMenu___UknInit>)
+  BaseListMenu(~)  ;<+>  (ADDR=00145364 LEN=00000034); =constructorId LuaFunc
+  new_local(~)  ;<+>  (ADDR=0015305C LEN=00000048)
+  .call(~)  ;<+>  (ADDR=0015305C LEN=00000048)
+  
+  ~ delete(~)  ;<+>  (ADDR=0014B77C LEN=00000028)
+  ~ AddItem(~)  ;1  ;<+>  (ADDR=0018C130 LEN=000000D4)
+  ~ AddItem(~)  ;2  ;<+>  (ADDR=0014DFFC LEN=00000140)
+  ~ AddItemWithRepText(~)  ;1  ;<+>  (ADDR=00192BD0 LEN=000000D4)
+  ~ AddItemWithRepText(~)  ;2  ;<+>  (ADDR=0016839C LEN=00000140)
+  ~ ClearItems(~)  ;<+>  (ADDR=00155954 LEN=0000001C)
+  ~ UpdateItemList(~)  ;<+>  (ADDR=0015FDB8 LEN=0000001C)
+  ~ ModifyItem_TextId(~)  ;<+>  (ADDR=001666A8 LEN=00000040)
+  ~ SetCurrentModifyItem(~)  ;<+>  (ADDR=0016BAF4 LEN=00000040)
+  curItem ;a ModifyItem
+    .set ;none
+    .get ;<+>  (ADDR=0016B98C LEN=00000050)
+
+  ;----------------------------------------
+  ModifyItem ;(internal name: MenuLuaWrapper_BaseListMenu::ModifyItem, ADDR=0011B568, Ukn: <none>)
+    text
+      .set ;<+>  (ADDR=00173D38 LEN=00000060)
+      .get ;<+>  (ADDR=00173C68 LEN=0000003C)
+
+    disable
+      .set ;<+>  (ADDR=001747D0 LEN=00000044)
+      .get ;<+>  (ADDR=00174778 LEN=0000002C)
+
+    grayed
+      .set ;<+>  (ADDR=0017447C LEN=00000044)
+      .get ;<+>  (ADDR=00174424 LEN=0000002C)
+
+    obj
+      .set ;<+>  (ADDR=00173888 LEN=00000068)
+      .get ;<+>  (ADDR=0017384C LEN=0000003C)
+
+    dispIndex
+      .set ;<+>  (ADDR=00174D98 LEN=00000040)
+      .get ;<+>  (ADDR=00174D2C LEN=00000030)
+
+    index
+      .set ;<+>  (ADDR=001740C4 LEN=00000040)
+      .get ;<+>  (ADDR=00174058 LEN=00000030)
+
+    selected
+      .set ;<+>  (ADDR=00174A84 LEN=00000044)
+      .get ;<+>  (ADDR=00174A2C LEN=0000002C)
+
+
+;========================================
+;TODO: may need some verification
+ParameterMenu extends BaseMenu ;(internal name: MenuLuaWrapper_ParameterMenu, ADDR=0011BA94, Ukn: <none>)
+  ~ SetCaption(~)  ;1  ;<+>  (ADDR=001912A0 LEN=0000003C)
+  ~ SetCaption(~)  ;2  ;<+>  (ADDR=0015A8A4 LEN=000000AC)
+  ~ SetLayoutRectAndLines(~)  ;1  ;<+>  (ADDR=001932A8 LEN=000000A8)
+  ~ SetLayoutRectAndLines(~)  ;2  ;<+>  (ADDR=00170088 LEN=0000019C)
+  ~ SetFooter(~)  ;<+>  (ADDR=00157BE4 LEN=00000044)
+  ~ AddItem(~)  ;1  ;<+>  (ADDR=0018F7B8 LEN=000000D4)
+  ~ AddItem(~)  ;2  ;<+>  (ADDR=00151E20 LEN=00000140)
+  ~ AddItemI(~)  ;1  ;<+>  (ADDR=001900D8 LEN=00000108)
+  ~ AddItemI(~)  ;2  ;<+>  (ADDR=00154944 LEN=000001A8)
+  ~ AddItemF(~)  ;1  ;<+>  (ADDR=0018FFD0 LEN=00000108)
+  ~ AddItemF(~)  ;2  ;<+>  (ADDR=00154748 LEN=000001A8)
+  ~ AddItemS(~)  ;1  ;<+>  (ADDR=001901E0 LEN=000000D4)
+  ~ AddItemS(~)  ;2  ;<+>  (ADDR=001902B4 LEN=00000140)
+  ~ AddItemS(~)  ;3  ;<+>  (ADDR=0019041C LEN=000001A4)
+  ~ AddItemS(~)  ;4  ;<+>  (ADDR=00154B40 LEN=000001A8)
+  ~ AddSelectString(~)  ;1  ;<+>  (ADDR=00192640 LEN=0000003C)
+  ~ AddSelectString(~)  ;2  ;<+>  (ADDR=0019267C LEN=000000F4)
+  ~ AddSelectString(~)  ;3  ;<+>  (ADDR=00192790 LEN=000000AC)
+  ~ AddSelectString(~)  ;4  ;<+>  (ADDR=00165D4C LEN=000000F8)
+  ~ SetSelectStringIndex(~)  ;1  ;<+>  (ADDR=00193090 LEN=0000003C)
+  ~ SetSelectStringIndex(~)  ;2  ;<+>  (ADDR=001930CC LEN=000000AC)
+  ~ SetSelectStringIndex(~)  ;3  ;<+>  (ADDR=001931A0 LEN=000000E0)
+  ~ SetSelectStringIndex(~)  ;4  ;<+>  (ADDR=0016E974 LEN=000000F4)
+  ~ SetSelectStringIndexObj(~)  ;<+>  (ADDR=00171A1C LEN=00000074)
+  ~ GetCursorItemIndex(~)  ;<+>  (ADDR=0016B488 LEN=00000030)
+  ~ SetCursorItemIndex(~)  ;<+>  (ADDR=0016B4B8 LEN=00000040)
+  ~ SetCurrentModifyItem(~)  ;<+>  (ADDR=0016E92C LEN=00000040)
+  ~ ModifyItem_TextId(~)  ;<+>  (ADDR=001698B4 LEN=00000040)
+  ~ SetSelectStringText(~)  ;<+>  (ADDR=0016CF38 LEN=00000058)
+  ~ SetSelectStringTextId(~)  ;<+>  (ADDR=0017024C LEN=00000068)
+  ~ GetSelectStringText(~)  ;<+>  (ADDR=0016CEC4 LEN=0000006C)
+  ~ SetPageIconPos(~)  ;<+>  (ADDR=00163AA0 LEN=00000068)
+  ~ IsResult(~)  ;<+>  (ADDR=00154D3C LEN=0000002C)
+  curItem ;ModifyItem
+    .set ;none
+    .get ;<+>  (ADDR=sub_16D0E8)
+
+  ;----------------------------------------
+  ModifyItem ;(internal name: MenuLuaWrapper_ParameterMenu::ModifyItem, ADDR=0011BAB8, Ukn: <none>)
+    ;TODO: why no constructor?
+    text
+      .set ;<+>  (ADDR=0017410C LEN=00000060)
+      .get ;<+>  (ADDR=00174088 LEN=0000003C)
+
+    disable
+      .set ;<+>  (ADDR=00174AC8 LEN=00000044)
+      .get ;<+>  (ADDR=00174A58 LEN=0000002C)
+
+    grayed
+      .set ;<+>  (ADDR=00174814 LEN=00000044)
+      .get ;<+>  (ADDR=001747A4 LEN=0000002C)
+
+    obj
+      .set ;<+>  (ADDR=00173E20 LEN=00000068)
+      .get ;<+>  (ADDR=00173CFC LEN=0000003C)
+
+    min
+      .set ;<+>  (ADDR=00173DDC LEN=0000003C)
+      .get ;<+>  (ADDR=00173CD0 LEN=0000002C)
+
+    max
+      .set ;<+>  (ADDR=00173D98 LEN=0000003C)
+      .get ;<+>  (ADDR=00173CA4 LEN=0000002C)
+
+    value
+      .set ;<+>  (ADDR=001744C0 LEN=0000003C)
+      .get ;<+>  (ADDR=00174450 LEN=0000002C)
+
+    selectValueObj
+      .set ;<+>  (ADDR=00175400 LEN=00000068)
+      .get ;<+>  (ADDR=001753C4 LEN=0000003C)
+
+  ;----------------------------------------
+  ValueParam ;(internal name: MenuLuaWrapper_ParameterMenu::ValueParam, ADDR=0011BB84, Ukn: <ValueParam___UknInit>)
+    ValueParam(~) ;<+>  (ADDR=00163B10 LEN=00000114);=constructorId
+    new_local(~)  ;<+>  (ADDR=0016EA90 LEN=00000128)
+    .call(~) ;<+>  (ADDR=0016EA90 LEN=00000128)
+
+
+;========================================
+PageMenu extends BaseListMenu ;(internal name: MenuLuaWrapper_PageMenu, ADDR=0011C108, Ukn: <PageMenu___UknInit>)
+  PageMenu(~)  ;<+>  (ADDR=00140DC0 LEN=00000034); =constructorId
+  new_local(~)  ;<+>  (ADDR=0014ABB4 LEN=00000048)
+  .call(~)  ;<+>  (ADDR=0014ABB4 LEN=00000048)
+
+  ~ delete(~)  ;<+>  (ADDR=001440B8 LEN=00000028)
+  ~ SetCaption(~)  ;1  ;<+>  (ADDR=0018BD68 LEN=0000003C)
+  ~ SetCaption(~)  ;2  ;<+>  (ADDR=0014CB88 LEN=000000AC)
+  ~ SetLayoutRectAndLines(~)  ;1  ;<+>  (ADDR=00192964 LEN=000000A8)
+  ~ SetLayoutRectAndLines(~)  ;2  ;<+>  (ADDR=00192A14 LEN=0000019C)
+  ~ SetLayoutRectAndLines(~)  ;3  ;<+>  (ADDR=00167B80 LEN=000001C8)
+  ~ GetCursorItemIndex(~)  ;<+>  (ADDR=001618D0 LEN=00000030)
+  ~ SetCursorItemIndex(~)  ;<+>  (ADDR=00161900 LEN=00000040)
+  ~ SetCursorOffset(~)  ;<+>  (ADDR=0015A818 LEN=00000068)
+  ~ SetItemOffset(~)  ;<+>  (ADDR=00154694 LEN=00000068)
+  ~ SetDefaultCursorDispIndex(~)  ;<+>  (ADDR=0016E8E4 LEN=00000040)
+  ~ SetDecideSound(~)  ;<+>  (ADDR=00157B84 LEN=00000044)
+  ~ GetPagenum(~)  ;<+>  (ADDR=0014CB58 LEN=00000030)
+  ~ GetPageTopIndex(~)  ;<+>  (ADDR=0015A72C LEN=00000050)
+  ~ ShowPageNum(~)  ;<+>  (ADDR=0014F524 LEN=00000044)
+  ~ SetShowCurosr(~)  ;<+>  (ADDR=00154704 LEN=00000044)
+  ~ EnableCursor(~)  ;<+>  (ADDR=00151DAC LEN=00000044)
+  ~ SetMultiSelectable(~)  ;<+>  (ADDR=00161990 LEN=00000044)
+  ~ AddMultiSelect(~)  ;<+>  (ADDR=00157B14 LEN=0000004C)
+  ~ ClearMultiSelect(~)  ;<+>  (ADDR=0015CCD0 LEN=0000004C)
+  ~ AllMultiSelectFromLua(~)  ;<+>  (ADDR=001679EC LEN=00000194)
+  ~ ResetSelecting(~)  ;<+>  (ADDR=00157B68 LEN=0000001C)
+  ~ GetItemCount(~)  ;<+>  (ADDR=00151DF0 LEN=00000030)
+  ~ GetItem(~)  ;<+>  (ADDR=00145EF8 LEN=00000070)
+  ~ GetSelectedItemCount(~)  ;<+>  (ADDR=00165D1C LEN=00000030)
+  ~ GetSelectedItem(~)  ;<+>  (ADDR=0015A784 LEN=00000070)
+  ~ IsMultiSelect(~)  ;<+>  (ADDR=00154668 LEN=0000002C)
+  ~ IsResult(~)  ;<+>  (ADDR=00148550 LEN=0000002C)
+  ~ IsOpened(~)  ;<+>  (ADDR=00148524 LEN=0000002C)
+  ~ SortItem(~)  ;<+>  (ADDR=0014857C LEN=0000005C)
+  ~ InterruptUpdate(~)  ;<+>  (ADDR=0015A7FC LEN=0000001C)
+  ~ SetMaxSelectingNum(~)  ;<+>  (ADDR=00161948 LEN=00000040)
+
+
+;========================================
+WINDOW ;(internal name: ScriptFunc_WINDOW, ADDR=0012F3F0, Ukn: <none>)
+  ~ DrawFace(~)  ;1  ;<+>  (ADDR=00186288 LEN=000000C8)
+  ~ DrawFace(~)  ;2  ;<+>  (ADDR=00144F3C LEN=0000019C)
+  ~ DrawFaceF(~)  ;1  ;<+>  (ADDR=001877BC LEN=000000C8)
+  ~ DrawFaceF(~)  ;2  ;<+>  (ADDR=00146E90 LEN=0000019C)
+  ~ DrawFaceFromPokemonIndex(~)  ;<+>  (ADDR=00169BF0 LEN=000000D4)
+  ~ DrawFaceOffset(~)  ;<+>  (ADDR=00152694 LEN=00000068)
+  ~ RemoveFace(~)  ;<+>  (ADDR=0014905C LEN=0000001C)
+  ~ SetPartnerName(~)  ;<+>  (ADDR=00152704 LEN=00000068)
+  ~ ResetPartnerName(~)  ;<+>  (ADDR=001580A8 LEN=0000001C)
+  ~ SetMessageScreenMode(~)  ;<+>  (ADDR=0016230C LEN=00000044)
+  ~ CloseMessage(~)  ;<+>  (ADDR=0014D8C4 LEN=0000001C)
+  ~ ForceCloseMessage(~)  ;<+>  (ADDR=0015B12C LEN=0000001C)
+  ~ SetWaitMode(~)  ;<+>  (ADDR=0014B1C0 LEN=00000060)
+  ~ SysMsg(~)  ;1  ;<+>  (ADDR=00182AC4 LEN=0000003C)
+  ~ SysMsg(~)  ;2  ;<+>  (ADDR=00142200 LEN=000000AC)
+  ~ SwitchSysMsg(~)  ;<+>  (ADDR=0014D9F0 LEN=00000078)
+  ~ SysAllMsg(~)  ;1  ;<+>  (ADDR=00187950 LEN=0000003C)
+  ~ SysAllMsg(~)  ;2  ;<+>  (ADDR=0014731C LEN=000000AC)
+  ~ BeginChapter(~)  ;<+>  (ADDR=0014D8A8 LEN=0000001C)
+  ~ EndChapter(~)  ;<+>  (ADDR=00148DE8 LEN=0000001C)
+  ~ Chapter(~)  ;1  ;<+>  (ADDR=00184A78 LEN=0000008C)
+  ~ Chapter(~)  ;2  ;<+>  (ADDR=0014305C LEN=0000015C)
+  ~ Narration(~)  ;1  ;<+>  (ADDR=001878C8 LEN=00000088)
+  ~ NarrationBottomFrame(~)  ;1  ;<+>  (ADDR=00192118 LEN=0000008C)
+  ~ NarrationBottomFrame(~)  ;2  ;<+>  (ADDR=00162188 LEN=0000015C)
+  ~ Narration(~)  ;2  ;<+>  (ADDR=00147130 LEN=00000160)
+  ~ SwitchNaration(~)  ;<+>  (ADDR=0015276C LEN=000000B4)
+  ~ NarrationB(~)  ;1  ;<+>  (ADDR=00189AEC LEN=00000088)
+  ~ NarrationB(~)  ;2  ;<+>  (ADDR=00148ECC LEN=00000160)
+  ~ Explanation(~)  ;1  ;<+>  (ADDR=0018B460 LEN=0000003C)
+  ~ Explanation(~)  ;2  ;<+>  (ADDR=0014AFCC LEN=000000AC)
+  ~ ExplanationB(~)  ;1  ;<+>  (ADDR=0018C004 LEN=0000003C)
+  ~ ExplanationB(~)  ;2  ;<+>  (ADDR=0014D8E0 LEN=000000AC)
+  ~ Outline(~)  ;<+>  (ADDR=00143228 LEN=0000008C)
+  ~ SystemLetter(~)  ;1  ;<+>  (ADDR=0018C040 LEN=0000003C)
+  ~ SystemLetter(~)  ;2  ;<+>  (ADDR=0014DA68 LEN=000000AC)
+  ~ Talk(~)  ;1  ;<+>  (ADDR=00181A2C LEN=0000007C)
+  ~ Talk(~)  ;2  ;<+>  (ADDR=00181AA8 LEN=0000011C)
+  ~ Talk(~)  ;3  ;<+>  (ADDR=00181BF8 LEN=00000118)
+  ~ Talk(~)  ;4  ;<+>  (ADDR=00181D3C LEN=0000011C)
+  ~ Talk(~)  ;5  ;<+>  (ADDR=00181E8C LEN=00000118)
+  ~ Talk(~)  ;6  ;<+>  (ADDR=00140A84 LEN=0000011C)
+  ~ Talk_HideFrame(~)  ;<+>  (ADDR=00152820 LEN=0000007C)
+  ~ Talk_AutoCloseFrame(~)  ;1  ;<+>  (ADDR=00191B4C LEN=00000088)
+  ~ Talk_AutoCloseFrame(~)  ;2  ;<+>  (ADDR=0015F9C8 LEN=00000128)
+  ~ Talk_Fuupa(~)  ;<+>  (ADDR=00149138 LEN=00000040)
+  ~ TalkOption(~)  ;<+>  (ADDR=001490F0 LEN=00000040)
+  ~ SwitchTalk(~)  ;<+>  (ADDR=00149078 LEN=00000078)
+  ~ TalkNpc(~)  ;<+>  (ADDR=001432BC LEN=00000088)
+  ~ KeyWait(~)  ;<+>  (ADDR=001431E0 LEN=00000040)
+  ~ Monologue(~)  ;1  ;<+>  (ADDR=0018788C LEN=0000003C)
+  ~ Monologue(~)  ;2  ;<+>  (ADDR=00147068 LEN=000000AC)
+  ~ Monologue2(~)  ;1  ;<+>  (ADDR=00189AB0 LEN=0000003C)
+  ~ Monologue2(~)  ;2  ;<+>  (ADDR=00148E04 LEN=000000AC)
+  ~ Log(~)  ;1  ;<+>  (ADDR=00181114 LEN=0000003C)
+  ~ Log(~)  ;2  ;<+>  (ADDR=0013FEB4 LEN=000000AC)
+  ~ SetStartKeyOffWait(~)  ;<+>  (ADDR=0015D61C LEN=00000044)
+  ~ SelectStart(~)  ;<+>  (ADDR=0014B1A4 LEN=0000001C)
+  ~ SelectSetLuaMenu(~)  ;<+>  (ADDR=001580C4 LEN=0000003C)
+  ~ SelectEnd(~)  ;<+>  (ADDR=001472C0 LEN=00000054)
+  ~ SelectEndWithWakeupCancel(~)  ;<+>  (ADDR=0016B8A4 LEN=00000054)
+  ~ SelectEndTalk(~)  ;<+>  (ADDR=001500F0 LEN=00000054)
+  ~ SelectEndNotPlayDecideSe(~)  ;<+>  (ADDR=00169CCC LEN=00000054)
+  ~ SelectChain(~)  ;1  ;<+>  (ADDR=0018B49C LEN=00000058)
+  ~ SelectChain(~)  ;2  ;<+>  (ADDR=0014B094 LEN=000000F4)
+  ~ DefaultCursor(~)  ;<+>  (ADDR=00150060 LEN=00000040)
+  ~ SetMessagePriority(~)  ;<+>  (ADDR=0015D5D4 LEN=00000040)
+  ~ GetMessagePriority(~)  ;<+>  (ADDR=0015D5A4 LEN=00000030)
+  ~ NoticeWindow(~)  ;<+>  (ADDR=0014D9A8 LEN=00000040)
+  ~ NoticeWindowB(~)  ;<+>  (ADDR=001500A8 LEN=00000040)
+
+
+;========================================
+LOWER_SCREEN ;(internal name: MenuLuaFunc_LOWER_SCREEN, ADDR=001150C8, Ukn: <none>)
+  ~ SetScreenLuaObjectIndex(~)  ;<+>  (ADDR=00171114 LEN=00000090)
+  ~ SetScreenLuaObjectType(~)  ;<+>  (ADDR=0016FFA8 LEN=00000094)
+  ~ SetUpperVisible(~)  ;<+>  (ADDR=001636A8 LEN=00000044)
+  ~ SetLowerVisible(~)  ;<+>  (ADDR=00163664 LEN=00000044)
+  ~ SetVisible(~)  ;<+>  (ADDR=00157590 LEN=00000044)
+  ~ IsVisible(~)  ;<+>  (ADDR=00154400 LEN=0000002C)
+  ~ SetWallpaperVisible(~)  ;<+>  (ADDR=0016B378 LEN=00000044)
+  ~ SetCaptionAndPadHelpVisible(~)  ;<+>  (ADDR=00173784 LEN=00000044)
+  ~ SetCaptionVisible(~)  ;<+>  (ADDR=001677BC LEN=00000044)
+  ~ SetPadHelpVisible(~)  ;<+>  (ADDR=00167800 LEN=00000044)
+  ~ IsCaptionAndPadHelpVisible(~)  ;<+>  (ADDR=00173100 LEN=0000002C)
+  ~ IsCaptionVisible(~)  ;<+>  (ADDR=00165A68 LEN=0000002C)
+  ~ IsPadHelpVisible(~)  ;<+>  (ADDR=00165A94 LEN=0000002C)
+  ~ SetCurrentScreenType(~)  ;<+>  (ADDR=0016CCB8 LEN=00000050)
+  ~ SetInputEnable(~)  ;<+>  (ADDR=001614BC LEN=00000044)
+  ~ SetTextIdCaption(~)  ;<+>  (ADDR=00165AC0 LEN=00000040)
+  ~ SetTextIdPadHelp(~)  ;<+>  (ADDR=00165B08 LEN=00000040)
+  ~ SetTextCaption(~)  ;<+>  (ADDR=00161500 LEN=0000003C)
+  ~ SetTextPadHelp(~)  ;<+>  (ADDR=0016153C LEN=0000003C)
+  ~ ChangeLastWallpaper(~)  ;<+>  (ADDR=0016B340 LEN=0000001C)
+  ~ SetEnableIndex(~)  ;<+>  (ADDR=00161454 LEN=00000060)
+  ~ SetEnableType(~)  ;<+>  (ADDR=0015EE9C LEN=00000064)
+  ~ ChangeRestPointMode(~)  ;<+>  (ADDR=0016B35C LEN=0000001C)
+
+
+;========================================
+SCREEN_A ;(internal name: ScriptFunc_SCREEN_A, ADDR=0012BF7C, Ukn: <none>)
+  ~ FadeIn(~)  ;<+>  (ADDR=001442E8 LEN=00000064)
+  ~ FadeOut(~)  ;<+>  (ADDR=001460EC LEN=00000064)
+  ~ FadeChange(~)  ;<+>  (ADDR=0014CDCC LEN=000000A4)
+  ~ FadeInAll(~)  ;<+>  (ADDR=0014ACE8 LEN=00000064)
+  ~ FadeOutAll(~)  ;<+>  (ADDR=0014CE70 LEN=00000064)
+  ~ IsFadeOutAllComplete(~)  ;<+>  (ADDR=00165F60 LEN=0000002C)
+  ~ WhiteIn(~)  ;<+>  (ADDR=00146150 LEN=00000064)
+  ~ WhiteOut(~)  ;<+>  (ADDR=00148770 LEN=00000064)
+  ~ WhiteChange(~)  ;<+>  (ADDR=0014F774 LEN=000000A4)
+  ~ WhiteInAll(~)  ;<+>  (ADDR=0014CED4 LEN=00000064)
+  ~ WhiteOutAll(~)  ;<+>  (ADDR=0014F818 LEN=00000064)
+  ~ SetColorFilter(~)  ;<+>  (ADDR=00157C28 LEN=0000005C)
+  ~ IsColorFilterColor(~)  ;<+>  (ADDR=00161CC4 LEN=00000068)
+  ~ ChangeColorFilter(~)  ;<+>  (ADDR=0015F350 LEN=000000AC)
+  ~ SetColorFilterAll(~)  ;<+>  (ADDR=0015F3FC LEN=0000005C)
+  ~ ChangeColorFilterAll(~)  ;<+>  (ADDR=00165EB4 LEN=000000AC)
+  ~ ChangeEffectColorFilter(~)  ;<+>  (ADDR=0016B500 LEN=000000AC)
+  ~ ClearEffectColorFilter(~)  ;<+>  (ADDR=00169988 LEN=00000064)
+  ~ SetSepiaFilter(~)  ;<+>  (ADDR=00157C84 LEN=00000024)
+  ~ ClearSepiaFilter(~)  ;<+>  (ADDR=0015CD24 LEN=0000001C)
+  ~ WaitFade(~)  ;<+>  (ADDR=0014873C LEN=00000034)
+  ~ LoadWallpaper(~)  ;1  ;<+>  (ADDR=00190690 LEN=00000048)
+  ~ LoadWallpaper(~)  ;2  ;<+>  (ADDR=00154EEC LEN=000000AC)
+  ~ DestroyWallpaper(~)  ;<+>  (ADDR=0015CD40 LEN=00000024)
+  ~ SetVisibleWallpaper(~)  ;<+>  (ADDR=00163D00 LEN=00000048)
+
+
+;========================================
+SCREEN_B ;(internal name: ScriptFunc_SCREEN_B, ADDR=0012C58C, Ukn: <none>)
+  ~ FadeIn(~)  ;<+>  (ADDR=0014434C LEN=00000064)
+  ~ FadeOut(~)  ;<+>  (ADDR=001461B4 LEN=00000064)
+  ~ FadeInAll(~)  ;<+>  (ADDR=0014AD4C LEN=00000064)
+  ~ FadeOutAll(~)  ;<+>  (ADDR=0014CFDC LEN=00000064)
+  ~ FadeChange(~)  ;<+>  (ADDR=0014CF38 LEN=000000A4)
+  ~ IsFadeOutAllComplete(~)  ;<+>  (ADDR=00166038 LEN=0000002C)
+  ~ WhiteIn(~)  ;<+>  (ADDR=00146218 LEN=00000064)
+  ~ WhiteOut(~)  ;<+>  (ADDR=00148808 LEN=00000064)
+  ~ WhiteInAll(~)  ;<+>  (ADDR=0014D040 LEN=00000064)
+  ~ WhiteOutAll(~)  ;<+>  (ADDR=0014F920 LEN=00000064)
+  ~ WhiteChange(~)  ;<+>  (ADDR=0014F87C LEN=000000A4)
+  ~ SetColorFilter(~)  ;<+>  (ADDR=00157CA8 LEN=0000005C)
+  ~ ChangeColorFilter(~)  ;<+>  (ADDR=0015F458 LEN=000000AC)
+  ~ SetColorFilterAll(~)  ;<+>  (ADDR=0015F504 LEN=0000005C)
+  ~ ChangeColorFilterAll(~)  ;<+>  (ADDR=00165F8C LEN=000000AC)
+  ~ SetSepiaFilter(~)  ;<+>  (ADDR=00157D04 LEN=00000024)
+  ~ ClearSepiaFilter(~)  ;<+>  (ADDR=0015CD64 LEN=0000001C)
+  ~ WaitFade(~)  ;<+>  (ADDR=001487D4 LEN=00000034)
+  ~ LoadWallpaper(~)  ;1  ;<+>  (ADDR=001906E0 LEN=00000048)
+  ~ LoadWallpaper(~)  ;2  ;<+>  (ADDR=00154FAC LEN=000000AC)
+  ~ DestroyWallpaper(~)  ;<+>  (ADDR=0015CD80 LEN=00000024)
+  ~ SetVisibleWallpaper(~)  ;<+>  (ADDR=00163D48 LEN=00000048)

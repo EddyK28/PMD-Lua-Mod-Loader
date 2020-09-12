@@ -1,0 +1,533 @@
+;All member functions also take 'self' as first arg, so call as obj:func(<args not including self>)
+
+;======================================== 
+Speed ;(internal name: ScriptType_Speed, ADDR=0011428C, Ukn: <Speed___UknInit>) 
+  Speed(~)  ;<+>  (ADDR=00180C88 LEN=00000050) ; =constructorId 
+  new_local(~)  ;<+>  (ADDR=00186120 LEN=00000064) 
+  .call(~)  ;<+>  (ADDR=00186120 LEN=00000064) 
+   
+  Speed(~)  ;<+>  (ADDR=0013F22C LEN=00000144) ; =constructorId 
+  new_local(~)  ;<+>  (ADDR=00144AF8 LEN=00000158) 
+  .call(~)  ;<+>  (ADDR=00144AF8 LEN=00000158) 
+
+
+;======================================== 
+Scale ;(internal name: ScriptType_Scale, ADDR=00114484, Ukn: <Scale___UknInit>) 
+  Scale(~)  ;<+>  (ADDR=00180B08 LEN=00000050) ; =constructorId 
+  new_local(~)  ;<+>  (ADDR=00185F78 LEN=00000064) 
+  .call(~)  ;<+>  (ADDR=00185F78 LEN=00000064) 
+   
+  Scale(~)  ;<+>  (ADDR=00180B74 LEN=000000F8) ; =constructorId 
+  new_local(~)  ;<+>  (ADDR=00185FF8 LEN=0000010C) 
+  .call(~)  ;<+>  (ADDR=00185FF8 LEN=0000010C) 
+   
+  Scale(~)  ;<+>  (ADDR=0013F0DC LEN=00000134) ; =constructorId 
+  new_local(~)  ;<+>  (ADDR=00144994 LEN=00000148) 
+  .call(~)  ;<+>  (ADDR=00144994 LEN=00000148) 
+
+
+;======================================== 
+Height ;(internal name: ScriptType_Height, ADDR=00114544, Ukn: <Height___UknInit>) 
+  Height(~)  ;<+>  (ADDR=0013F4A0 LEN=00000048) ; =constructorId 
+  new_local(~)  ;<+>  (ADDR=00145CD4 LEN=0000005C) 
+  .call(~)  ;<+>  (ADDR=00145CD4 LEN=0000005C) 
+
+
+;======================================== 
+Raito ;(internal name: ScriptType_Raito, ADDR=001145A4, Ukn: <Raito___UknInit>) 
+  Raito(~)  ;<+>  (ADDR=0013F014 LEN=00000048) ; =constructorId 
+  new_local(~)  ;<+>  (ADDR=001441F8 LEN=0000005C) 
+  .call(~)  ;<+>  (ADDR=001441F8 LEN=0000005C) 
+
+
+;======================================== 
+Ratio ;(internal name: ScriptType_Ratio, ADDR=00114604, Ukn: <Ratio___UknInit>) 
+  Ratio(~)  ;<+>  (ADDR=0013F078 LEN=00000048) ; =constructorId 
+  new_local(~)  ;<+>  (ADDR=00144270 LEN=0000005C) 
+  .call(~)  ;<+>  (ADDR=00144270 LEN=0000005C) 
+
+
+;======================================== 
+Level ;(internal name: ScriptType_Level, ADDR=00114664, Ukn: <Level___UknInit>) 
+  Level(~)  ;<+>  (ADDR=0013EDB8 LEN=00000048) ; =constructorId 
+  new_local(~)  ;<+>  (ADDR=00143F4C LEN=0000005C) 
+  .call(~)  ;<+>  (ADDR=00143F4C LEN=0000005C) 
+
+
+;======================================== 
+RotateTarget ;(internal name: ScriptType_RotateTarget, ADDR=001146C4, Ukn: <RotateTarget___UknInit>) 
+  RotateTarget(~)  ;<+>  (ADDR=001872D8 LEN=00000050) ; =constructorId 
+  new_local(~)  ;<+>  (ADDR=0019060C LEN=00000064) 
+  .call(~)  ;<+>  (ADDR=0019060C LEN=00000064) 
+   
+  RotateTarget(~)  ;<+>  (ADDR=00145F70 LEN=000000F8) ; =constructorId 
+  new_local(~)  ;<+>  (ADDR=00154D84 LEN=0000010C) 
+  .call(~)  ;<+>  (ADDR=00154D84 LEN=0000010C) 
+
+
+;======================================== 
+RotateOffs ;(internal name: ScriptType_RotateOffs, ADDR=00114754, Ukn: <RotateOffs___UknInit>) 
+  RotateOffs(~)  ;<+>  (ADDR=00142CAC LEN=00000048) ; =constructorId 
+  new_local(~)  ;<+>  (ADDR=0014F694 LEN=0000005C) 
+  .call(~)  ;<+>  (ADDR=0014F694 LEN=0000005C) 
+
+
+;======================================== 
+Volume ;(internal name: ScriptType_Volume, ADDR=001147B4, Ukn: <Volume___UknInit>) 
+  Volume(~)  ;<+>  (ADDR=0013FE48 LEN=00000050) ; =constructorId 
+  new_local(~)  ;<+>  (ADDR=00146E10 LEN=00000064) 
+  .call(~)  ;<+>  (ADDR=00146E10 LEN=00000064) 
+
+
+;======================================== 
+Degree ;(internal name: ScriptType_Degree, ADDR=00114814, Ukn: <Degree___UknInit>) 
+  Degree(~)  ;<+>  (ADDR=0013F43C LEN=00000048) ; =constructorId 
+  new_local(~)  ;<+>  (ADDR=00145BEC LEN=0000005C) 
+  .call(~)  ;<+>  (ADDR=00145BEC LEN=0000005C) 
+
+
+;======================================== 
+TimeSec ;(internal name: ScriptType_TimeSec, ADDR=00114A04, Ukn: <TimeSec___UknInit>) 
+  TimeSec(~)  ;<+>  (ADDR=001819C0 LEN=00000050) ; =constructorId 
+  new_local(~)  ;<+>  (ADDR=00189A30 LEN=00000064)
+  .call(~)  ;<+>  (ADDR=00189A30 LEN=00000064) 
+   
+  TimeSec(~)  ;<+>  (ADDR=00140968 LEN=00000100) ; =constructorId 
+  new_local(~)  ;<+>  (ADDR=00148CB8 LEN=00000114) 
+  .call(~)  ;<+>  (ADDR=00148CB8 LEN=00000114) 
+   
+  GetFrame(~)  ;<+>  (ADDR=00146DD4 LEN=00000038) 
+
+
+;======================================== 
+Distance ;(internal name: ScriptType_Distance, ADDR=00114AA4, Ukn: <Distance___UknInit>) 
+  Distance(~)  ;<+>  (ADDR=00140D04 LEN=00000048) ; =constructorId 
+  new_local(~)  ;<+>  (ADDR=00149E98 LEN=0000005C) 
+  .call(~)  ;<+>  (ADDR=00149E98 LEN=0000005C) 
+
+
+;======================================== 
+PosOffs ;(internal name: ScriptType_PosOffs, ADDR=00114B04, Ukn: <PosOffs___UknInit>) 
+  PosOffs(~)  ;<+>  (ADDR=001814FC LEN=0000006C) ; =constructorId 
+  new_local(~)  ;<+>  (ADDR=001897B4 LEN=00000080) 
+  .call(~)  ;<+>  (ADDR=001897B4 LEN=00000080) 
+   
+  PosOffs(~)  ;<+>  (ADDR=00140454 LEN=00000134) ; =constructorId 
+  new_local(~)  ;<+>  (ADDR=001485D8 LEN=00000148) 
+  .call(~)  ;<+>  (ADDR=001485D8 LEN=00000148) 
+
+
+;======================================== 
+Rectangle ;(internal name: Rectangle, ADDR=00114C14, Ukn: <Rectangle___UknInit>) 
+  Rectangle(~)  ;<+>  (ADDR=00182864 LEN=000000B4)  ; Rectangle(int, int, int, int) ; =constructorId 
+  new_local(~)  ;<+>  (ADDR=0018BDA4 LEN=000000C8) 
+  .call(~)  ;<+>  (ADDR=0018BDA4 LEN=000000C8) 
+   
+  Rectangle(~)  ;<+>  (ADDR=0018292C LEN=00000074)  ; Rectangle(Rectangle) ; =constructorId 
+  new_local(~)  ;<+>  (ADDR=0018BE80 LEN=00000088) 
+  .call(~)  ;<+>  (ADDR=0018BE80 LEN=00000088) 
+   
+  Rectangle(~)  ;<+>  (ADDR=00141C00 LEN=000000CC) ; =constructorId 
+  new_local(~)  ;<+>  (ADDR=0014CCD0 LEN=000000E0) 
+  .call(~)  ;<+>  (ADDR=0014CCD0 LEN=000000E0) 
+   
+  x  
+    .set ;<+>  (ADDR=0013EA58 LEN=00000038) 
+    .get ;<+>  (ADDR=0013E980 LEN=0000002C) 
+   
+  y  
+    .set ;<+>  (ADDR=0013EA98 LEN=00000038) 
+    .get ;<+>  (ADDR=0013E9AC LEN=0000002C) 
+ 
+  w  
+    .set ;<+>  (ADDR=0013EA18 LEN=00000038) 
+    .get ;<+>  (ADDR=0013E954 LEN=0000002C) 
+   
+  h  
+    .set ;<+>  (ADDR=0013E9D8 LEN=00000038) 
+    .get ;<+>  (ADDR=0013E928 LEN=0000002C) 
+
+
+;======================================== 
+Vector ;(internal name: tech::math::Vector3, ADDR=00130770, Ukn: <Vector___UknInit>) 
+  Vector(~)  ;<+>  (ADDR=0018E1F8 LEN=0000008C)  ; =constructorId 
+  new_local(~)  ;<+>  (ADDR=00191BDC LEN=000000A0) 
+  .call(~)  ;<+>  (ADDR=00191BDC LEN=000000A0) 
+   
+  Vector(~)  ;<+>  (ADDR=0018E2A0 LEN=00000080)  ; =constructorId  
+  new_local(~)  ;<+>  (ADDR=00191C98 LEN=00000094)   
+  .call(~)  ;<+>  (ADDR=00191C98 LEN=00000094)   
+   
+  Vector(~)  ;<+>  (ADDR=00150254 LEN=000000CC)  ; =constructorId  
+  new_local(~)  ;<+>  (ADDR=0015FB60 LEN=000000E0)   
+  .call(~)  ;<+>  (ADDR=0015FB60 LEN=000000E0)   
+ 
+  x  
+    .set ;<+>  (ADDR=0014B5FC LEN=00000038) 
+    .get ;<+>  (ADDR=0014B4F8 LEN=0000002C) 
+   
+  y  
+    .set ;<+>  (ADDR=0014B63C LEN=00000038) 
+    .get ;<+>  (ADDR=0014B524 LEN=0000002C) 
+ 
+  z  
+    .set ;<+>  (ADDR=0014B67C LEN=00000038) 
+    .get ;<+>  (ADDR=0014B550 LEN=0000002C) 
+ 
+  .sub(~)  ;___1    ;<+>  (ADDR=0018FB6C LEN=00000084)
+  .sub(~)  ;___2     ;<+>  (ADDR=00152D40 LEN=0000013C)
+  .add(~)     ;<+>  (ADDR=00152B04 LEN=000000BC)
+  .div(~)  ;___1     ;<+>  (ADDR=0018FAA8 LEN=000000A4)
+  .div(~)  ;___2     ;<+>  (ADDR=00152BD4 LEN=0000013C)
+  .eq(~)     ;<+>  (ADDR=001501DC LEN=00000078)
+  Set(~)     ;<+>  (ADDR=0015014C LEN=00000074)
+  InnerProduct(~)     ;<+>  (ADDR=00166504 LEN=00000050)
+  OuterProduct(~)     ;<+>  (ADDR=00166554 LEN=00000070)
+  SizeSquared(~)     ;<+>  (ADDR=0016434C LEN=0000002C)
+  Size(~)     ;<+>  (ADDR=00152AD4 LEN=00000030)
+  Normalize(~)     ;<+>  (ADDR=0015FB1C LEN=00000030)
+  GetNormalized(~)     ;<+>  (ADDR=001682C0 LEN=00000090)
+
+
+;========================================
+Vector2 ;(internal name: tech::math::Vector2, ADDR=00130984, Ukn: <Vector2___UknInit>) 
+  Vector2(~)  ;<+>  (ADDR=0018F98C LEN=0000006C)  ; =constructorId 
+  new_local(~)  ;<+>  (ADDR=001921AC LEN=00000080) 
+  .call(~)  ;<+>  (ADDR=001921AC LEN=00000080) 
+   
+  Vector2(~)  ;<+>  (ADDR=0018FA14 LEN=00000080)  ; =constructorId 
+  new_local(~)  ;<+>  (ADDR=00192248 LEN=00000094) 
+  .call(~)  ;<+>  (ADDR=00192248 LEN=00000094) 
+   
+  Vector2(~)  ;<+>  (ADDR=001529D8 LEN=000000CC)  ; =constructorId 
+  new_local(~)  ;<+>  (ADDR=0016240C LEN=000000E0) 
+  .call(~)  ;<+>  (ADDR=0016240C LEN=000000E0) 
+   
+  x  
+    .set  ;<+>  (ADDR=0014B57C LEN=00000038) 
+    .get  ;<+>  (ADDR=0014B4A0 LEN=0000002C) 
+   
+  y  
+    .set  ;<+>  (ADDR=0014B5BC LEN=00000038) 
+    .get  ;<+>  (ADDR=0014B4CC LEN=0000002C) 
+ 
+     
+  ~ .sub(~)  ;___1   ;<+>  (ADDR=00190730 LEN=00000080)
+  ~ .sub(~)  ;___2   ;<+>  (ADDR=00155638 LEN=00000130)
+  ~ .add(~)   ;<+>  (ADDR=001554B0 LEN=000000AC)
+  ~ .div(~)   ;<+>  (ADDR=00155570 LEN=000000A8)
+  ~ .eq(~)   ;<+>  (ADDR=00152978 LEN=00000060)
+  ~ Set(~)   ;<+>  (ADDR=001528F0 LEN=0000006C)
+  ~ InnerProduct(~)   ;<+>  (ADDR=00168228 LEN=0000004C)
+  ~ OuterProduct(~)   ;<+>  (ADDR=00168274 LEN=0000004C)
+  ~ SizeSquared(~)   ;<+>  (ADDR=001664CC LEN=00000038)
+  ~ Size(~)   ;<+>  (ADDR=00155474 LEN=0000003C)
+  ~ Normalize(~)   ;<+>  (ADDR=001623C8 LEN=00000030)
+  ~ GetNormalized(~)   ;<+>  (ADDR=00169EE8 LEN=00000098)
+
+
+;======================================== 
+Color ;(internal name: ColorF, ADDR=00130D98, Ukn: <Color___UknInit>) 
+  Color(~)  ;<+>  (ADDR=00180878 LEN=000000A4)  ; =constructorId 
+  new_local(~)  ;<+>  (ADDR=00185BC0 LEN=000000B8) 
+  .call(~)  ;<+>  (ADDR=00185BC0 LEN=000000B8) 
+   
+  Color(~)  ;<+>  (ADDR=0018092C LEN=00000080)  ; =constructorId 
+  new_local(~)  ;<+>  (ADDR=00185C88 LEN=00000094) 
+  .call(~)  ;<+>  (ADDR=00185C88 LEN=00000094) 
+   
+  Color(~)  ;<+>  (ADDR=0013EC78 LEN=000000CC)  ; =constructorId 
+  new_local(~)  ;<+>  (ADDR=00143C90 LEN=000000E0) 
+  .call(~)  ;<+>  (ADDR=00143C90 LEN=000000E0) 
+ 
+  r  
+    .set ;<+>  (ADDR=0013E3B8 LEN=00000038) 
+    .get ;<+>  (ADDR=0013E2CC LEN=0000002C) 
+ 
+  g  
+    .set ;<+>  (ADDR=0013E378 LEN=00000038) 
+    .get ;<+>  (ADDR=0013E2A0 LEN=0000002C) 
+ 
+  b  
+    .set ;<+>  (ADDR=0013E338 LEN=00000038) 
+    .get ;<+>  (ADDR=0013E274 LEN=0000002C) 
+ 
+  a  
+    .set ;<+>  (ADDR=0013E2F8 LEN=00000038) 
+    .get ;<+>  (ADDR=0013E248 LEN=0000002C) 
+
+
+;======================================== 
+Color32 ;(internal name: Color32, ADDR=00130EA8, Ukn: <Color32___UknInit>) 
+  Color32(~)  ;<+>  (ADDR=001811AC LEN=00000094)  ; =constructorId 
+  new_local(~)  ;<+>  (ADDR=001885C8 LEN=000000A8) 
+  .call(~)  ;<+>  (ADDR=001885C8 LEN=000000A8) 
+   
+  Color32(~)  ;<+>  (ADDR=00181250 LEN=00000170)  ; =constructorId 
+  new_local(~)  ;<+>  (ADDR=00188680 LEN=00000184) 
+  .call(~)  ;<+>  (ADDR=00188680 LEN=00000184) 
+   
+  Color32(~)  ;<+>  (ADDR=001813D0 LEN=00000080)  ; =constructorId 
+  new_local(~)  ;<+>  (ADDR=00188814 LEN=00000094) 
+  .call(~)  ;<+>  (ADDR=00188814 LEN=00000094) 
+   
+  Color32(~)  ;<+>  (ADDR=001401D8 LEN=000000C8)  ; =constructorId 
+  new_local(~)  ;<+>  (ADDR=00147B74 LEN=000000DC) 
+  .call(~)  ;<+>  (ADDR=00147B74 LEN=000000DC) 
+ 
+  r  
+    .set ;<+>  (ADDR=001452F4 LEN=0000003C) 
+    .get ;<+>  (ADDR=001451F8 LEN=00000030) 
+ 
+  g  
+    .set ;<+>  (ADDR=001452B0 LEN=0000003C) 
+    .get ;<+>  (ADDR=001451C8 LEN=00000030) 
+ 
+  b 
+    .set ;<+>  (ADDR=0014526C LEN=0000003C) 
+    .get ;<+>  (ADDR=00145198 LEN=00000030) 
+ 
+  a 
+    .set ;<+>  (ADDR=00145228 LEN=0000003C) 
+    .get ;<+>  (ADDR=00145168 LEN=00000030) 
+
+
+;======================================== 
+Point ;(internal name: Point, ADDR=00130FE8, Ukn: <Point___UknInit>) 
+  Point(~)  ;<+>  (ADDR=00180A1C LEN=00000060)  ; =constructorId 
+  new_local(~)  ;<+>  (ADDR=00185D60 LEN=00000078) 
+  .call(~)  ;<+>  (ADDR=00185D60 LEN=00000078) 
+   
+  Point(~)  ;<+>  (ADDR=00180A8C LEN=00000074)  ; =constructorId 
+  new_local(~)  ;<+>  (ADDR=00185DE8 LEN=00000088) 
+  .call(~)  ;<+>  (ADDR=00185DE8 LEN=00000088) 
+   
+  Point(~)  ;<+>  (ADDR=0013EF2C LEN=000000CC)  ; =constructorId 
+  new_local(~)  ;<+>  (ADDR=001440FC LEN=000000E0) 
+  .call(~)  ;<+>  (ADDR=001440FC LEN=000000E0) 
+ 
+  x 
+    .set ;<+>  (ADDR=0013E1C0 LEN=0000003C) 
+    .get ;<+>  (ADDR=0013E168 LEN=0000002C) 
+ 
+  y 
+    .set ;<+>  (ADDR=0013E204 LEN=0000003C) 
+    .get ;<+>  (ADDR=0013E194 LEN=0000002C) 
+
+
+;======================================== 
+SymCam ;(internal name: ScriptType_SymbolCam, ADDR=001310D0, Ukn: <SymCam___UknInit>) 
+  SymCam(~)  ;<+>  (ADDR=0013F858 LEN=00000048)  ; =constructorId 
+  new_local(~)  ;<+>  (ADDR=00146758 LEN=0000005C) 
+  .call(~)  ;<+>  (ADDR=00146758 LEN=0000005C) 
+
+
+;======================================== 
+SymPresetCam ;(internal name: ScriptType_SymbolPresetCam, ADDR=00131290, Ukn: <SymPresetCam___UknInit>) 
+  SymPresetCam(~)  ;<+>  (ADDR=00146C50 LEN=00000048)  ; =constructorId 
+  new_local(~)  ;<+>  (ADDR=001553FC LEN=0000005C) 
+  .call(~)  ;<+>  (ADDR=001553FC LEN=0000005C) 
+
+
+;======================================== 
+SymAct ;(internal name: ScriptFunc_SymbolActor, ADDR=001312F0, Ukn: <SymAct___UknInit>) 
+  SymAct(~)  ;<+>  (ADDR=00180E38 LEN=00000048)  ; =constructorId 
+  new_local(~)  ;<+>  (ADDR=00187454 LEN=0000005C)  
+  .call(~)  ;<+>  (ADDR=00187454 LEN=0000005C)  
+   
+  SymAct(~)  ;<+>  (ADDR=0013F7C0 LEN=00000080)  ; =constructorId 
+  new_local(~)  ;<+>  (ADDR=001466AC LEN=00000094)   
+  .call(~)  ;<+>  (ADDR=001466AC LEN=00000094)  
+   
+  GetIndex(~)  ;<+>  (ADDR=00144C6C LEN=00000030) 
+
+
+;======================================== 
+SymGA ;(internal name: ScriptFunc_SymbolGA, ADDR=00131390, Ukn: <SymGA___UknInit>) 
+  SymGA(~)  ;<+>  (ADDR=00180CF4 LEN=00000054)  ; =constructorId 
+  new_local(~)  ;<+>  (ADDR=0018620C LEN=00000068) 
+  .call(~)  ;<+>  (ADDR=0018620C LEN=00000068) 
+   
+  SymGA(~)  ;<+>  (ADDR=0013F38C LEN=00000080)  ; =constructorId 
+  new_local(~)  ;<+>  (ADDR=00144D34 LEN=00000094) 
+  .call(~)  ;<+>  (ADDR=00144D34 LEN=00000094) 
+
+
+;======================================== 
+SymCut ;(internal name: ScriptFunc_SymbolCut, ADDR=00131420, Ukn: <SymCut___UknInit>) 
+  SymCut(~)  ;<+>  (ADDR=00180E98 LEN=00000054)  ; =constructorId 
+  new_local(~)  ;<+>  (ADDR=001874C8 LEN=00000068) 
+  .call(~)  ;<+>  (ADDR=001874C8 LEN=00000068) 
+   
+  SymCut(~)  ;<+>  (ADDR=0013F8B8 LEN=00000080)  ; =constructorId 
+  new_local(~)  ;<+>  (ADDR=001467CC LEN=00000094) 
+  .call(~)  ;<+>  (ADDR=001467CC LEN=00000094) 
+
+
+;======================================== 
+SymCutMsgId ;(internal name: ScriptFunc_SymCutMsgId, ADDR=001314B0, Ukn: <SymCutMsgId___UknInit>) 
+  SymCutMsgId(~)  ;<+>  (ADDR=001861A0 LEN=00000054)  ; =constructorId 
+  new_local(~)  ;<+>  (ADDR=0018F90C LEN=00000068) 
+  .call(~)  ;<+>  (ADDR=0018F90C LEN=00000068) 
+   
+  SymCutMsgId(~)  ;<+>  (ADDR=00144C9C LEN=00000080)  ; =constructorId 
+  new_local(~)  ;<+>  (ADDR=0015257C LEN=00000094) 
+  .call(~)  ;<+>  (ADDR=0015257C LEN=00000094) 
+
+
+;======================================== 
+SymWord ;(internal name: ScriptFunc_SymbolWord, ADDR=00131540, Ukn: <SymWord___UknInit>) 
+  SymWord(~)  ;<+>  (ADDR=00181584 LEN=00000054)  ; =constructorId 
+  new_local(~)  ;<+>  (ADDR=001898C4 LEN=00000068) 
+  .call(~)  ;<+>  (ADDR=001898C4 LEN=00000068) 
+   
+  SymWord(~)  ;<+>  (ADDR=001815F0 LEN=000000B8)  ; =constructorId 
+  new_local(~)  ;<+>  (ADDR=00189944 LEN=000000CC) 
+  .call(~)  ;<+>  (ADDR=00189944 LEN=000000CC) 
+   
+  SymWord(~)  ;<+>  (ADDR=00140688 LEN=00000080)  ; =constructorId 
+  new_local(~)  ;<+>  (ADDR=00148BC4 LEN=00000094) 
+  .call(~)  ;<+>  (ADDR=00148BC4 LEN=00000094) 
+
+
+;======================================== 
+SymMap ;(internal name: ScriptFunc_SymbolMap, ADDR=00131600, Ukn: <SymMap___UknInit>) 
+  SymMap(~)  ;<+>  (ADDR=00180FDC LEN=00000054)  ; =constructorId 
+  new_local(~)  ;<+>  (ADDR=00187648 LEN=00000068) 
+  .call(~)  ;<+>  (ADDR=00187648 LEN=00000068) 
+   
+  SymMap(~)  ;<+>  (ADDR=0013FA80 LEN=00000080)  ; =constructorId 
+  new_local(~)  ;<+>  (ADDR=001469D0 LEN=00000094) 
+  .call(~)  ;<+>  (ADDR=001469D0 LEN=00000094) 
+
+
+;======================================== 
+SymImg ;(internal name: ScriptFunc_SymbolImg, ADDR=0013180C, Ukn: <SymImg___UknInit>) 
+  SymImg(~)  ;<+>  (ADDR=00180F70 LEN=00000054)  ; =constructorId 
+  new_local(~)  ;<+>  (ADDR=001875C8 LEN=00000068) 
+  .call(~)  ;<+>  (ADDR=001875C8 LEN=00000068) 
+   
+  SymImg(~)  ;<+>  (ADDR=0013F9E8 LEN=00000080)  ; =constructorId 
+  new_local(~)  ;<+>  (ADDR=00146924 LEN=00000094) 
+  .call(~)  ;<+>  (ADDR=00146924 LEN=00000094) 
+
+
+;======================================== 
+SymEff ;(internal name: ScriptFunc_SymbolEffect, ADDR=0013189C, Ukn: <SymEff___UknInit>) 
+  SymEff(~)  ;<+>  (ADDR=00180F04 LEN=00000054)  ; =constructorId 
+  new_local(~)  ;<+>  (ADDR=00187548 LEN=00000068) 
+  .call(~)  ;<+>  (ADDR=00187548 LEN=00000068) 
+ 
+  SymEff(~)  ;<+>  (ADDR=0013F950 LEN=00000080)  ; =constructorId 
+  new_local(~)  ;<+>  (ADDR=00146878 LEN=00000094) 
+  .call(~)  ;<+>  (ADDR=00146878 LEN=00000094) 
+
+
+;======================================== 
+SymSnd ;(internal name: ScriptFunc_SymbolSound, ADDR=0013192C, Ukn: <SymSnd___UknInit>) 
+  SymSnd(~)  ;<+>  (ADDR=001810A8 LEN=00000054)  ; =constructorId 
+  new_local(~)  ;<+>  (ADDR=0018773C LEN=00000068) 
+  .call(~)  ;<+>  (ADDR=0018773C LEN=00000068) 
+   
+  SymSnd(~)  ;<+>  (ADDR=0013FCC4 LEN=00000080)  ; =constructorId 
+  new_local(~)  ;<+>  (ADDR=00146CB4 LEN=00000094) 
+  .call(~)  ;<+>  (ADDR=00146CB4 LEN=00000094) 
+
+
+;======================================== 
+SymMot ;(internal name: ScriptType_SymbolMot, ADDR=001319BC, Ukn: <SymMot___UknInit>) 
+  SymMot(~)  ;<+>  (ADDR=0013FB18 LEN=00000048)  ; =constructorId 
+  new_local(~)  ;<+>  (ADDR=00146A7C LEN=0000005C) 
+  .call(~)  ;<+>  (ADDR=00146A7C LEN=0000005C) 
+
+
+;======================================== 
+SymPos ;(internal name: ScriptType_SymbolPos, ADDR=00131A1C, Ukn: <SymPos___UknInit>) 
+  SymPos(~)  ;<+>  (ADDR=00181048 LEN=00000048)  ; =constructorId 
+  new_local(~)  ;<+>  (ADDR=001876C8 LEN=0000005C) 
+  .call(~)  ;<+>  (ADDR=001876C8 LEN=0000005C) 
+   
+  SymPos(~)  ;<+>  (ADDR=0013FB78 LEN=00000120)  ; =constructorId 
+  new_local(~)  ;<+>  (ADDR=00146AF0 LEN=00000134) 
+  .call(~)  ;<+>  (ADDR=00146AF0 LEN=00000134) 
+
+
+;======================================== 
+SymSpl ;(internal name: ScriptType_SymbolSpl, ADDR=00131AAC, Ukn: <SymSpl___UknInit>) 
+  SymSpl(~)  ;<+>  (ADDR=0013FD5C LEN=00000048)  ; =constructorId 
+  new_local(~)  ;<+>  (ADDR=00146D60 LEN=0000005C) 
+  .call(~)  ;<+>  (ADDR=00146D60 LEN=0000005C) 
+
+
+;======================================== 
+SymGroup ;(internal name: ScriptType_SymGroup, ADDR=00131B0C, Ukn: <SymGroup___UknInit>) 
+  SymGroup(~)  ;<+>  (ADDR=0014121C LEN=00000048)  ; =constructorId 
+  new_local(~)  ;<+>  (ADDR=Sym00143EDC LEN=0000005C) 
+  .call(~)  ;<+>  (ADDR=Sym00143EDC LEN=0000005C) 
+
+
+;======================================== 
+SymHint ;(internal name: ScriptFunc_SymHint, ADDR=00131B6C, Ukn: <SymHint___UknInit>) 
+  SymHint(~)  ;<+>  (ADDR=001405D0 LEN=00000048)  ; =constructorId 
+  new_local(~)  ;<+>  (ADDR=00148AE4 LEN=0000005C) 
+  .call(~)  ;<+>  (ADDR=00148AE4 LEN=0000005C) 
+         ;TODO: check at LuaInitMain+1EC44 
+
+
+;======================================== 
+SymRBox ;(internal name: ScriptType_SymRBox, ADDR=00131D68, Ukn: <SymRBox___UknInit>) 
+  SymRBox(~)  ;<+>  (ADDR=0014062C LEN=00000048)  ; =constructorId 
+  new_local(~)  ;<+>  (ADDR=00148B54 LEN=0000005C) 
+  .call(~)  ;<+>  (ADDR=00148B54 LEN=0000005C) 
+
+
+;======================================== 
+Dg ;(internal name: ScriptFunc_Dg, ADDR=00131DC8, Ukn: <Dg___UknInit>) 
+  Dg(~)  ;<+>  (ADDR=0013E414 LEN=00000048)  ; =constructorId 
+  new_local(~)  ;<+>  (ADDR=00140C90 LEN=0000005C) 
+  .call(~)  ;<+>  (ADDR=00140C90 LEN=0000005C) 
+
+
+;======================================== 
+SymSpecialEntry ;(internal name: ScriptType_SymbolSpecialEntry, ADDR=00131E28, Ukn: <SymSpecialEntry___UknInit>) 
+  SymSpecialEntry(~)  ;<+>  (ADDR=0014D7A8 LEN=00000048)  ; =constructorId 
+  new_local(~)  ;<+>  (ADDR=0015D4E0 LEN=0000005C) 
+  .call(~)  ;<+>  (ADDR=0015D4E0 LEN=0000005C) 
+
+
+;======================================== 
+SplinePath ;(internal name: ScriptType_SplinePath, ADDR=00131E88, Ukn: <SplinePath___UknInit>) 
+  SplinePath(~)  ;<+>  (ADDR=00183F50 LEN=000000FC)  ; =constructorId 
+  new_local(~)  ;<+>  (ADDR=0018D614 LEN=00000110) 
+  .call(~)  ;<+>  (ADDR=0018D614 LEN=00000110) 
+   
+  SplinePath(~)  ;<+>  (ADDR=00184064 LEN=000001BC)  ; =constructorId 
+  new_local(~)  ;<+>  (ADDR=0018D73C LEN=000001D0) 
+  .call(~)  ;<+>  (ADDR=0018D73C LEN=000001D0) 
+   
+  SplinePath(~)  ;<+>  (ADDR=0018424C LEN=00000154)  ; =constructorId 
+  new_local(~)  ;<+>  (ADDR=0018D938 LEN=00000168) 
+  .call(~)  ;<+>  (ADDR=0018D938 LEN=00000168) 
+   
+  SplinePath(~)  ;<+>  (ADDR=001843CC LEN=0000028C)  ; =constructorId 
+  new_local(~)  ;<+>  (ADDR=0018DACC LEN=000002A0) 
+  .call(~)  ;<+>  (ADDR=0018DACC LEN=000002A0) 
+   
+  SplinePath(~)  ;<+>  (ADDR=00184688 LEN=00000208)  ; =constructorId 
+  new_local(~)  ;<+>  (ADDR=0018DD9C LEN=0000021C) 
+  .call(~)  ;<+>  (ADDR=0018DD9C LEN=0000021C) 
+   
+  SplinePath(~)  ;<+>  (ADDR=001848C0 LEN=00000188)  ; =constructorId 
+  new_local(~)  ;<+>  (ADDR=0018DFE8 LEN=0000019C) 
+  .call(~)  ;<+>  (ADDR=0018DFE8 LEN=0000019C) 
+   
+  SplinePath(~)  ;<+>  (ADDR=00142ED4 LEN=00000108)  ; =constructorId 
+  new_local(~)  ;<+>  (ADDR=0014FDCC LEN=0000011C) 
+  .call(~)  ;<+>  (ADDR=0014FDCC LEN=0000011C) 
+
+
+;======================================== 
+Group ;(internal name: ScriptType_Group, ADDR=00132008, Ukn: <Group___UknInit>) 
+  Group(~)  ;<+>  (ADDR=0013ED5C LEN=00000048)  ; =constructorId 
+  new_local(~)  ;<+>  (ADDR=00143EDC LEN=0000005C) 
+  .call(~)  ;<+>  (ADDR=00143EDC LEN=0000005C) 

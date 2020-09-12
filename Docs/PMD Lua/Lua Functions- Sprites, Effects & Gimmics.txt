@@ -1,0 +1,233 @@
+;All member functions also take 'self' as first arg, so call as obj:func(<args not including self>)
+
+;========================================
+GLOBAL
+  ~ GM(~)  ;<+>  ADDR=0013C7F8 LEN=00000074)
+
+;========================================
+;Sprite handler, not the actual sprites
+SPRITE ;(internal name: ScriptFunc_SPRITE, ADDR=0012CBCC, Ukn: <none>)
+  ~ CreatePatternSetFromTable(~)  ;<+>  ADDR=0016B5AC LEN=0000008C)
+  ~ CreateSprite(~)  ;1  ;<+>  ADDR=0018BF14 LEN=0000009C)
+  ~ CreateSprite(~)  ;2  ;<+>  ADDR=0014D0A4 LEN=0000013C)
+  ~ GetSprite(~)  ;1  ;<+>  ADDR=00187384 LEN=0000009C)
+  ~ GetSprite(~)  ;2  ;<+>  ADDR=00146430 LEN=0000013C)
+  ~ DestroyPatternSet(~)  ;<+>  ADDR=0015AB04 LEN=0000003C)
+  ~ DestroySprite(~)  ;1  ;<+>  ADDR=0018D4E8 LEN=0000003C)
+  ~ DestroySprite(~)  ;2  ;<+>  ADDR=0018D524 LEN=000000DC)
+  ~ DestroySprite(~)  ;3  ;<+>  ADDR=0014F9A0 LEN=000000C0)
+  ~ DestroySpriteGroup(~)  ;<+>  ADDR=0015CDC0 LEN=0000003C)
+
+
+
+;========================================
+;An actual sprite object
+SPRITE_OBJ ;(internal name: ScriptFunc_SPRITE_OBJ, ADDR=0012CC98, Ukn: <SPRITE_OBJ___UknInit>)
+  ~ SetPatternFromTable(~)  ;<+>  ADDR=00167D68 LEN=00000074)
+  ~ SetVisible(~)  ;<+>  ADDR=00152294 LEN=00000044)
+  ~ SetPosition(~)  ;<+>  ADDR=0015515C LEN=00000058)
+  ~ GetPosition(~)  ;<+>  ADDR=001550D0 LEN=00000078)
+  ~ SetScale(~)  ;<+>  ADDR=0014D20C LEN=0000003C)
+  ~ SetRotate(~)  ;<+>  ADDR=0014FBA4 LEN=0000003C)
+  ~ GetAnchor(~)  ;<+>  ADDR=0014FA8C LEN=00000090)
+  ~ SetOption(~)  ;<+>  ADDR=0014FB30 LEN=00000074)
+  ~ ChangeAlpha(~)  ;<+>  ADDR=0015506C LEN=0000005C)
+  ~ MoveTo(~)  ;1  ;<+>  ADDR=00189850 LEN=00000074)
+  ~ MoveTo(~)  ;2  ;<+>  ADDR=0014886C LEN=00000130)
+
+
+;========================================
+EFFECT ;(internal name: ScriptFunc_EFFECT, ADDR=0012AA84, Ukn: <none>)
+  ~ Create(~)  ;<+>  ADDR=001417B0 LEN=0000007C)
+  ~ Play(~)  ;<+>  ADDR=001402B8 LEN=0000003C)
+  ~ SetPosition(~)  ;1  ;<+>  ADDR=0018AA94 LEN=00000074)
+  ~ SetPosition(~)  ;2  ;<+>  ADDR=0018AB08 LEN=00000154)
+  ~ SetPosition(~)  ;3  ;<+>  ADDR=0014A050 LEN=00000120)
+  ~ SetCharacterAttach(~)  ;<+>  ADDR=0015BCC4 LEN=0000009C)
+  ~ GetPosition(~)  ;<+>  ADDR=00149FAC LEN=00000090)
+  ~ SetHeight(~)  ;<+>  ADDR=00145C80 LEN=00000054)
+  ~ SetScale(~)  ;<+>  ADDR=00143E04 LEN=00000054)
+  ~ MoveTo(~)  ;1  ;<+>  ADDR=0018259C LEN=000000BC)
+  ~ MoveTo(~)  ;2  ;<+>  ADDR=00182660 LEN=000001BC)
+  ~ MoveTo(~)  ;3  ;<+>  ADDR=0014182C LEN=000001AC)
+  ~ MoveHeightTo(~)  ;<+>  ADDR=0014C114 LEN=00000074)
+  ~ WaitMove(~)  ;<+>  ADDR=00143E58 LEN=0000003C)
+  ~ WaitMoveHeight(~)  ;<+>  ADDR=00150F2C LEN=0000003C)
+  ~ ChangeColor(~)  ;<+>  ADDR=00149F10 LEN=0000009C)
+  ~ SetDir(~)  ;<+>  ADDR=00141A94 LEN=00000054)
+  ~ Pause(~)  ;<+>  ADDR=00140D68 LEN=0000003C)
+  ~ Resume(~)  ;<+>  ADDR=00141A58 LEN=0000003C)
+  ~ Remove(~)  ;<+>  ADDR=00141A1C LEN=0000003C)
+  ~ AllRemove(~)  ;<+>  ADDR=00145C64 LEN=0000001C)
+  ~ Wait(~)  ;<+>  ADDR=001402F4 LEN=0000003C)
+  ~ AllWait(~)  ;<+>  ADDR=00142A7C LEN=0000001C)
+  ~ CreateSpot(~)  ;<+>  ADDR=00147C68 LEN=0000003C)
+  ~ SetSpotPosition(~)  ;1  ;<+>  ADDR=0018FCC0 LEN=00000074)
+  ~ SetSpotPosition(~)  ;2  ;<+>  ADDR=00153BF4 LEN=00000120)
+  ~ SetSpotScale(~)  ;<+>  ADDR=0014C1CC LEN=00000054)
+  ~ ChangeSpotScale(~)  ;<+>  ADDR=00153B5C LEN=0000007C)
+  ~ ChangeSpotAlpha(~)  ;<+>  ADDR=00153A7C LEN=00000074)
+  ~ SpotMoveTo(~)  ;1  ;<+>  ADDR=001888B0 LEN=0000009C)
+  ~ SpotMoveTo(~)  ;2  ;<+>  ADDR=0018894C LEN=00000180)
+  ~ SpotMoveTo(~)  ;3  ;<+>  ADDR=00188B0C LEN=00000170)
+  ~ SpotMoveTo(~)  ;4  ;<+>  ADDR=00188CB8 LEN=00000170)
+  ~ SpotMoveTo(~)  ;5  ;<+>  ADDR=00188E64 LEN=00000180)
+  ~ SpotMoveTo(~)  ;6  ;<+>  ADDR=00147CA4 LEN=00000170)
+  ~ WaitSpotMove(~)  ;<+>  ADDR=0014C29C LEN=0000003C)
+  ~ BossWipe(~)  ;<+>  ADDR=00143DA4 LEN=00000060)
+  ~ BossWipeWait(~)  ;<+>  ADDR=0014C0F8 LEN=0000001C)
+  ~ SpotWipeOut(~)  ;<+>  ADDR=0014A1FC LEN=00000060)
+  ~ SpotWipeIn(~)  ;<+>  ADDR=00147E50 LEN=00000060)
+  ~ SpotWipeWait(~)  ;<+>  ADDR=0014C280 LEN=0000001C)
+  ~ SpotWipeOutB(~)  ;<+>  ADDR=0014C220 LEN=00000060)
+  ~ SpotWipeInB(~)  ;<+>  ADDR=0014A19C LEN=00000060)
+  ~ SpotWipeWaitB(~)  ;<+>  ADDR=0014EB18 LEN=0000001C)
+  ~ SetSpotFilter(~)  ;<+>  ADDR=0014EAD4 LEN=0000003C)
+  ~ ChangeSpotFilter(~)  ;<+>  ADDR=0015659C LEN=0000005C)
+  ~ ClearSpotFilter(~)  ;<+>  ADDR=00153BD8 LEN=0000001C)
+  ~ SetSpotCover(~)  ;<+>  ADDR=0014C188 LEN=0000003C)
+  ~ ChangeSpotCover(~)  ;<+>  ADDR=00153AF8 LEN=0000005C)
+  ~ ClearSpotCover(~)  ;<+>  ADDR=00150F10 LEN=0000001C)
+  ~ StartMotionBlur(~)  ;<+>  ADDR=00153D40 LEN=0000007C)
+  ~ ChangeMotionBlurLevel(~)  ;<+>  ADDR=00162E08 LEN=0000005C)
+  ~ ChangeMotionBlurAlpha(~)  ;<+>  ADDR=00162DA4 LEN=0000005C)
+  ~ ChangeMotionBlurRotate(~)  ;<+>  ADDR=001652CC LEN=0000005C)
+  ~ CreateRecollectionFilter(~)  ;<+>  ADDR=00168AB8 LEN=0000001C)
+  ~ DestroyRecollectionFilter(~)  ;<+>  ADDR=0016A620 LEN=0000001C)
+  ~ EndMotionBlur(~)  ;<+>  ADDR=0014EAB8 LEN=0000001C)
+  ;--------\/------Check These------\/--------
+  ~ FLAG_Set(~)  ;<+>  ADDR=0013E828 LEN=00000068)
+  ~ FLAG_Get(~)  ;<+>  ADDR=0013E788 LEN=00000084)
+  ~ CONST_Get(~)  ;<+>  ADDR=0013EB74 LEN=00000084)
+  ~ LocalFlag_Get(~)  ;<+>  ADDR=00141AE8 LEN=00000058)
+
+
+;========================================
+GIMMICK ;(internal name: ScriptFunc_GIMMICK_SYS, ADDR=00130130, Ukn: <none>)
+  ~ Get(~)  ;1  ;<+>  ADDR=00181458 LEN=0000008C)
+  ~ Get(~)  ;2  ;<+>  ADDR=00140330 LEN=000000F4)
+  ~ IsExist(~)  ;<+>  ADDR=00143E94 LEN=00000048)
+  
+  ~ SetupLoopPlaced(~)  ;<+>  ADDR=0015708C LEN=000000A4)
+  ~ ShutdownLoopPlaced(~)  ;<+>  ADDR=0015E8CC LEN=0000001C)
+  ~ MoveLoopPlaced(~)  ;<+>  ADDR=0015403C LEN=0000003C)
+  ~ SetVisibleLoopPlaced(~)  ;<+>  ADDR=001630F4 LEN=00000044)
+  ~ SetLoopPlacedRightMode(~)  ;<+>  ADDR=00167308 LEN=0000001C)
+  ~ SetLoopPlacedLeftMode(~)  ;<+>  ADDR=00165790 LEN=0000001C)
+  ~ SetLoopPlacedCenterMode(~)  ;<+>  ADDR=00169254 LEN=0000001C)
+
+
+
+
+
+;========================================
+GIMMICK_OBJ ;(internal name: ScriptFunc_GIMMICK_OBJ, ADDR=0012B168, Ukn: <GIMMICK_OBJ___UknInit>)
+  ~ SetVisible(~)  ;<+>  ADDR=001540B0 LEN=00000044)
+  ~ IsVisible(~)  ;<+>  ADDR=001512C4 LEN=0000002C)
+  ~ SetPosition(~)  ;1  ;<+>  ADDR=00190B38 LEN=0000007C)
+  ~ SetPosition(~)  ;2  ;<+>  ADDR=00190BBC LEN=000000DC)
+  ~ SetPosition(~)  ;3  ;<+>  ADDR=00156F70 LEN=000000EC)
+  ~ GetPosition(~)  ;<+>  ADDR=00156EC8 LEN=00000078)
+  ~ GetPosition2d(~)  ;<+>  ADDR=0015C550 LEN=00000078)
+  ~ SetHeight(~)  ;<+>  ADDR=001512F0 LEN=0000003C)
+  ~ GetHeight(~)  ;<+>  ADDR=00151298 LEN=0000002C)
+  ~ SetScale(~)  ;<+>  ADDR=0014EE78 LEN=0000003C)
+  ~ ChangeScale(~)  ;<+>  ADDR=00156E64 LEN=00000064)
+  ~ SetDir(~)  ;1  ;<+>  ADDR=0018B0AC LEN=0000006C)
+  ~ SetDir(~)  ;2  ;<+>  ADDR=0018B118 LEN=000000C0)
+  ~ SetDir(~)  ;3  ;<+>  ADDR=0018B208 LEN=000000DC)
+  ~ SetDir(~)  ;4  ;<+>  ADDR=0018B310 LEN=000000C0)
+  ~ SetDir(~)  ;5  ;<+>  ADDR=0014A46C LEN=000000C0)
+  ~ SetPitch(~)  ;<+>  ADDR=0014EE3C LEN=0000003C)
+  ~ SetRoll(~)  ;<+>  ADDR=0014C420 LEN=0000003C)
+  ~ GetDir(~)  ;<+>  ADDR=0014A25C LEN=0000002C)
+  ~ GetPitch(~)  ;<+>  ADDR=0014EDA8 LEN=0000002C)
+  ~ GetRoll(~)  ;<+>  ADDR=0014C3F4 LEN=0000002C)
+  ~ SetMotion(~)  ;<+>  ADDR=0015132C LEN=00000088)
+  ~ SetNextMotion(~)  ;<+>  ADDR=0015C5DC LEN=000000A0)
+  ~ ResetMotion(~)  ;<+>  ADDR=00156F54 LEN=0000001C)
+  ~ SetMotionRaito(~)  ;<+>  ADDR=0015E848 LEN=0000003C)
+  ~ SetMotionPause(~)  ;<+>  ADDR=0015E804 LEN=00000044)
+  ~ MoveTo(~)  ;1  ;<+>  ADDR=0018AC90 LEN=00000098)
+  ~ MoveTo(~)  ;2  ;<+>  ADDR=0018AD30 LEN=0000017C)
+  ~ MoveTo(~)  ;3  ;<+>  ADDR=0018AEF8 LEN=0000016C)
+  ~ MoveTo(~)  ;4  ;<+>  ADDR=0014A2B4 LEN=0000016C)
+  ~ MoveHeightTo(~)  ;<+>  ADDR=00159964 LEN=0000005C)
+  ~ ChangeColor(~)  ;<+>  ADDR=00156DEC LEN=00000078)
+  ~ ChangeAlpha(~)  ;<+>  ADDR=00156D88 LEN=0000005C)
+  ~ DirTo(~)  ;1  ;<+>  ADDR=00189024 LEN=00000098)
+  ~ DirTo(~)  ;2  ;<+>  ADDR=001890C4 LEN=00000154)
+  ~ DirTo(~)  ;3  ;<+>  ADDR=00189264 LEN=0000017C)
+  ~ DirTo(~)  ;4  ;<+>  ADDR=0018942C LEN=00000168)
+  ~ DirTo(~)  ;5  ;<+>  ADDR=001895E0 LEN=0000011C)
+  ~ DirTo(~)  ;6  ;<+>  ADDR=00147F24 LEN=00000110)
+  ~ IsMove(~)  ;<+>  ADDR=0014A288 LEN=0000002C)
+  ~ IsMoveHeight(~)  ;<+>  ADDR=0015990C LEN=0000002C)
+  ~ IsRotate(~)  ;<+>  ADDR=0014EDD4 LEN=0000002C)
+  ~ IsPlayMotion(~)  ;<+>  ADDR=00159938 LEN=0000002C)
+  ~ IsNextMotionExist(~)  ;<+>  ADDR=00165764 LEN=0000002C)
+  ~ WaitMove(~)  ;<+>  ADDR=0014EF2C LEN=00000024)
+  ~ WaitMoveHeight(~)  ;<+>  ADDR=0015E884 LEN=00000024)
+  ~ WaitRotate(~)  ;<+>  ADDR=001540F4 LEN=00000024)
+  ~ WaitPlayMotion(~)  ;<+>  ADDR=0015E8A8 LEN=00000024)
+  ~ WaitNextMotionExist(~)  ;<+>  ADDR=00169230 LEN=00000024)
+  ~ SetManpu(~)  ;<+>  ADDR=0014EE00 LEN=0000003C)
+  ~ WaitManpu(~)  ;<+>  ADDR=001513BC LEN=0000001C)
+  ~ ResetManpu(~)  ;<+>  ADDR=00154078 LEN=0000001C)
+  ~ SetShake(~)  ;<+>  ADDR=0014EEB4 LEN=00000078)
+  ~ ResetShake(~)  ;<+>  ADDR=00154094 LEN=0000001C)
+
+
+;========================================
+SAJI ;(internal name: ScriptFunc_SAJI_SYS, ADDR=0012B9F0, Ukn: <none>)
+  ~ CreateSajiPlayer(~)  ;<+>  ADDR=00152224 LEN=00000054)
+  ~ DestroySajiPlayer(~)  ;<+>  ADDR=00154EB0 LEN=0000003C)
+  ~ GetSajiPlayer(~)  ;<+>  ADDR=0014AC30 LEN=0000009C)
+
+
+
+;========================================
+SajiPlayerBaseWrap ;(internal name: ScriptFuncWrap_SajiPlayerBase, ADDR=0012BD24, Ukn: <none>)
+  ~ SetPosition(~)  ;<+>  ADDR=00167FC8 LEN=0000003C)
+  ~ GetPosition(~)  ;<+>  ADDR=00167EF8 LEN=00000078)
+  ~ SetScale(~)  ;<+>  ADDR=001620E8 LEN=0000003C)
+  ~ GetScale(~)  ;<+>  ADDR=00162070 LEN=00000064)
+  ~ SetRotate(~)  ;<+>  ADDR=00163ECC LEN=0000003C)
+  ~ GetRotate(~)  ;<+>  ADDR=00163E2C LEN=00000060)
+  ~ SetDrawPriority(~)  ;<+>  ADDR=0016ED30 LEN=00000040)
+  ~ SetParallax(~)  ;<+>  ADDR=00167F84 LEN=0000003C)
+  ~ SetParallaxFromLevel(~)  ;<+>  ADDR=00173208 LEN=00000044)
+  ~ Play(~)  ;<+>  ADDR=00157F3C LEN=00000044)
+  ~ WaitEnd(~)  ;<+>  ADDR=0015F91C LEN=0000001C)
+  ~ Stop(~)  ;<+>  ADDR=00157F88 LEN=0000001C)
+  ~ Pause(~)  ;<+>  ADDR=0015B040 LEN=00000044)
+  ~ IsPause(~)  ;<+>  ADDR=0015F8AC LEN=0000002C)
+  ~ SetLoop(~)  ;<+>  ADDR=0015F8D8 LEN=00000044)
+  ~ IsLoop(~)  ;<+>  ADDR=0015D288 LEN=0000002C)
+  ~ SetFrameTime(~)  ;<+>  ADDR=00169BA8 LEN=00000040)
+  ~ SetVisible(~)  ;<+>  ADDR=00166228 LEN=00000044)
+  ~ IsVisible(~)  ;<+>  ADDR=00163EA0 LEN=0000002C)
+  ~ SetScreenType(~)  ;<+>  ADDR=0016B858 LEN=00000044)
+  ~ GetScreenType(~)  ;<+>  ADDR=0016B828 LEN=00000030)
+  ~ ChangeAlpha(~)  ;<+>  ADDR=00167E94 LEN=0000005C)
+  ~ MoveTo(~)  ;1  ;<+>  ADDR=00191704 LEN=00000074)
+  ~ MoveTo(~)  ;2  ;<+>  ADDR=0015D2B4 LEN=00000130)
+
+
+
+;========================================
+SajiPlayerWrap extends SajiPlayerBaseWrap ;(internal name: ScriptFuncWrap_SajiPlayer, ADDR=0012BED0, Ukn: <none>)
+
+
+
+;========================================
+SajiPatternPlayerWrap extends SajiPlayerBaseWrap ;(internal name: ScriptFuncWrap_SajiPatternPlayer, ADDR=0012BEFC, Ukn: <SajiPatternPlayerWrap___UknInit>)
+  ~ Play(~)  ;<+>  ADDR=0015F844 LEN=00000060)
+  ~ SetVisible(~)  ;<+>  ADDR=0016B7E4 LEN=00000044)
+
+
+
+;========================================
+SAJI_PLAYER_OBJ extends SajiPlayerBaseWrap ;(internal name: ScriptFunc_SAJI_PLAYER_OBJ, ADDR=0012BF4C, Ukn: <SAJI_PLAYER_OBJ___UknInit>)
+
+

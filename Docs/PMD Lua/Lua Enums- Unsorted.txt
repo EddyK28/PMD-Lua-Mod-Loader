@@ -1,0 +1,754 @@
+
+;========================================
+ArQuestFloorType  ;(ADDR=0011F368)
+  0 - SHORT
+  1 - MIDDLE
+  2 - LONG
+
+
+;========================================
+UsedMenuKind  ;(ADDR=0011F7E8)
+  0 - USED_MENU_KIND_TOP_START
+  1 - USED_MENU_KIND_TOP_AR
+  2 - USED_MENU_KIND_TOP_PASSWORD
+  3 - USED_MENU_KIND_TOP_RESERVE_0
+  4 - USED_MENU_KIND_TOP_RESERVE_1
+  5 - USED_MENU_KIND_TOP_RESERVE_2
+  6 - USED_MENU_KIND_TOP_RESERVE_3
+  7 - USED_MENU_KIND_TOP_RESERVE_4
+  8 - USED_MENU_KIND_COMMON_QUEST
+  9 - USED_MENU_KIND_GROUND_MATERIAL
+  10 - USED_MENU_KIND_GROUND_LOCAL
+  11 - USED_MENU_KIND_GROUND_3
+  12 - USED_MENU_KIND_GROUND_4
+  13 - USED_MENU_KIND_GROUND_5
+  14 - USED_MENU_KIND_GROUND_6
+  15 - USED_MENU_KIND_GROUND_7
+  16 - USED_MENU_KIND_GROUND_8
+  17 - USED_MENU_KIND_GROUND_9
+  18 - USED_MENU_KIND_QUEST_MEMO
+  19 - USED_MENU_KIND_DUNGEON_1
+  20 - USED_MENU_KIND_DUNGEON_2
+  21 - USED_MENU_KIND_DUNGEON_3
+  22 - USED_MENU_KIND_DUNGEON_4
+  23 - USED_MENU_KIND_DUNGEON_5
+  24 - USED_MENU_KIND_DUNGEON_6
+  25 - USED_MENU_KIND_DUNGEON_7
+  26 - USED_MENU_KIND_DUNGEON_8
+
+
+;========================================
+PokemonType  ;(ADDR=0011FDBC)
+  0 - None
+  1 - Normal
+  2 - Grass
+  3 - Fire
+  4 - Water
+  5 - Electric
+  6 - Ice
+  7 - Fighting
+  8 - Poison
+  9 - Ground
+  10 - Flying
+  11 - Psychic
+  12 - Bug
+  13 - Rock
+  14 - Ghost
+  15 - Dragon
+  16 - Dark
+  17 - Steel
+  19 - Nashi
+
+
+;========================================
+DungeonMenuSelectItems  ;(ADDR=00120C70)
+  -1 - SELECT_MENU_NON
+  0 - SELECT_MENU_WAZA_USE
+  1 - SELECT_MENU_ITEM_EQUIP
+  2 - SELECT_MENU_ITEM_PUT
+  3 - SELECT_MENU_ITEM_SET
+  4 - SELECT_MENU_ITEM_UNSET
+  5 - SELECT_MENU_ITEM_RETURN
+  6 - SELECT_MENU_ITEM_EQUIP_EXCHANGE
+  7 - SELECT_MENU_ITEM_THROW
+  8 - SELECT_MENU_ITEM_SHOT
+  9 - SELECT_MENU_ITEM_STONE_THROW
+  10 - SELECT_MENU_ITEM_GIFT
+  11 - SELECT_MENU_ITEM_EAT
+  12 - SELECT_MENU_ITEM_DRINK
+  13 - SELECT_MENU_ITEM_OTHER_USE
+  14 - SELECT_MENU_ITEM_ORB_USE
+  15 - SELECT_MENU_ITEM_STUCK
+  16 - SELECT_MENU_ITEM_STUCK_FROM_EQUIP
+  17 - SELECT_MENU_ITEM_REMOVE_FROM_EQUIP
+  18 - SELECT_MENU_ITEM_SWING
+  19 - SELECT_MENU_ITEM_TENT
+  20 - SELECT_MENU_ITEM_SUMMON
+  21 - SELECT_MENU_ITEM_SUMMON_RET
+  22 - SELECT_MENU_FOOT_GET
+  23 - SELECT_MENU_FOOT_EXCHANGE
+  24 - SELECT_MENU_FOOT_THROW
+  25 - SELECT_MENU_FOOT_SHOT
+  26 - SELECT_MENU_FOOT_STONE_THROW
+  27 - SELECT_MENU_FOOT_GIFT
+  28 - SELECT_MENU_FOOT_EAT
+  29 - SELECT_MENU_FOOT_DRINK
+  30 - SELECT_MENU_FOOT_OTHER_USE
+  31 - SELECT_MENU_FOOT_ORB_USE
+  32 - SELECT_MENU_FOOT_SWING
+  33 - SELECT_MENU_FOOT_TENT
+  37 - SELECT_MENU_FOOT_SUMMON
+  38 - SELECT_MENU_FOOT_SUMMON_RET
+  39 - SELECT_MENU_FOOT_STEP
+  40 - SELECT_MENU_FOOT_MOVE
+  41 - SELECT_MENU_FOOT_QUEST
+  42 - SELECT_MENU_FOOT_SAVE
+  34 - SELECT_MENU_FOOT_STUCK
+  35 - SELECT_MENU_FOOT_STUCK_FROM_EQUIP
+  36 - SELECT_MENU_FOOT_REMOVE_FROM_EQUIP
+  43 - SELECT_MENU_PARTY_OPE_BACK
+  44 - SELECT_MENU_LEADER_CHANGE
+  45 - SELECT_MENU_REST_REST
+  46 - SELECT_MENU_REST_GIVEUP
+  47 - SELECT_MENU_LOOK_AROUND
+  48 - SELECT_MENU_PARADISE
+  49 - SELECT_MENU_DO_RESCUE
+  51 - SELECE_DEBUG_PARAM_LV_UP
+  52 - SELECT_DEBUG_CTRL_ALL_CLEAR
+  53 - SELECT_DEBUG_CTRL_CREATE
+  54 - SELECT_DEBUG_MAP_FLOOR
+  55 - SELECT_DEBUG_MAP_BG_CHANGE
+  57 - SELECT_DEBUG_MAP_SEED
+  58 - SELECT_DEBUG_MYSTERY_REENTRY
+  59 - SELECT_DEBUG_WATARIARUKI_NEXT_FLOOR
+  56 - SELECT_DEBUG_MAP_THROUGH
+  60 - SELECT_DEBUG_OTHERS_SUICIDE
+  61 - SELECT_DEBUG_OTHERS_ESCAPE
+  62 - SELECT_DEBUG_OTHERS_CLEAR
+  63 - SELECT_DEBUG_WAZA_VIEWER_MAP_CHANGE
+  64 - SELECT_DEBUG_WAZA_VIEWER_EXIT
+
+
+;========================================
+DungeonMenuMenuCursor  ;(ADDR=00121880)
+  0 - MENU_CURSOR_MAIN
+  1 - MENU_CURSOR_WAZA_POKE
+  2 - MENU_CURSOR_WAZA_WAZA
+  3 - MENU_CURSOR_ITEM_ITEM
+  4 - MENU_CURSOR_ITEM_POKE
+  5 - MENU_CURSOR_PARTY_MAIN
+  6 - MENU_CURSOR_PARTY_TSUYOSA
+  7 - MENU_CURSOR_PARTY_TOKUTYO
+  8 - MENU_CURSOR_PARTY_JOTAI
+  9 - MENU_CURSOR_PARTY_TEAM_SKILL
+  10 - MENU_CURSOR_PARTY_ORDER
+  11 - MENU_CURSOR_OTHER_MAIN
+  12 - MENU_CURSOR_FOOT
+  13 - MENU_CURSOR_REST
+  14 - MENU_CURSOR_MAX
+
+
+;========================================
+WazaSelectMenuAskReturnValue  ;(ADDR=00121D8C)
+  
+  0 - ANSWER_YES
+  1 - ANSWER_NO
+  2 - ANSWER_CANCEL
+
+
+;========================================
+ChangeLeaderParameter  ;(ADDR=00121DE4)
+  0 - CHANGE_OK
+  1 - CHANGE_NG_SHOPPING
+  2 - CHANGE_NG_DOROBOU
+  3 - CHANGE_NG_STATUS
+  4 - CHANGE_NG_OTHER
+
+
+;========================================
+StatusIndex  ;(ADDR=00121E5C)
+  95 - INDEX_OBIE
+
+
+;========================================
+ITEM_KIND  ;(ADDR=001244D8)
+  1 - KIND_ARROW
+  2 - KIND_STONE
+  3 - KIND_EQUIP
+  4 - KIND_FOOD
+  5 - KIND_SEED
+  6 - KIND_PP
+  7 - KIND_PARAMETER
+  8 - KIND_ORB
+  9 - KIND_WAND
+  10 - KIND_SUMMON
+  11 - KIND_STUDS
+  12 - KIND_EVOLUTION
+  13 - KIND_OTHER
+  14 - KIND_MONEY
+  15 - KIND_BOX
+  16 - KIND_CHEST
+  17 - KIND_WAZAMACHINE
+  18 - KIND_BROKENMACHINE
+  19 - KIND_TRAP
+
+
+  
+;========================================
+ITEM_SHOP_TYPE  ;(ADDR=001249F8)
+  0 - None
+  1 - Seed
+  2 - MISSILE
+  3 - ORB
+
+
+;========================================
+CecResultState  ;(ADDR=00124A64)
+  2 - NG_EULA
+
+
+;========================================
+CheckRescueType  ;(ADDR=00124A98)
+  0 - OK_IN_FUKKATSU_SEED
+  1 - OK_COLLECTED_PEOPLE
+  2 - NG_BOX_NONE
+  3 - NG_PARENTAL_CONTROL
+  4 - OTHER
+
+
+;========================================
+ButtonMenuInputMode  ;(ADDR=00125844)
+  0 - V_LINE
+  1 - H_LINE
+  2 - VNH2_LINE
+  3 - HNV2_LINE
+  4 - STRIP
+  5 - LINK
+
+
+;========================================
+ButtonFixedPattern  ;(ADDR=001258D4)
+  0 - ITEM
+  1 - PARTY
+  2 - REQUEST
+  3 - MATERIAL
+  3 - WAZA
+  4 - PARADISE
+  5 - LOOK_AROUND
+  6 - FOOT
+  6 - G_DISABLE
+  7 - REST
+  8 - ETC
+  9 - DISABLE
+  9 - DEBUG
+  10 - TOP_CONTINUE
+  11 - TOP_DIVER
+  12 - TOP_AR
+  13 - TOP_ETC
+  14 - TOP_DLC
+  15 - TOP_TEAM
+  16 - TOP_DEL
+  17 - TOP_RETURN
+  18 - TOP_DEBUG
+  19 - EC_ICON
+
+
+;========================================
+IconCursorAction  ;(ADDR=00125A80)
+  0 - NORMAL
+  1 - DECIDE
+
+
+;========================================
+ButtonMenuWindowType  ;(ADDR=00125ED8)
+  0 - TYPE_NORMAL
+  1 - TYPE_ADHESION
+  2 - TYPE_SPRITE
+
+
+;========================================
+SpriteSlotIndex  ;(ADDR=00125F30)
+  0 - SLOT_INDEX_0
+  1 - SLOT_INDEX_1
+  2 - SLOT_INDEX_2
+  3 - SLOT_INDEX_3
+
+
+;========================================
+NUM_MENU_TYPE  ;(ADDR=00126F18)
+  0 - TYPE_DIGIT_ON
+  1 - TYPE_DIGIT_OFF
+
+
+;========================================
+LowerScreenType  ;(ADDR=00115648)
+  
+  0 - TYPE_BASE 
+  1 - TYPE_FLOOR_MAP
+  2 - TYPE_OPERATION 
+  3 - TYPE_STATUS
+  4 - TYPE_QUEST
+  5 - TYPE_GUIDE_MAP
+  6 - TYPE_ITEM_WINDOW
+  10 - TYPE_MAX
+
+
+;========================================
+ScreenType  ;(ADDR=00116510)
+  0 - A
+  1 - B
+
+
+;========================================
+FontType  ;(ADDR=00116554)
+  0 - TYPE_08
+  1 - TYPE_12
+  2 - TYPE_16
+  3 - TYPE_TALK_16
+
+
+;========================================
+FrameMode  ;(ADDR=001165B8)
+  0 - NORMAL
+  1 - MINI
+  2 - MENU
+  3 - TALK
+  5 - NAME
+  6 - FACE
+  8 - INFOMATION
+  9 - INFOMATION_MENU
+  10 - TALK_MENU
+  11 - LOG
+  12 - HINT
+  13 - HINT_OPAQUE
+  14 - BUTTON
+
+
+;========================================
+DungeonNameType  ;(ADDR=001166AC)
+  0 - DEFAULT
+  0 - FULL_KANJI
+  1 - FULL_KANA
+  2 - SHORT_KANJI
+  3 - SHORT_KANA
+
+
+;========================================
+DungeonMystery  ;(ADDR=0011A5B4)
+  0 - INDEX_SPEED_DOWN
+  1 - INDEX_LEVEL_DOWN
+  2 - INDEX_KAMIN
+  3 - INDEX_SPEED_UP
+  4 - INDEX_NO_HP_UP
+  5 - INDEX_LEVEL_UP
+  6 - INDEX_NO_USE_SEED
+  7 - INDEX_NO_USE_ORB
+  8 - INDEX_NO_USE_EQUIPMENT
+  9 - INDEX_WAY
+  10 - INDEX_PANEL
+  11 - INDEX_WEATHER
+  12 - INDEX_ITEM_KIND
+  13 - INDEX_POKEMON_KIND
+  14 - INDEX_NO_ABILITY
+  15 - INDEX_SUDDEN_DEATH
+  16 - INDEX_WAZAMACHINE
+  17 - INDEX_MAX
+
+
+;========================================
+PokemonStatusWindowTypes  ;(ADDR=00127A70)
+  0 - TYPE_MIN
+  0 - TYPE_STASUS
+  1 - TYPE_ABILLITY
+  3 - TYPE_CONDITION_1
+  3 - TYPE_CONDITION_2
+  4 - TYPE_CONDITION_3
+  5 - TYPE_CONDITION_4
+  6 - TYPE_CONDITION_5
+  7 - TYPE_CONDITION_6
+  8 - TYPE_CONDITION_7
+  9 - TYPE_CONDITION_8
+  10 - TYPE_CONDITION_9
+  11 - TYPE_CONDITION_10
+  12 - TYPE_PLAIN
+  13 - TYPE_WAZA_SHOP
+  14 - TYPE_MAX
+
+
+;========================================
+WazaDetailArrowFlag  ;(ADDR=001281F0)
+  2 - FLAG_POWER_DOWN
+
+
+;========================================
+WALLPAPER_PATTERN  ;(ADDR=0012C47C)
+  0 - MAIN01
+  1 - MAIN02
+  2 - MAIN03
+  3 - SUB01
+  4 - SUB02
+  5 - SUB03
+  7 - AR
+  8 - MAIN_NOTICE01
+  9 - SUB_NOTICE01
+  10 - MAP_OUTPOST_ALL
+  12 - MAP_OUTPOST01GRASS
+  13 - MAP_OUTPOST02FOREST
+  14 - MAP_OUTPOST03WATER
+  15 - MAP_OUTPOST04ROCK
+
+
+;========================================
+ALPHA_BLEND  ;(ADDR=0012CD78)
+  5 - NEGAPOJI
+
+
+;========================================
+TEXTURE_FILTER_MODE  ;(ADDR=0012CDB0)
+  2 - LINEAR
+
+  
+;========================================
+LANGUAGE_TYPE  ;(ADDR=0012EC38)
+  0 - EN
+  0 - MALE
+  1 - JP
+  1 - FR
+  1 - GE
+  1 - IT
+  1 - SP
+  1 - FEMALE
+  2 - UNKNOWN
+
+
+;========================================
+SEX  ;(ADDR=0012ECF8)
+  0 - MALE
+  1 - FEMALE
+  2 - UNKNOWN
+
+
+;========================================
+PARADISE_CENTER_LV  ;(ADDR=0012ED4C)
+  0 - LV_1
+  1 - LV_2
+  2 - LV_3
+  3 - LV_4
+
+
+;========================================
+PARADISE_HOME_LV  ;(ADDR=0012EDB0)
+  0 - LV_1
+  1 - LV_2
+  2 - LV_3
+  3 - LV_4
+
+
+;========================================
+PARADISE_LAND_DIR  ;(ADDR=0012F0DC)
+  0 - DIR_N
+  1 - DIR_E
+  2 - DIR_S
+  3 - DIR_W
+
+
+;========================================
+PARADISE_LAND_INDEX  ;(ADDR=0012F140)
+  0 - INDEX_00
+  1 - INDEX_01
+  2 - INDEX_02
+  3 - INDEX_03
+  4 - INDEX_04
+  5 - INDEX_05
+  6 - INDEX_06
+  7 - INDEX_07
+  999 - INDEX_HOME
+
+
+;========================================
+PARADISE_LAND_TYPE  ;(ADDR=0012F1FC)
+  0 - WILDERNESS
+  1 - PRAIRIE
+  2 - FOREST
+  3 - ROCKY_HILL
+  4 - WATER
+  5 - NONE
+
+
+;========================================
+DLC_ERROR  ;(ADDR=0012F280)
+  0 - NONE
+  1 - MEDIA_NOT_FOUND
+  2 - MOUNT_ERROR
+  3 - NOT_FORMATTED
+
+
+;========================================
+KEEP_PLACEMENT  ;(ADDR=0012FECC)
+  0 - ON
+  1 - OFF
+
+
+;========================================
+SPECIAL_ENTRY  ;(ADDR=0012FF10)
+  0 - NEXT_DAY
+  1 - NEXT_DAY_ONLY_PARTNER
+  2 - HOUSYUU
+  3 - YARARETA
+
+
+;========================================
+FACE_TYPE  ;(ADDR=00132068)
+  0 - NORMAL
+  1 - HAPPY
+  2 - PAIN
+  3 - ANGRY
+  4 - THINK
+  5 - SAD
+  6 - WEEP
+  7 - SHOUT
+  8 - TEARS
+  9 - DECIDE
+  10 - GLADNESS
+  11 - EMOTION
+  12 - SURPRISE
+  13 - FAINT
+  14 - RELIEF
+  15 - CATCHBREATH
+  16 - SPECIAL01
+  17 - SPECIAL02
+  18 - SPECIAL03
+  19 - SPECIAL04
+  20 - SPECIAL05
+  21 - SPECIAL06
+  22 - SPECIAL07
+  23 - SPECIAL08
+  24 - SPECIAL09
+  25 - SPECIAL10
+  26 - SPECIAL11
+  27 - SPECIAL12
+  28 - SPECIAL13
+  29 - SPECIAL14
+  30 - SPECIAL15
+  31 - SPECIAL16
+  
+  
+;========================================
+FACE_FRAME  ;(ADDR=0013240C)
+  0 - DISABLE
+  1 - ENABLE
+
+
+;========================================
+BlendMode  ;(ADDR=00132450)
+  0 - NONE
+  1 - CHANGE_ONLY
+  2 - ALL
+  
+  
+;========================================
+SAVE_STATUS  ;(ADDR=001324A4)
+  0 - NONE
+  1 - START
+  2 - GROUND
+  3 - DUNGEON
+  4 - DUNGEON_ERROR
+  5 - RESCUE
+  6 - REVIVAL
+  7 - REVIVAL_AFTER
+  
+  
+;========================================
+TIME_TYPE  ;(ADDR=00132548)
+  0 - SECOND
+  1 - FRAME
+  
+  
+;========================================
+ROT_TYPE  ;(ADDR=0013258C)
+  0 - NEAR
+  1 - LEFT
+  2 - RIGHT
+
+  
+;========================================
+ACCEL_TYPE  ;(ADDR=001325E0)
+  0 - NONE
+  1 - LOW
+  2 - HIGH
+  
+  
+;========================================
+DECEL_TYPE  ;(ADDR=00132634)
+  0 - NONE
+  1 - LOW
+  2 - HIGH
+  
+  
+;========================================
+LOOP  ;(ADDR=0013290C)
+  0 - OFF
+  1 - ON
+ 
+ 
+;========================================
+FLIP  ;(ADDR=00132950)
+  0 - OFF
+  1 - ON
+  
+  
+;========================================
+LINK_DIR  ;(ADDR=00132994)
+  0 - OFF
+  1 - ON
+  
+  
+;========================================
+WITH_MOTION  ;(ADDR=001329D8)
+  0 - OFF
+  1 - ON
+  
+
+;========================================
+PROC  ;(ADDR=00132A1C)
+  0 - OK
+  1 - NONE
+ 
+ 
+;========================================
+TASK_EXIT  ;(ADDR=00132A60)
+  0 - NO
+  1 - END
+  2 - QUICK
+  
+  
+;========================================
+MENU_SELECT_MODE  ;(ADDR=00132AB4)
+  0 - DISABLE_CANCEL
+  1 - ENABLE_CANCEL_HIDDEN
+  2 - ENABLE_CANCEL
+  3 - DISABLE_CANCEL_NO_CLOSE
+  4 - ENABLE_CANCEL_HIDDEN_NO_CLOSE
+  5 - ENABLE_CANCEL_NO_CLOSE
+  
+
+;========================================
+BODY_POINT  ;(ADDR=00132B38)
+  0 - CENTER
+  1 - HEAD
+  2 - MOUTH
+  3 - R_HAND
+  4 - L_HAND
+  5 - SCARF
+  
+  
+;========================================
+MOTION  ;(ADDR=00132BBC)
+  0 - WAIT
+  4 - WALK
+  6 - BACKWALK
+  7 - RUN
+  8 - ATTACK
+  9 - SPECIAL
+  10 - SWELL
+  11 - THROW
+  12 - DAMAGE
+  16 - SLEEP
+  17 - SLEEPLOOP
+  18 - ROUND
+  19 - ATTACK_ROUND
+  20 - DOUBLE
+  21 - JUMP
+  22 - JUMPLOOP
+  23 - LANDING
+  24 - CHARGE
+  25 - VICTORY
+  26 - PUSH
+  27 - PULL
+  28 - PLEASE
+  29 - SMILE
+  30 - SURPRISE
+  31 - ANGRY
+  32 - SAD
+  33 - DISAGREE
+  34 - AGREE
+  35 - CONFUSE
+  36 - CRY
+  37 - PAIN
+  38 - ENDURE
+  39 - SPEAK
+  40 - LETSGO
+  41 - FALL
+  42 - GREET
+  43 - EAT
+  44 - SHORTJUMP
+  45 - BATTLE
+  
+
+;========================================
+MOTION_PARTS  ;(ADDR=00133090)
+  15 - NONE
+  0 - BODY
+  
+
+;========================================
+FACIAL_MOTION  ;(ADDR=001330D8)
+  1 - NORMAL
+  2 - TALK
+  3 - BLINK
+  4 - HAPPY
+  5 - PAIN
+  6 - ANGRY
+  7 - THINK
+  8 - SAD
+  9 - WEEP
+  10 - SHOUT
+  11 - TEARS
+  12 - DECIDE
+  13 - GLADNESS
+  14 - EMOTION
+  15 - SURPRISE
+  16 - FAINT
+  17 - RELIEF
+  18 - CATCHBREATH
+  19 - SLEEP
+  20 - DAMAGE
+  21 - DOWN
+  
+
+;========================================
+EYE_MOTION  ;(ADDR=0013324C)
+  0 - NORMAL
+  1 - CLOSE
+  2 - ANGRY
+  3 - HAPPY
+  4 - PAIN
+  5 - SAD
+  6 - DOWN
+  
+
+;========================================
+MOUTH_MOTION  ;(ADDR=001332E0)
+  0 - NORMAL
+  1 - ANGRY
+  2 - HAPPY
+  3 - PAIN
+  4 - SAD
+  5 - SURPRISE
+  
+  
+;========================================
+PARALLAX_LEVEL  ;(ADDR=00133554)
+  0 - NEAR_2
+  1 - NEAR_1
+  2 - PLANE
+  3 - FAR_1
+  4 - FAR_2
+  5 - FAR_3
+  
+
+;========================================
+NPC_TALK_KIND  ;(ADDR=001335D8)
+  0 - GATE
+  1 - WAY_POINT
+  2 - LAND_NPC
