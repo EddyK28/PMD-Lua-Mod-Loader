@@ -8,13 +8,13 @@ There are limitations to what can be done from Lua scripts, but there are still 
  
 #### Luma3DS LayeredFS
 Make sure to [enable game patching](https://github.com/AuroraWright/Luma3DS/wiki/Optional-features).
-place the "RomFS" folder in the "luma/titles/0004000000174600" folder on your 3DS SD card for Super or "luma/titles/00040000000BA800" for Gates (you may have to create one of more these folders).  
+Place the "RomFS" folder in the "luma/titles/0004000000174600" folder on your 3DS SD card for Super or "luma/titles/00040000000BA800" for Gates (you may have to create one of more these folders).  
   
-#### Citra Packed ROM
-Unpack your game ROM using your desired tool/kit (eg .Net 3DS Toolkit).  Merge the mod loader's "RomFS" folder with that extracted from the ROM, overwriting files when prompted.  Repack ROM and load with Citra.  
+#### Citra
+Place the "RomFS" folder in the "load/mods/\<gameID\>" folder in your Citra config directory (you may have to create one of more these folders).  Right click on the game in the Citra game list and select "Open Mods Location" for easy access to the appropriate foolder. ([See more details on Citra LayeredFS here](https://github.com/citra-emu/citra/pull/5088#issue-372284184))
 
-#### Citra Loose File Loader
-Unpack your game ROM using your desired tool/kit (eg .Net 3DS Toolkit).  Merge the mod loader's "RomFS" folder with that extracted from the ROM, overwriting files when prompted.  Move or copy the game "RomFS" folder to the same directory as the ROM and rename as `<ROM name with extension>.romfsdir` (eg `Pokemon SMD.cxi.romfsdir` for `Pokemon SMD.cxi`).  Open the ROM using [this version of Citra](https://github.com/EddyK28/citra).  
+#### Packed ROM
+Unpack your game ROM using your desired tool/kit (eg .Net 3DS Toolkit).  Merge the mod loader's "RomFS" folder with that extracted from the ROM, overwriting files when prompted.  Repack ROM and load using desired method.   
 &nbsp;  
   
 ### Use:
