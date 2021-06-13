@@ -33,16 +33,18 @@ Text Replacement:
   [other_nickname]  --Nothing?
 
   [c_kind:%d]       --Species of numbered team member
-  [c_name:%d]       --name of numbered team member
-  [c_stammer:%d]    --first char of name of numbered team member
+  [c_name:%d]       --Name of numbered team member
+  [c_stammer:%d]    --First char of name of numbered team member
   [kind:%d]         --Species name of given PKID (in blue)
   [type:%d]         --Name of given type ID
-  [waza:%d]         --name of given move ID (in green)
-  [item:%d]         --name of given item ID (w/item icon)
+  [waza:%d]         --Name of given move ID (in green)
+  [item:%d]         --Name of given item ID (w/item icon)
   [ability:%d]      --Name of given ability ID (in blue)
   [skill:%d]        --Name of given Gates Team Skill ID
-  [status:%d]       --Name of given Status Condition ID (status_a for lower case)
-  [weather:%d]      --Name of given Weather ID (weather_a for lower case)
+  [status:%d]       --Name of given Status Condition ID
+  [status_a:%d]     --As above, but lower case
+  [weather:%d]      --Name of given Weather ID
+  [weather_a:%d]    --As above, but lower case
 
   [explore_team]    --"Expedition Society"
   [item_bag]        --"Bag"
@@ -59,7 +61,7 @@ Text Replacement:
   
 Math & Numbers
   [M:V%d]           --small numbers (0-9)
-    
+   
   [M:VHS]           --1x space
   [M:VZS]           --1.5x space
     
@@ -84,12 +86,12 @@ Math & Numbers
 Icons:
 
   Items:
-    [M:MONEY] (A072)        --Coin ("Poke")
+    [M:MONEY] (A072)        --Coin (Poke)
     [M:INGOT] (A074)        --gold bars
 
     [M:RIBBON] (A0A1)       --Scarf/Ribbon
     [M:APPLE2] (A0A2)       --Apple
-    [M:I1501] (A013)        --Apple (fresh/sparkle)
+-   [M:I1501] (A013)        --Apple (fresh/sparkle)
     [M:I1001] (A016)        --Apple (Gold)
 
     [M:I0501] (A011)        --orb
@@ -113,9 +115,9 @@ Icons:
     [M:IDL51] (A0DF)        --Gold Rock
 
     [M:I0201] (A022)        --stick
-    [M:IDL61] (A0E0)        --Gold Stick
     [M:I0202] (A023)        --iron spike
     [M:I0203] (A024)        --silver spike
+    [M:IDL61] (A0E0)        --Gold Stick
 
     [M:I1201] (A00D)        --Red chest
     [M:I1202] (A00E)        --Blue chest
@@ -158,7 +160,7 @@ Icons:
 
 
   Looplets & Emeras:
-    [M:SEAL%0d]     --Emera Icons (1-6)
+    [M:SEAL%02d]     --Emera Icons (1-6, eg [M:SEAL01])
     [M:I1001Y]      --rainbow emera
     [M:I1001V]      --blue emera
     
@@ -292,7 +294,7 @@ Icons:
   
   
   Other:
-    [M:CONTI%0d]    --Continent Icons (1-6)
+    [M:CONTI%02d]    --Continent Icons (1-6, eg [M:CONTI01])
 
     [M:KARI]        --red Japanese char in yellow block
     [M:UNUSED]      --red Japanese char in yellow block
@@ -306,7 +308,7 @@ Icons:
     [M:LOOPOFF]     --audio player loop w/ small 1
     [M:LOOPON]      --audio player loop
   
-    [M:B%02d]       --3ds Button Icons 
+    [M:B%02d]       --3ds Button Icons (eg [M:B01])
        1-8  = Select, Start, X, Y, A, B, R, L
        9-14 = D-pad, D-pad U/D, D-pad L/R, Circle-Pad, Circle-Pad U/D, Circle-Pad L/R
       15-22 = D-pad U, D-pad D, D-pad L, D-pad R, Circle-Pad U, Circle-Pad D, Circle-Pad L, Circle-Pad R
@@ -314,7 +316,7 @@ Icons:
       
         
 Unsorted:
-  [LINE:0:%d]     --horizontal line %d chars long
+  [LINE:0:%d]     --horizontal line %d chars long  ("LINE:" in code_table)
  
   [money:%d]      --"Poke" icon followed by number in blue
   
