@@ -6,5 +6,6 @@ return {
 "Itemizer",
 "Nicknamer",
 "InjectorControl",
+"Ground debug",
 "Example"
 }
